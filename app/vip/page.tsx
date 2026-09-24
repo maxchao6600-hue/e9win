@@ -21,7 +21,7 @@ export default function VipPage() {
     <div className="container page-hero">
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "VIP" }]} />
       <h1>VIP</h1>
-      <p>E9WIN treats VIP as part of the rewards experience. This page explains that path without adding tiers or payouts the brand has not published.</p>
+      <p>VIP sits with the rewards desk: missions, rebates, and account notices. Levels and cash values are confirmed in your account, so they are not listed here.</p>
       <div className="info-grid section">
         {points.map((point) => (
           <article className="panel" key={point.title}><h2>{point.title}</h2><p>{point.text}</p></article>

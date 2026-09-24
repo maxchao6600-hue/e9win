@@ -104,7 +104,14 @@ button, input, select { font: inherit; color: inherit; }
 h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0.045em; margin: 0 0 18px; font-weight: 620; }
 .lede { font-size: 1.2rem; color: var(--text-2); max-width: 28rem; margin: 0 0 28px; }
 .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-.stage { position: relative; height: 520px; }
+.stage {
+  position: relative; height: 560px; padding: 28px 20px 16px;
+  background:
+    radial-gradient(ellipse at 28% 40%, rgba(245, 210, 10, 0.16), transparent 58%),
+    linear-gradient(160deg, #171b24, #0d1016);
+  border: 1px solid rgba(246, 243, 234, 0.1);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
 .stage figure { margin: 0; position: absolute; display: flex; flex-direction: column; background: transparent; }
 .stage img { width: 100%; flex: 1 1 auto; height: 0; min-height: 0; object-fit: cover; object-position: center 8%; background: #12141a; }
 .stage figcaption {
@@ -149,7 +156,9 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
 .band-link:hover strong { color: var(--accent); }
 
 .game-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.game-card { background: var(--surface); }
+.game-card { background: var(--surface); border: 1px solid transparent; transition: border-color 0.2s ease; }
+.game-card:hover { border-color: rgba(245, 210, 10, 0.45); }
+.promo .btn { margin-top: 16px; }
 .game-card img { aspect-ratio: 3 / 4; width: 100%; object-fit: cover; object-position: center 12%; background: #0c0e12; }
 .game-card .meta { padding: 12px 12px 14px; }
 .game-card h3 { margin: 0; font-size: 1rem; }

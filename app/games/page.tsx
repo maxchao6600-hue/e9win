@@ -7,8 +7,8 @@ import { pageMeta } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "E9WIN Games",
-  description: "Browse E9WIN slots, live casino tables, and the sports racing title from the public catalog.",
+  title: "E9WIN Games | Slots, Live Casino, Sports and More",
+  description: "Browse E9WIN slots, live casino, sports, lottery, fishing, and esports. Search the catalog and open a title in the lobby.",
   path: "/games",
 });
 

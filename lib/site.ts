@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "E9WIN",
-  url: "https://e9win.net",
+  url: "https://e9winonline.com",
   description:
     "E9WIN is a Malaysia online gaming platform for slots, live casino, sports, lottery, and mobile play.",
   locale: "en_MY",

@@ -5,7 +5,7 @@ import { faqGroups } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "E9WIN FAQ",
+  title: "E9WIN FAQ | Account, Games, Payments and Support",
   description: "Answers about E9WIN accounts, games, download, payments, promotions, agents, and support.",
   path: "/faq",
 });

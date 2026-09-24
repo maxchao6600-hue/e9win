@@ -9,7 +9,7 @@ export function pageMeta(input: {
 }): Metadata {
   const url = absoluteUrl(input.path);
   return {
-    title: input.title,
+    title: { absolute: input.title },
     description: input.description,
     alternates: { canonical: url },
     robots: input.index === false ? { index: false, follow: false } : { index: true, follow: true },

@@ -15,7 +15,7 @@ export default function DepositPage() {
     <div className="container page-hero">
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Deposit" }]} />
       <h1>Deposit</h1>
-      <p>The cashier tutorials on e9win.net cover instant transfer, e-wallet, telco PIN, bank transfer, crypto, and sending credit to a friend.</p>
+      <p>The cashier covers instant transfer, e-wallet, telco PIN, bank transfer, USDT, and sending credit to a friend.</p>
       <div className="pay-grid section">
         {payments.map((item) => (
           <div className="pay" key={item.id}><img src={item.image} alt={item.name} /></div>

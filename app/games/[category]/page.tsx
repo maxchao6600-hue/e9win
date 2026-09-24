@@ -16,9 +16,9 @@ export function generateMetadata({ params }: { params: Promise<{ category: strin
     const item = categoryBySlug(category);
     if (!item) return { title: "Games" };
     const path = `/games/${item.slug}`;
-    const title = `E9WIN ${item.title}`;
+    const title = `E9WIN ${item.title} | Malaysia ${item.title}`;
     return {
-      title,
+      title: { absolute: title },
       description: item.description,
       alternates: { canonical: absoluteUrl(path) },
       openGraph: { title, description: item.description, url: absoluteUrl(path) },
@@ -28,7 +28,7 @@ export function generateMetadata({ params }: { params: Promise<{ category: strin
 
 const faqs: Partial<Record<GameCategory, { q: string; a: string }[]>> = {
   slots: [
-    { q: "Which slot studios are in this list?", a: "The thumbnails here are Pragmatic Play and Lucky365 titles that appear in the public E9WIN catalog." },
+    { q: "Which slot studios are in this list?", a: "The thumbnails here are Pragmatic Play and Lucky365 titles from the E9WIN catalog." },
     { q: "Do slot rules change?", a: "Each game shows its own paytable and stake range inside the lobby." },
   ],
   "live-casino": [

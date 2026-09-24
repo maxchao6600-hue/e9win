@@ -14,7 +14,7 @@ export default function ContactPage() {
     <div className="container page-hero">
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Contact" }]} />
       <h1>Contact</h1>
-      <p>These are the public channels printed on e9win.net. Email and telephone are mentioned in general copy but no address or number is published, so none is added here.</p>
+      <p>Reach E9WIN on WhatsApp or Facebook. After you sign in, live chat is also available in the lobby. No public email or phone number is listed.</p>
       <div className="split section">
         <article className="panel">
           <h2>WhatsApp</h2>

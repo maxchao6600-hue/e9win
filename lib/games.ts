@@ -27,7 +27,7 @@ export const categories: {
     title: "Slots",
     short: "Video slots from studios in the E9WIN lobby.",
     description:
-      "The slots lobby includes titles from Pragmatic Play, Playtech, Lucky365, and other studios listed in the public game catalog.",
+      "Slots in the lobby include titles from Pragmatic Play, Playtech, Lucky365, and other studios in the catalog.",
     image: "/images/games/gates-of-olympus.webp",
   },
   {
@@ -35,7 +35,7 @@ export const categories: {
     title: "Live Casino",
     short: "Baccarat, roulette, blackjack, and sic bo with live tables.",
     description:
-      "Live tables on the public catalog include baccarat, roulette, sic bo, dragon tiger, and game shows from Evolution and Playtech.",
+      "Live tables include baccarat, roulette, sic bo, dragon tiger, and game shows from Evolution and Playtech.",
     image: "/images/games/lightning-baccarat.webp",
   },
   {
@@ -43,7 +43,7 @@ export const categories: {
     title: "Sports",
     short: "Sports betting, including football and horse racing.",
     description:
-      "E9WIN describes sports markets such as the World Cup and the Premier League, and the catalog includes a live horse-racing product.",
+      "Sports markets include football events such as the World Cup and the Premier League, plus live horse racing in the catalog.",
     image: "/images/games/horse-racing.webp",
   },
   {
@@ -51,7 +51,7 @@ export const categories: {
     title: "Lottery",
     short: "4D games including Magnum, Da Ma Cai, Toto, and Singapore.",
     description:
-      "The lottery page on e9win.net lists popular 4D games such as Magnum, Da Ma Cai, Toto, and Singapore.",
+      "4D lottery covers Magnum, Da Ma Cai, Toto, and Singapore. Draw details open in the lobby.",
     image: null,
   },
   {
@@ -59,7 +59,7 @@ export const categories: {
     title: "Fishing",
     short: "Arcade fishing games in the Malaysia lobby.",
     description:
-      "E9WIN’s own product description includes fishing games alongside slots and live tables. Open the lobby to see the current fishing list.",
+      "Fishing games sit in the lobby next to slots and live tables. The current list opens after you sign in.",
     image: null,
   },
   {
@@ -67,7 +67,7 @@ export const categories: {
     title: "Esports",
     short: "Esports markets offered with the sportsbook.",
     description:
-      "E9WIN groups esports with sports betting. Markets are shown in the sportsbook after you sign in.",
+      "Esports markets are offered with the sportsbook and open after you sign in.",
     image: null,
   },
 ];

@@ -16,7 +16,7 @@ export default function AboutPage() {
       <h1>About E9WIN</h1>
       <p>E9WIN is a Malaysia-facing online gaming lobby. The public site describes slots, live casino, sports betting, 4D lottery, fishing games, and esports, with play on mobile web, an Android download, or an iPhone home-screen shortcut.</p>
       <p>The game catalog shown here uses titles that appear in the public E9WIN game list, including Pragmatic Play, Evolution, Playtech, and Lucky365. Payment marks include major Malaysian banks, e-wallets, and USDT.</p>
-      <p>Founding dates, licences, offices, and ownership are not stated on the pages used for this site, so they are not stated here.</p>
+      <p>Company history, licences, offices, and ownership are not stated here because they are not part of the published product information.</p>
       <p><Link href="/contact">Contact</Link> · <Link href="/responsible-gaming">Responsible gaming</Link></p>
     </div>
   );

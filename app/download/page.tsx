@@ -5,8 +5,8 @@ import { pageMeta } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "E9WIN Download",
-  description: "Download E9WIN on Android, add it to an iPhone home screen, or use the mobile web lobby.",
+  title: "E9WIN Download | Android, iOS and Mobile Web",
+  description: "Get E9WIN on Android, add it to an iPhone home screen, or play in the mobile browser.",
   path: "/download",
 });
 
@@ -15,11 +15,11 @@ export default function DownloadPage() {
     <div className="container page-hero">
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Download" }]} />
       <h1>Download</h1>
-      <p>E9WIN can be used as an Android download, an iOS home-screen icon, or a browser lobby. Store listings are not linked on the official download page, so they are not linked here.</p>
+      <p>Use Android download, an iPhone home-screen icon, or the browser lobby. The documented path does not include an App Store or Google Play listing.</p>
       <div className="split section">
         <article className="panel">
           <h2>Android</h2>
-          <p>The download button on e9win.net opens the player portal. Use that path rather than a file from another site.</p>
+          <p>Start the Android install from the player portal linked here. Do not use a file from another site.</p>
           <a className="btn btn-primary" href={siteConfig.playerPortal}>Download now</a>
         </article>
         <article className="panel">

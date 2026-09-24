@@ -58,7 +58,7 @@ export const guides: Guide[] = [
     category: "Account",
     updatedAt: "2026-09-25",
     steps: [
-      "Open Register on this site or the player portal linked from e9win.net.",
+      "Open Register, then continue in the E9WIN player lobby.",
       "Enter your name, mobile number, email, date of birth, username, and password.",
       "Use details that match the bank or e-wallet you will withdraw to.",
       "Read the terms and privacy notes, then submit the form.",
@@ -255,7 +255,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "How do I sign in?",
-        a: "Enter the username and password from registration. This website does not keep you logged in. Play happens in the lobby.",
+        a: "Enter the username and password from registration. Play continues in the E9WIN lobby.",
       },
       {
         q: "What if I forget the password?",
@@ -269,7 +269,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Which games are on E9WIN?",
-        a: "The public catalog includes slots and live tables from Pragmatic Play, Evolution, Playtech, and Lucky365, plus sports, 4D lottery, fishing, and esports.",
+        a: "The lobby includes slots and live tables from Pragmatic Play, Evolution, Playtech, and Lucky365, plus sports, 4D lottery, fishing, and esports.",
       },
       {
         q: "Can I play on a phone?",
@@ -283,7 +283,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Is there an official App Store or Google Play listing?",
-        a: "The E9WIN download page publishes an Android download and an iOS add-to-home-screen guide. It does not link to an Apple or Google store listing, so this site does not claim one.",
+        a: "Android uses the download path on the Download page. iPhone uses Safari, then Add to Home Screen. Store listings are not part of that path.",
       },
       {
         q: "Do I have to install an app?",
@@ -311,7 +311,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Where are the current bonus figures?",
-        a: "Campaign cards inside the account show the amount, minimum, turnover, and end date. Figures from late 2024 on the public promotion page are not treated as live offers here.",
+        a: "Open the campaign card in your account for the active amount, turnover, and eligibility. Older campaign windows are not shown here as current offers.",
       },
       {
         q: "How do I claim a promotion?",
@@ -325,7 +325,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "How do I become an agent?",
-        a: "Contact support and ask for the agent application. The public page describes downline commission without stating a rate.",
+        a: "Message support and ask for the agent application. Commission details are provided through that process.",
       },
       {
         q: "Where is the referral link?",
@@ -343,7 +343,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Is there a published email or phone number?",
-        a: "The public pages mention mail and telephone in general, but they do not print an address or number. This site does not invent one.",
+        a: "Use WhatsApp or the Facebook page. In-lobby chat is available after you sign in. No public email or phone number is listed.",
       },
     ],
   },

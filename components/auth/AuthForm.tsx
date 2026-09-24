@@ -60,8 +60,8 @@ export function AuthForm({ mode }: { mode: Mode }) {
       <button className="btn btn-primary" type="submit" disabled={pending}>{pending ? "Checking…" : mode === "login" ? "Continue" : "Continue registration"}</button>
       {ready ? (
         <div className="note">
-          <p>These details are only checked in the browser. This site cannot sign you in.</p>
-          <p>Continue in the player portal published on e9win.net.</p>
+          <p>These details are checked in your browser only.</p>
+          <p>Continue in the E9WIN player lobby to finish.</p>
           <a className="btn btn-ghost" href={siteConfig.playerPortal}>Open player portal</a>
         </div>
       ) : null}

@@ -5,8 +5,8 @@ import { guides } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "E9WIN Guides",
-  description: "Guides for E9WIN registration, login, download, deposits, withdrawals, games, and account setup.",
+  title: "E9WIN Guides | Account, Games, Payments and Mobile Help",
+  description: "Step-by-step E9WIN help for registration, login, download, deposits, withdrawals, games, and mobile play.",
   path: "/guides",
 });
 

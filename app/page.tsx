@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { faqGroups, guides, promotions } from "@/lib/content";
+import { faqGroups, guides, payments, promotions } from "@/lib/content";
 import { categories, featuredGames } from "@/lib/games";
 import { siteConfig } from "@/lib/site";
 
@@ -119,7 +119,7 @@ export default function HomePage() {
         <div className="container why">
           <div>
             <h2>Why players open E9WIN</h2>
-            <p className="lede">A single lobby for the products the brand already publishes. No invented rankings.</p>
+            <p className="lede">One lobby for slots, live tables, sports, lottery, and mobile play.</p>
           </div>
           <ol>
             <li><span className="num">01</span><div><strong>One catalog</strong>Slots, live tables, sports, lottery, fishing, and esports are described on the official pages.</div></li>
@@ -135,7 +135,7 @@ export default function HomePage() {
           <div className="section-head">
             <div>
               <h2>Promotions</h2>
-              <p>Offer types published by E9WIN. Amounts and turnover stay on the live campaign card.</p>
+              <p>Welcome, rebate, and mission campaigns. Active amounts and turnover are on the card in your account.</p>
             </div>
             <Link className="btn btn-line" href="/promotions">All promotions</Link>
           </div>
@@ -156,13 +156,13 @@ export default function HomePage() {
           <article className="panel">
             <p className="tag">Download</p>
             <h2>Play on the phone you already use</h2>
-            <p>Android uses the download published on e9win.net. iPhone uses Safari’s Add to Home Screen. Everyone else can stay in the browser.</p>
+            <p>Android uses the download on the Download page. iPhone uses Safari’s Add to Home Screen. You can also stay in the browser.</p>
             <Link className="btn btn-primary" href="/download">Get the app path</Link>
           </article>
           <article className="panel">
             <p className="tag">VIP</p>
             <h2>A membership path, not a made-up ladder</h2>
-            <p>E9WIN names VIP in its rewards desk. Tiers and cash values are not published, so this site explains the membership experience without inventing them.</p>
+            <p>VIP sits with missions, rebates, and account notices. Tier details are shown in your account.</p>
             <Link className="btn btn-ghost" href="/vip">Read VIP</Link>
           </article>
         </div>
@@ -173,7 +173,7 @@ export default function HomePage() {
           <article className="panel">
             <p className="tag">Agent</p>
             <h2>Introduce players. Commission is not quoted here.</h2>
-            <p>Agents work with downline players and an in-account top-up and withdrawal flow. Contact support to apply. No rate is printed on the public agent page.</p>
+            <p>Agents work with downline players and the in-account cashier. Commission details come from support when you apply.</p>
             <Link className="btn btn-ghost" href="/agent">Agent details</Link>
           </article>
           <article className="panel">
@@ -200,11 +200,8 @@ export default function HomePage() {
             <Link className="btn btn-line" href="/deposit">Deposit steps</Link>
           </div>
           <div className="pay-grid">
-            {[
-              ["maybank", "Maybank"], ["cimb", "CIMB"], ["public-bank", "Public Bank"],
-              ["rhb", "RHB"], ["tng", "Touch 'n Go"], ["usdt", "USDT"],
-            ].map(([id, name]) => (
-              <div className="pay" key={id}><img src={`/images/payment/${id}.png`} alt={name} /></div>
+            {payments.map((item) => (
+              <div className="pay" key={item.id}><img src={item.image} alt={item.name} /></div>
             ))}
           </div>
         </div>
