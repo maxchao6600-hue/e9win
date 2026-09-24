@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+.wrangler
+*.log
+.DS_Store
+_research
+.env*
+!.env.example
