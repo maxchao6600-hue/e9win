@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqGroups, guides, payments, promotions } from "@/lib/content";
 import { categories, featuredGames } from "@/lib/games";
+import { pageMeta } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = pageMeta({
+  title: "E9WIN | Malaysia Online Gaming",
+  description: siteConfig.description,
+  path: "/",
+});
 
 const featured = featuredGames().slice(0, 8);
 const homeFaq = faqGroups.flatMap((group) => group.items).slice(0, 5);
