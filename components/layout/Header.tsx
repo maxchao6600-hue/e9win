@@ -49,10 +49,10 @@ export function Header() {
           ))}
         </nav>
         <div className="header-actions">
-          <Link className="btn btn-ghost desk" href="/login">Login</Link>
+          <Link className="btn btn-login desk" href="/login">Login</Link>
           <Link className="btn btn-primary desk" href="/register">Register</Link>
           <div className="mobile-auth">
-            <Link className="btn btn-ghost" href="/login">Login</Link>
+            <Link className="btn btn-login" href="/login">Login</Link>
             <Link className="btn btn-primary" href="/register">Register</Link>
             <button className="btn btn-ghost menu-btn" type="button" aria-expanded={open} aria-controls="mobile-nav" onClick={() => setOpen((v) => !v)}>
               {open ? "Close" : "Menu"}

@@ -15,40 +15,39 @@ export default function HomePage() {
     <>
       <section className="hero">
         <div className="container hero-grid">
-          <div>
+          <div className="hero-copy">
             <p className="kicker">Malaysia online gaming</p>
             <h1>E9WIN</h1>
-            <p className="lede">
-              Slots, live casino, sports, and 4D lottery in one lobby. Register, browse the catalog, or open the mobile lobby.
-            </p>
+            <p className="lede">Slots, live casino, sports, and 4D lottery in one lobby.</p>
             <div className="cta-row">
               <Link className="btn btn-primary" href="/register">Register now</Link>
               <Link className="btn btn-ghost" href="/games">Explore games</Link>
             </div>
           </div>
-          <div>
-            <div className="hero-visual">
-              <div className="hero-main">
-                <img src="/images/games/gates-of-olympus.webp" alt="Gates of Olympus, a Pragmatic Play slot in the E9WIN catalog" width={640} height={640} />
-              </div>
-              <div className="hero-side">
-                <img src="/images/games/lightning-baccarat.webp" alt="Lightning Baccarat live table" width={320} height={320} />
-              </div>
-              <div className="hero-side">
-                <img src="/images/games/sweet-bonanza.webp" alt="Sweet Bonanza slot artwork" width={320} height={320} />
-              </div>
-            </div>
-            <p className="hero-caption">Artwork from titles in the public E9WIN game catalog.</p>
+          <div className="stage" aria-label="E9WIN gaming showcase">
+            <figure className="stage-main">
+              <img src="/images/games/gates-of-olympus.webp" alt="Gates of Olympus, a Pragmatic Play slot in the E9WIN catalog" width={480} height={640} />
+              <figcaption>Slots</figcaption>
+            </figure>
+            <figure className="stage-card stage-a">
+              <img src="/images/games/lightning-baccarat.webp" alt="Lightning Baccarat live table" width={280} height={360} />
+              <figcaption>Live casino</figcaption>
+            </figure>
+            <figure className="stage-card stage-b">
+              <img src="/images/games/sweet-bonanza.webp" alt="Sweet Bonanza slot artwork" width={280} height={360} />
+              <figcaption>Featured</figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
-      <section className="section" aria-labelledby="categories">
+      <section className="section follow" aria-labelledby="categories">
         <div className="container">
           <div className="section-head">
             <div>
+              <p className="kicker">Discover</p>
               <h2 id="categories">Game categories</h2>
-              <p>Six areas named on the E9WIN site: slots, live casino, sports, lottery, fishing, and esports.</p>
+              <p>Slots, live casino, sports, 4D lottery, fishing, and esports. Open a category, then play in the lobby.</p>
             </div>
             <Link className="btn btn-line" href="/games">View catalog</Link>
           </div>
@@ -80,14 +79,12 @@ export default function HomePage() {
                 </div>
               </Link>
             </div>
-            <div className="cat-row">
+            <div className="cat-band">
               {rest.slice(1).map((category) => (
-                <Link className="cat-card" key={category.slug} href={`/games/${category.slug}`}>
-                  <div className="copy">
-                    <div className="mark">{category.title.slice(0, 1)}</div>
-                    <h3>{category.title}</h3>
-                    <p>{category.short}</p>
-                  </div>
+                <Link className="band-link" key={category.slug} href={`/games/${category.slug}`}>
+                  <span className="tag">{category.title}</span>
+                  <strong>{category.short}</strong>
+                  <span className="arrow" aria-hidden="true">→</span>
                 </Link>
               ))}
             </div>
