@@ -22,7 +22,7 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <div className="container hero-grid">
+        <div className="hero-grid">
           <div className="hero-copy">
             <p className="kicker">Malaysia online gaming</p>
             <h1>E9WIN</h1>
@@ -32,19 +32,14 @@ export default function HomePage() {
               <Link className="btn btn-ghost" href="/games">Explore games</Link>
             </div>
           </div>
-          <div className="stage" aria-label="E9WIN gaming showcase">
-            <figure className="stage-main">
-              <img src="/images/games/gates-of-olympus.webp" alt="Gates of Olympus, a Pragmatic Play slot in the E9WIN catalog" width={480} height={640} />
-              <figcaption>Slots</figcaption>
-            </figure>
-            <figure className="stage-card stage-a">
-              <img src="/images/games/lightning-baccarat.webp" alt="Lightning Baccarat live table" width={280} height={360} />
-              <figcaption>Live casino</figcaption>
-            </figure>
-            <figure className="stage-card stage-b">
-              <img src="/images/games/sweet-bonanza.webp" alt="Sweet Bonanza slot artwork" width={280} height={360} />
-              <figcaption>Featured</figcaption>
-            </figure>
+          <div className="hero-art">
+            <img
+              src="/images/games/gates-of-olympus.webp"
+              alt="Gates of Olympus artwork from the E9WIN lobby"
+              width={720}
+              height={960}
+              fetchPriority="high"
+            />
           </div>
         </div>
       </section>
