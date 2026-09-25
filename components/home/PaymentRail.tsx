@@ -74,12 +74,12 @@ export function PaymentRail({ items }: { items: readonly PayItem[] }) {
       <ul className="pay-track">
         {items.map((item) => (
           <li className="pay-badge" key={item.id}>
-            <img src={item.image} alt={item.name} width={96} height={48} loading="lazy" />
+            <img src={item.image} alt={item.name} width={64} height={32} loading="lazy" />
           </li>
         ))}
         {items.map((item) => (
           <li className="pay-badge" key={`${item.id}-loop`} aria-hidden="true">
-            <img src={item.image} alt="" width={96} height={48} loading="lazy" />
+            <img src={item.image} alt="" width={64} height={32} loading="lazy" />
           </li>
         ))}
       </ul>
