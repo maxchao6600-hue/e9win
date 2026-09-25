@@ -20,6 +20,7 @@ export default function PromotionsPage() {
       <div className="guide-grid section">
         {promotions.map((item, index) => (
           <article className="promo" key={item.id}>
+            {item.image ? <img className="promo-art" src={item.image} alt="" width={1280} height={720} /> : null}
             <p className="tag">{String(index + 1).padStart(2, "0")} · {item.category}</p>
             <h2>{item.title}</h2>
             <p>{item.description}</p>

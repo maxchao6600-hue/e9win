@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { GameBrowser } from "@/components/games/GameBrowser";
 import { categories, categoryBySlug, gamesByCategory, type GameCategory } from "@/lib/games";
+import { categoryScenes } from "@/lib/scenes";
 import { absoluteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -50,6 +51,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/games", label: "Games" }, { label: item.title }]} />
       <h1>{item.title}</h1>
       <p>{item.description}</p>
+      {categoryScenes[item.slug] ? (
+        <figure className="scene-banner">
+          <img src={categoryScenes[item.slug].src} alt={categoryScenes[item.slug].alt} width={1280} height={720} />
+        </figure>
+      ) : null}
       {list.length > 0 ? <GameBrowser initialCategory={item.slug} /> : (
         <div className="empty">
           <p>This category is part of the E9WIN lobby. Individual markets and titles are shown after you sign in, so there is no thumbnail grid here.</p>

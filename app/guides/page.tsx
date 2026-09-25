@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { guides } from "@/lib/content";
+import { guideScenes } from "@/lib/scenes";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
@@ -19,9 +20,12 @@ export default function GuidesPage() {
       <div className="guide-grid section">
         {guides.map((guide) => (
           <Link className="guide-card" key={guide.slug} href={`/guides/${guide.slug}`}>
-            <p className="tag">{guide.category}</p>
-            <h2>{guide.title}</h2>
-            <p>{guide.excerpt}</p>
+            <img src={guideScenes[guide.category].src} alt="" width={1280} height={720} />
+            <span className="guide-body">
+              <p className="tag">{guide.category}</p>
+              <h2>{guide.title}</h2>
+              <p>{guide.excerpt}</p>
+            </span>
           </Link>
         ))}
       </div>

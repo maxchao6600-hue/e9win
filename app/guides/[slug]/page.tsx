@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { guideBySlug, guides } from "@/lib/content";
+import { guideScenes } from "@/lib/scenes";
 import { absoluteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -33,6 +34,9 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <p className="tag">{guide.category}</p>
       <h1>{guide.title}</h1>
       <p>{guide.excerpt}</p>
+      <figure className="scene-banner">
+        <img src={guideScenes[guide.category].src} alt={guideScenes[guide.category].alt} width={1280} height={720} />
+      </figure>
       <ol className="steps">{guide.steps.map((step) => <li key={step}>{step}</li>)}</ol>
       <h2>Related</h2>
       <p>{guide.related.map((link, index) => (

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { pageMeta } from "@/lib/seo";
+import { pageScenes } from "@/lib/scenes";
 
 export const metadata: Metadata = pageMeta({
   title: "E9WIN VIP",
@@ -22,6 +23,9 @@ export default function VipPage() {
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "VIP" }]} />
       <h1>VIP</h1>
       <p>VIP sits with the rewards desk: missions, rebates, and account notices. Levels and cash values are confirmed in your account, so they are not listed here.</p>
+      <figure className="scene-banner">
+        <img src={pageScenes.vip.src} alt={pageScenes.vip.alt} width={1280} height={720} />
+      </figure>
       <div className="info-grid section">
         {points.map((point) => (
           <article className="panel" key={point.title}><h2>{point.title}</h2><p>{point.text}</p></article>

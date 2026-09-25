@@ -6,6 +6,7 @@ import { faqGroups, guides, homepagePromotions, payments } from "@/lib/content";
 import { PromoSlider } from "@/components/home/PromoSlider";
 import { featuredGames } from "@/lib/games";
 import { pageMeta } from "@/lib/seo";
+import { categoryScenes, guideScenes, pageScenes } from "@/lib/scenes";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
@@ -22,26 +23,12 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <div className="hero-world" aria-hidden="true">
-          <span className="wash wash-navy" />
-          <span className="wash wash-blue" />
-          <span className="wash wash-violet" />
-          <span className="wash wash-magenta" />
-          <span className="wash wash-gold" />
-          <span className="rays" />
-          <span className="haze" />
-          <span className="band" />
-          <span className="floor" />
-          <span className="motes" />
-          <span className="grain" />
-          <span className="vignette" />
-        </div>
         <img
           className="hero-scene"
           src="/images/brand/hero-hall.webp"
-          alt="A quiet luxury gaming hall in blue and gold light"
-          width={1280}
-          height={720}
+          alt="A quiet luxury gaming hall in gold light"
+          width={1600}
+          height={900}
           fetchPriority="high"
         />
         <div className="hero-layout">
@@ -85,7 +72,7 @@ export default function HomePage() {
           </div>
           <div className="cat-showcase">
             <Link className="cat-tile cat-slots" href="/games/slots">
-              <img src="/images/games/sweet-bonanza.webp" alt="Colorful slot artwork from Sweet Bonanza" width={640} height={640} loading="lazy" />
+              <img src={categoryScenes.slots.src} alt={categoryScenes.slots.alt} width={1280} height={720} loading="lazy" />
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>Slots</h3>
@@ -94,37 +81,7 @@ export default function HomePage() {
               </span>
             </Link>
             <Link className="cat-tile cat-live" href="/games/live-casino">
-              <span className="cat-scene" aria-hidden="true">
-                <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice">
-                  <defs>
-                    <radialGradient id="live-glow" cx="70%" cy="38%" r="62%">
-                      <stop offset="0%" stopColor="#ffe08a" stopOpacity="0.85" />
-                      <stop offset="42%" stopColor="#c47a12" stopOpacity="0.25" />
-                      <stop offset="100%" stopColor="#1a0d08" stopOpacity="0" />
-                    </radialGradient>
-                    <radialGradient id="live-wheel" cx="40%" cy="38%" r="65%">
-                      <stop offset="0%" stopColor="#fff4cc" />
-                      <stop offset="55%" stopColor="#e2b03a" />
-                      <stop offset="100%" stopColor="#7a4e08" />
-                    </radialGradient>
-                  </defs>
-                  <rect width="640" height="360" fill="#1a0c0a" />
-                  <rect width="640" height="360" fill="url(#live-glow)" />
-                  <ellipse cx="390" cy="150" rx="280" ry="120" fill="#7a1420" />
-                  <ellipse cx="390" cy="132" rx="230" ry="92" fill="none" stroke="#f5d20a" strokeWidth="16" />
-                  <ellipse cx="390" cy="132" rx="150" ry="58" fill="none" stroke="#f6f3ea" strokeWidth="6" />
-                  <circle cx="390" cy="132" r="62" fill="url(#live-wheel)" />
-                  <circle cx="390" cy="132" r="14" fill="#1a1008" />
-                  <g fill="#f4efe4">
-                    <ellipse cx="210" cy="150" rx="46" ry="26" transform="rotate(-18 210 150)" />
-                    <ellipse cx="560" cy="168" rx="42" ry="24" transform="rotate(14 560 168)" />
-                  </g>
-                  <g fill="#d01228">
-                    <ellipse cx="250" cy="96" rx="36" ry="20" transform="rotate(20 250 96)" />
-                    <ellipse cx="520" cy="88" rx="36" ry="20" transform="rotate(-16 520 88)" />
-                  </g>
-                </svg>
-              </span>
+              <img src={categoryScenes["live-casino"].src} alt={categoryScenes["live-casino"].alt} width={1280} height={720} loading="lazy" />
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>Live Casino</h3>
@@ -133,7 +90,7 @@ export default function HomePage() {
               </span>
             </Link>
             <Link className="cat-tile cat-sports" href="/games/sports">
-              <img src="/images/games/horse-racing.webp" alt="Live horse racing artwork from the sports lobby" width={640} height={640} loading="lazy" />
+              <img src={categoryScenes.sports.src} alt={categoryScenes.sports.alt} width={1280} height={720} loading="lazy" />
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>Sports</h3>
@@ -143,39 +100,7 @@ export default function HomePage() {
             </Link>
             <div className="cat-row">
               <Link className="cat-tile cat-lottery" href="/games/lottery">
-                <span className="cat-scene" aria-hidden="true">
-                  <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                      <radialGradient id="lot-glow" cx="62%" cy="38%" r="58%">
-                        <stop offset="0%" stopColor="#ffe56a" stopOpacity="0.55" />
-                        <stop offset="42%" stopColor="#146b38" stopOpacity="0.18" />
-                        <stop offset="100%" stopColor="#06140e" stopOpacity="0" />
-                      </radialGradient>
-                      <radialGradient id="lot-gold" cx="32%" cy="30%" r="70%">
-                        <stop offset="0%" stopColor="#fff6c4" />
-                        <stop offset="46%" stopColor="#f5d20a" />
-                        <stop offset="100%" stopColor="#8a6408" />
-                      </radialGradient>
-                      <radialGradient id="lot-cream" cx="32%" cy="30%" r="70%">
-                        <stop offset="0%" stopColor="#ffffff" />
-                        <stop offset="48%" stopColor="#f3ecdc" />
-                        <stop offset="100%" stopColor="#b7a78a" />
-                      </radialGradient>
-                    </defs>
-                    <rect width="640" height="360" fill="#07140e" />
-                    <rect width="640" height="360" fill="url(#lot-glow)" />
-                    <ellipse cx="400" cy="150" rx="250" ry="92" fill="#0b3a22" />
-                    <ellipse cx="400" cy="138" rx="210" ry="64" fill="none" stroke="rgba(245,210,10,0.4)" strokeWidth="3" />
-                    <circle cx="290" cy="118" r="72" fill="url(#lot-cream)" />
-                    <circle cx="410" cy="92" r="64" fill="url(#lot-gold)" />
-                    <circle cx="520" cy="128" r="56" fill="url(#lot-cream)" />
-                    <circle cx="360" cy="176" r="46" fill="url(#lot-gold)" />
-                    <text x="290" y="132" textAnchor="middle" fontSize="48" fontWeight="700" fill="#1a1408">8</text>
-                    <text x="410" y="106" textAnchor="middle" fontSize="42" fontWeight="700" fill="#1a1408">4</text>
-                    <text x="520" y="142" textAnchor="middle" fontSize="36" fontWeight="700" fill="#1a1408">2</text>
-                    <text x="360" y="190" textAnchor="middle" fontSize="30" fontWeight="700" fill="#1a1408">6</text>
-                  </svg>
-                </span>
+                <img src={categoryScenes.lottery.src} alt={categoryScenes.lottery.alt} width={1280} height={720} loading="lazy" />
                 <span className="cat-shade" />
                 <span className="cat-copy">
                   <h3>4D Lottery</h3>
@@ -184,43 +109,7 @@ export default function HomePage() {
                 </span>
               </Link>
               <Link className="cat-tile cat-fishing" href="/games/fishing">
-                <span className="cat-scene" aria-hidden="true">
-                  <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                      <linearGradient id="fish-water" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#1a6ea8" />
-                        <stop offset="46%" stopColor="#0b3d66" />
-                        <stop offset="100%" stopColor="#06141f" />
-                      </linearGradient>
-                      <linearGradient id="fish-ray" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#d7f4ff" stopOpacity="0.45" />
-                        <stop offset="100%" stopColor="#d7f4ff" stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-                    <rect width="640" height="360" fill="url(#fish-water)" />
-                    <polygon points="90,0 150,0 230,360 20,360" fill="url(#fish-ray)" />
-                    <polygon points="280,0 330,0 410,360 230,360" fill="url(#fish-ray)" opacity="0.65" />
-                    <polygon points="470,0 520,0 600,360 420,360" fill="url(#fish-ray)" opacity="0.4" />
-                    <g fill="#e8f8ff">
-                      <ellipse cx="250" cy="118" rx="92" ry="36" />
-                      <polygon points="338,118 392,78 392,158" />
-                      <circle cx="196" cy="110" r="5" fill="#062033" />
-                    </g>
-                    <g fill="#7fd4ea">
-                      <ellipse cx="470" cy="168" rx="70" ry="26" />
-                      <polygon points="404,168 360,142 360,194" />
-                      <circle cx="508" cy="162" r="4" fill="#062033" />
-                    </g>
-                    <g fill="#b7ecff" opacity="0.9">
-                      <ellipse cx="360" cy="78" rx="36" ry="14" />
-                      <polygon points="396,78 424,62 424,94" />
-                    </g>
-                    <circle cx="160" cy="60" r="5" fill="rgba(255,255,255,0.4)" />
-                    <circle cx="540" cy="48" r="4" fill="rgba(255,255,255,0.32)" />
-                    <circle cx="200" cy="200" r="7" fill="rgba(255,255,255,0.18)" />
-                    <circle cx="430" cy="40" r="3" fill="rgba(255,255,255,0.35)" />
-                  </svg>
-                </span>
+                <img src={categoryScenes.fishing.src} alt={categoryScenes.fishing.alt} width={1280} height={720} loading="lazy" />
                 <span className="cat-shade" />
                 <span className="cat-copy">
                   <h3>Fishing</h3>
@@ -229,36 +118,7 @@ export default function HomePage() {
                 </span>
               </Link>
               <Link className="cat-tile cat-esports" href="/games/esports">
-                <span className="cat-scene" aria-hidden="true">
-                  <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                      <radialGradient id="esp-glow" cx="68%" cy="40%" r="60%">
-                        <stop offset="0%" stopColor="#7a46e0" stopOpacity="0.7" />
-                        <stop offset="50%" stopColor="#24124a" stopOpacity="0.2" />
-                        <stop offset="100%" stopColor="#070814" stopOpacity="0" />
-                      </radialGradient>
-                      <linearGradient id="esp-line" x1="0" y1="0" x2="1" y2="0">
-                        <stop offset="0%" stopColor="#f5d20a" stopOpacity="0" />
-                        <stop offset="50%" stopColor="#f5d20a" stopOpacity="0.8" />
-                        <stop offset="100%" stopColor="#f5d20a" stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-                    <rect width="640" height="360" fill="#0c0818" />
-                    <rect width="640" height="360" fill="url(#esp-glow)" />
-                    <g stroke="rgba(170,140,255,0.35)" fill="none">
-                      <path d="M80 40 L560 300" strokeWidth="1" />
-                      <path d="M140 20 L620 240" strokeWidth="1" />
-                      <path d="M40 120 L520 340" strokeWidth="1" />
-                    </g>
-                    <ellipse cx="400" cy="130" rx="150" ry="54" fill="none" stroke="url(#esp-line)" strokeWidth="3" />
-                    <path d="M250 168h210c22 0 36-16 36-36v-16c0-34-30-60-70-60h-120c-40 0-70 26-70 60v16c0 20 14 36 36 36z" fill="#1a1030" stroke="#f6f3ea" strokeWidth="5" />
-                    <path d="M214 148h-36c-16 0-28 12-28 28v12c0 16 16 28 34 24l30-12" fill="none" stroke="#f5d20a" strokeWidth="6" strokeLinecap="round" />
-                    <path d="M496 148h36c16 0 28 12 28 28v12c0 16-16 28-34 24l-30-12" fill="none" stroke="#f5d20a" strokeWidth="6" strokeLinecap="round" />
-                    <circle cx="318" cy="128" r="10" fill="#f5d20a" />
-                    <circle cx="392" cy="128" r="10" fill="#f6f3ea" />
-                    <circle cx="500" cy="70" r="6" fill="#f5d20a" />
-                  </svg>
-                </span>
+                <img src={categoryScenes.esports.src} alt={categoryScenes.esports.alt} width={1280} height={720} loading="lazy" />
                 <span className="cat-shade" />
                 <span className="cat-copy">
                   <h3>Esports</h3>
@@ -313,13 +173,15 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container split">
-          <article className="panel">
+          <article className="panel panel-scene">
+            <img src={pageScenes.download.src} alt={pageScenes.download.alt} width={1280} height={720} loading="lazy" />
             <p className="tag">Download</p>
             <h2>Play on the phone you already use</h2>
             <p>Android uses the download on the Download page. iPhone uses Safari’s Add to Home Screen. You can also stay in the browser.</p>
             <Link className="btn btn-primary" href="/download">Get the app path</Link>
           </article>
-          <article className="panel">
+          <article className="panel panel-scene">
+            <img src={pageScenes.vip.src} alt={pageScenes.vip.alt} width={1280} height={720} loading="lazy" />
             <p className="tag">VIP</p>
             <h2>A membership path, not a made-up ladder</h2>
             <p>VIP sits with missions, rebates, and account notices. Tier details are shown in your account.</p>
@@ -330,7 +192,8 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container split">
-          <article className="panel">
+          <article className="panel panel-scene">
+            <img src={pageScenes.agent.src} alt={pageScenes.agent.alt} width={1280} height={720} loading="lazy" />
             <p className="tag">Agent</p>
             <h2>Introduce players. Commission is not quoted here.</h2>
             <p>Agents work with downline players and the in-account cashier. Commission details come from support when you apply.</p>
@@ -375,9 +238,12 @@ export default function HomePage() {
           <div className="guide-grid">
             {guides.slice(0, 4).map((guide) => (
               <Link className="guide-card" key={guide.slug} href={`/guides/${guide.slug}`}>
-                <p className="tag">{guide.category}</p>
-                <h3>{guide.title}</h3>
-                <p>{guide.excerpt}</p>
+                <img src={guideScenes[guide.category].src} alt="" width={1280} height={720} loading="lazy" />
+                <span className="guide-body">
+                  <p className="tag">{guide.category}</p>
+                  <h3>{guide.title}</h3>
+                  <p>{guide.excerpt}</p>
+                </span>
               </Link>
             ))}
           </div>

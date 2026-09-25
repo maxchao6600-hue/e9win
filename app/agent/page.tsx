@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { pageMeta } from "@/lib/seo";
+import { pageScenes } from "@/lib/scenes";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
@@ -24,6 +25,9 @@ export default function AgentPage() {
       <p className="kicker">Partners</p>
       <h1>Agent</h1>
       <p>Introduce players to E9WIN and work with a downline. Commission details are provided through the agent support process. Earnings are not guaranteed.</p>
+      <figure className="scene-banner">
+        <img src={pageScenes.agent.src} alt={pageScenes.agent.alt} width={1280} height={720} />
+      </figure>
       <div className="info-grid section">
         {points.map((point) => (
           <article className="panel" key={point.n}>

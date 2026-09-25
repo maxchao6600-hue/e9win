@@ -216,7 +216,7 @@ export const promotions: Promotion[] = [
     description:
       "New players are invited to opt in to welcome campaigns for slots, live casino, and sports. The live terms, including any turnover, are shown on the offer before you claim it.",
     category: "Welcome",
-    image: "/images/promotions/welcome.svg",
+    image: "/images/promotions/promo-welcome.webp",
     href: "/promotions",
     homepageFeatured: true,
     homepageOrder: 1,
@@ -227,7 +227,7 @@ export const promotions: Promotion[] = [
     description:
       "The promotions desk publishes daily and extra slot campaigns. Check the current card in your account. Older campaign windows on the public site have closed.",
     category: "Slots",
-    image: "/images/promotions/daily.svg",
+    image: "/images/promotions/promo-daily.webp",
     href: "/promotions",
     homepageFeatured: true,
     homepageOrder: 2,
@@ -238,7 +238,7 @@ export const promotions: Promotion[] = [
     description:
       "A rebate campaign has been published for eligible play. The rate and the products that count are stated on the offer, not assumed here.",
     category: "Rebate",
-    image: "/images/promotions/rebate.svg",
+    image: "/images/promotions/promo-rebate.webp",
     href: "/promotions",
     homepageFeatured: true,
     homepageOrder: 3,
@@ -256,7 +256,7 @@ export const promotions: Promotion[] = [
     description:
       "After login, the profile share area can provide a referral link. Friends register through that link. Reward details are on the current invite campaign.",
     category: "Referral",
-    image: "/images/promotions/referral.svg",
+    image: "/images/promotions/promo-referral.webp",
     href: "/promotions",
     homepageFeatured: true,
     homepageOrder: 4,

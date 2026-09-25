@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { pageMeta } from "@/lib/seo";
+import { pageScenes } from "@/lib/scenes";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
@@ -16,6 +17,9 @@ export default function DownloadPage() {
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Download" }]} />
       <h1>Download</h1>
       <p>Use Android download, an iPhone home-screen icon, or the browser lobby. The documented path does not include an App Store or Google Play listing.</p>
+      <figure className="scene-banner">
+        <img src={pageScenes.download.src} alt={pageScenes.download.alt} width={1280} height={720} />
+      </figure>
       <div className="split section">
         <article className="panel">
           <h2>Android</h2>
@@ -25,7 +29,7 @@ export default function DownloadPage() {
         <article className="panel">
           <h2>iOS</h2>
           <p>Open the site in Safari, tap Share, then Add to Home Screen. The icon opens the web lobby.</p>
-          <img src="/images/mobile/qr.webp" alt="QR code published on the E9WIN download page" width={180} height={180} />
+          <img className="qr-code" src="/images/mobile/qr.webp" alt="QR code published on the E9WIN download page" width={180} height={180} />
         </article>
         <article className="panel">
           <h2>Mobile web</h2>

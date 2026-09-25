@@ -71,12 +71,16 @@ export function PromoSlider({ items }: { items: Slide[] }) {
           >
             <img
               src={item.image}
-              alt={item.title}
+              alt=""
               width={1280}
-              height={400}
+              height={720}
               fetchPriority={slide === 0 ? "high" : undefined}
               loading={slide === 0 ? "eager" : "lazy"}
             />
+            <span className="promo-copy">
+              <span className="kicker">{item.category}</span>
+              <strong>{item.title}</strong>
+            </span>
           </Link>
         ))}
         {count > 1 ? (
