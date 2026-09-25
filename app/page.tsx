@@ -36,6 +36,14 @@ export default function HomePage() {
           <span className="grain" />
           <span className="vignette" />
         </div>
+        <img
+          className="hero-scene"
+          src="/images/brand/hero-hall.webp"
+          alt="A quiet luxury gaming hall in blue and gold light"
+          width={1280}
+          height={720}
+          fetchPriority="high"
+        />
         <div className="hero-layout">
           <div className="hero-copy">
             <p className="kicker">Malaysia online gaming</p>
@@ -46,50 +54,6 @@ export default function HomePage() {
               <Link className="btn btn-ghost" href="/games">Explore games</Link>
             </div>
           </div>
-          <svg className="hero-motif" viewBox="0 0 900 700" aria-hidden="true">
-            <defs>
-              <radialGradient id="portal" cx="50%" cy="48%" r="50%">
-                <stop offset="0%" stopColor="#ffe56a" stopOpacity="0.95" />
-                <stop offset="18%" stopColor="#7eb6ff" stopOpacity="0.35" />
-                <stop offset="100%" stopColor="#7eb6ff" stopOpacity="0" />
-              </radialGradient>
-              <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#f5d20a" stopOpacity="0" />
-                <stop offset="50%" stopColor="#d7e6ff" stopOpacity="0.55" />
-                <stop offset="100%" stopColor="#f5d20a" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-            <ellipse cx="520" cy="340" rx="250" ry="250" fill="url(#portal)" />
-            <g fill="none" stroke="#d7e4ff" strokeOpacity="0.35">
-              <path d="M80 560 L520 300 L880 620" />
-              <path d="M140 620 L520 330 L820 660" />
-              <path d="M220 680 L520 360 L740 690" />
-              <path d="M360 120 L520 340" />
-              <path d="M700 80 L520 340" />
-            </g>
-            <g fill="none" stroke="#f5d20a">
-              <ellipse cx="520" cy="330" rx="210" ry="150" strokeWidth="2" opacity="0.7" />
-              <ellipse cx="520" cy="330" rx="150" ry="150" strokeWidth="8" opacity="0.9" />
-              <ellipse cx="520" cy="330" rx="78" ry="78" stroke="#f7f4ec" strokeWidth="2" />
-            </g>
-            <circle cx="520" cy="330" r="22" fill="#f5d20a" />
-            <g fill="url(#beam)">
-              <polygon points="470,40 500,40 530,620 440,620" opacity="0.35" />
-              <polygon points="620,0 648,0 600,640 560,640" opacity="0.22" />
-            </g>
-            <g fill="#f6f3ea">
-              <rect x="250" y="210" width="28" height="150" rx="8" opacity="0.18" />
-              <rect x="292" y="170" width="28" height="210" rx="8" opacity="0.28" />
-              <rect x="334" y="230" width="28" height="120" rx="8" opacity="0.16" />
-            </g>
-            <g fill="#f5d20a">
-              <circle cx="300" cy="150" r="4" />
-              <circle cx="760" cy="180" r="5" />
-              <circle cx="690" cy="460" r="3" />
-              <circle cx="390" cy="500" r="4" />
-              <circle cx="820" cy="300" r="3" />
-            </g>
-          </svg>
         </div>
       </section>
 

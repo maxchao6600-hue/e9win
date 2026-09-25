@@ -188,15 +188,19 @@ button, input, select { font: inherit; color: inherit; }
   inset: -48px -72px -36px -28px;
   background: radial-gradient(ellipse at 28% 46%, rgba(6, 14, 36, 0.42), transparent 72%);
 }
-.hero-motif {
+.hero-scene {
   position: absolute;
   z-index: 1;
-  right: -2%;
-  top: 6%;
-  width: min(820px, 62vw);
-  height: auto;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: min(72%, 980px);
+  max-width: none;
+  object-fit: cover;
+  object-position: 68% center;
   pointer-events: none;
-  filter: drop-shadow(0 20px 40px rgba(20, 10, 50, 0.35));
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.35) 12%, #000 34%, #000 88%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.35) 12%, #000 34%, #000 88%, transparent 100%);
 }
 .hero-layout {
   position: relative;
@@ -461,7 +465,7 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
     padding-top: calc(var(--header) + 20px);
   }
   .hero-copy h1 { font-size: clamp(3.2rem, 6vw, 4.6rem); }
-  .hero-motif { width: min(560px, 54vw); top: 12%; }
+  .hero-scene { width: min(64%, 720px); object-position: 72% center; }
   .cat-showcase { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
   .cat-slots { grid-row: auto; grid-column: 1 / -1; min-height: 300px; }
   .cat-live, .cat-sports { min-height: 230px; }
@@ -491,7 +495,17 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
     align-items: flex-start;
   }
   .hero-copy h1 { font-size: clamp(3.4rem, 16vw, 4.4rem); }
-  .hero-motif { position: relative; width: min(100%, 420px); right: auto; top: auto; margin: 8px 0 0 auto; display: block; }
+  .hero { display: flex; flex-direction: column; }
+  .hero-scene {
+    position: relative;
+    order: 2;
+    width: 100%;
+    height: 250px;
+    object-position: 70% 48%;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 16%, #000 78%, transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 16%, #000 78%, transparent 100%);
+  }
+  .hero-layout { order: 1; }
   .cat-head-row { flex-direction: column; align-items: flex-start; }
   .cat-showcase, .cat-row { grid-template-columns: 1fr; }
   .cat-tile { min-height: 240px; }
