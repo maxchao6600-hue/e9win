@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { CopySections, RelatedLinks } from "@/components/content/CopySections";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
@@ -26,6 +27,31 @@ export default function WithdrawalPage() {
         <h2>Notes</h2>
         <p>Turnover on an active promotion can block a withdrawal until that requirement is met. The campaign card states the rule. This site does not promise a processing time.</p>
         <p><Link href="/guides/withdrawal-guide">Withdrawal guide</Link> · <Link href="/contact">Support</Link></p>
+      </div>
+      <div className="prose">
+        <CopySections sections={[
+          {
+            title: "What can receive the payout",
+            paragraphs: [
+              "The same banks and e-wallets shown for deposits are the published set. The cashier confirms which of them your account can use.",
+            ],
+          },
+          {
+            title: "Why a request can wait",
+            paragraphs: [
+              "A name that does not match the profile, a missing verification step, or turnover on an active promotion can hold a request. The promotion card states its own rule. This page does not add a clock to it.",
+            ],
+          },
+        ]} />
+        <section className="topic">
+          <h2>Related</h2>
+          <RelatedLinks links={[
+            { href: "/deposit", label: "Deposit" },
+            { href: "/guides/withdrawal-guide", label: "Withdrawal guide" },
+            { href: "/promotions", label: "Promotions" },
+            { href: "/contact", label: "Contact" },
+          ]} />
+        </section>
       </div>
       <div className="faq">
         <h2>FAQ</h2>

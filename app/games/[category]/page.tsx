@@ -4,7 +4,10 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { GameBrowser } from "@/components/games/GameBrowser";
-import { categories, categoryBySlug, gamesByCategory, type GameCategory } from "@/lib/games";
+import { CopySections, FaqBlock, RelatedLinks } from "@/components/content/CopySections";
+import { categoryCopy } from "@/lib/categoryCopy";
+import { categories, categoryBySlug, gamesByCategory } from "@/lib/games";
+import { pageMeta } from "@/lib/seo";
 import { categoryScenes } from "@/lib/scenes";
 import { absoluteUrl } from "@/lib/site";
 
@@ -16,41 +19,22 @@ export function generateMetadata({ params }: { params: Promise<{ category: strin
   return params.then(({ category }) => {
     const item = categoryBySlug(category);
     if (!item) return { title: "Games" };
-    const path = `/games/${item.slug}`;
-    const title = `E9WIN ${item.title} | Malaysia ${item.title}`;
-    return {
-      title: { absolute: title },
-      description: item.description,
-      alternates: { canonical: absoluteUrl(path) },
-      openGraph: { title, description: item.description, url: absoluteUrl(path) },
-    };
+    const title = `E9WIN ${item.title} | ${item.title} in the lobby`;
+    return pageMeta({ title, description: item.description, path: `/games/${item.slug}` });
   });
 }
-
-const faqs: Partial<Record<GameCategory, { q: string; a: string }[]>> = {
-  slots: [
-    { q: "Which slot studios are in this list?", a: "The thumbnails here are Pragmatic Play and Lucky365 titles from the E9WIN catalog." },
-    { q: "Do slot rules change?", a: "Each game shows its own paytable and stake range inside the lobby." },
-  ],
-  "live-casino": [
-    { q: "Which live games are listed?", a: "Baccarat, roulette, sic bo, dragon tiger, and game shows from Evolution and Playtech." },
-  ],
-  lottery: [
-    { q: "Which 4D games are named?", a: "Magnum, Da Ma Cai, Toto, and Singapore are named on the E9WIN lottery page." },
-  ],
-};
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
   const item = categoryBySlug(category);
   if (!item) notFound();
   const list = gamesByCategory(item.slug);
-  const questions = faqs[item.slug] ?? [];
+  const copy = categoryCopy[item.slug];
   return (
     <div className="container page-hero">
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/games", label: "Games" }, { label: item.title }]} />
       <h1>{item.title}</h1>
-      <p>{item.description}</p>
+      <p>{copy.lead}</p>
       {categoryScenes[item.slug] ? (
         <figure className="scene-banner">
           <img src={categoryScenes[item.slug].src} alt={categoryScenes[item.slug].alt} width={1280} height={720} />
@@ -63,17 +47,22 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         </div>
       )}
       <div className="section prose">
-        <h2>Related guides</h2>
-        <p><Link href="/guides/games-guide">Games guide</Link> · <Link href="/guides/how-to-register">How to register</Link> · <Link href="/deposit">Deposit</Link></p>
-        {questions.length > 0 ? (
-          <div className="faq">
-            <h2>Questions</h2>
-            {questions.map((question) => (
-              <details key={question.q}><summary>{question.q}</summary><p>{question.a}</p></details>
-            ))}
-          </div>
-        ) : null}
+        <CopySections sections={copy.sections} />
+        <FaqBlock items={copy.faq} />
+        <section className="topic">
+          <h2>Related</h2>
+          <RelatedLinks links={copy.links} />
+        </section>
       </div>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: copy.faq.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: { "@type": "Answer", text: item.a },
+        })),
+      }} />
       <JsonLd data={{
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",

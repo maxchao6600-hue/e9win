@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { CopySections, FaqBlock, RelatedLinks } from "@/components/content/CopySections";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { pageMeta } from "@/lib/seo";
 import { pageScenes } from "@/lib/scenes";
 
@@ -26,6 +28,42 @@ export default function VipPage() {
       <figure className="scene-banner">
         <img src={pageScenes.vip.src} alt={pageScenes.vip.alt} width={1280} height={720} />
       </figure>
+      <div className="prose">
+        <CopySections sections={[
+          {
+            title: "What VIP is",
+            paragraphs: [
+              "VIP is a rewards-desk label. It sits with missions, rebates, referral earning, and redeem codes. It is not a cash table, and it is not the Playtech game called VIP Baccarat.",
+            ],
+          },
+          {
+            title: "What is not published",
+            paragraphs: [
+              "Levels, point targets, and cash benefits are omitted until they are printed by E9WIN. This page will not invent a ladder to look complete.",
+            ],
+          },
+          {
+            title: "Eligibility and support",
+            paragraphs: [
+              "VIP treatment is tied to a real player account. Sign in, keep the profile complete, and read any VIP notice in the rewards area.",
+              "If the lobby mentions an invitation you do not understand, ask on WhatsApp or Facebook. Those are the public support paths.",
+            ],
+          },
+        ]} />
+        <FaqBlock items={[
+          { q: "Are VIP cash amounts listed?", a: "No public figure is available, so none is shown." },
+          { q: "Is VIP Baccarat the same as membership?", a: "No. VIP Baccarat is a Playtech live table." },
+        ]} />
+        <section className="topic">
+          <h2>Related</h2>
+          <RelatedLinks links={[
+            { href: "/promotions", label: "Promotions" },
+            { href: "/games/live-casino", label: "Live casino" },
+            { href: "/guides/account-guide", label: "Account guide" },
+            { href: "/contact", label: "Contact" },
+          ]} />
+        </section>
+      </div>
       <div className="info-grid section">
         {points.map((point) => (
           <article className="panel" key={point.title}><h2>{point.title}</h2><p>{point.text}</p></article>
@@ -41,13 +79,20 @@ export default function VipPage() {
             <li>Ask support if a VIP invitation is mentioned in the lobby and you need the next step.</li>
           </ol>
         </article>
-        <article className="panel faq">
-          <h2>FAQ</h2>
-          <details><summary>Are VIP cash amounts listed?</summary><p>No public figure is available, so none is shown.</p></details>
-          <details><summary>Is VIP Baccarat the same as VIP membership?</summary><p>VIP Baccarat is a Playtech live table. Membership VIP is a separate rewards label.</p></details>
+        <article className="panel">
+          <h2>Open an account</h2>
+          <p>VIP notices are read in the lobby after you register. This page does not unlock a tier by itself.</p>
           <Link className="btn btn-primary" href="/register">Register</Link>
         </article>
       </div>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          { "@type": "Question", name: "Are VIP cash amounts listed?", acceptedAnswer: { "@type": "Answer", text: "No public figure is available, so none is shown." } },
+          { "@type": "Question", name: "Is VIP Baccarat the same as membership?", acceptedAnswer: { "@type": "Answer", text: "No. VIP Baccarat is a Playtech live table." } },
+        ],
+      }} />
     </div>
   );
 }

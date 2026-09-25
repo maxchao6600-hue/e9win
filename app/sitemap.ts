@@ -28,6 +28,6 @@ const paths = [
 export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((path) => ({
     url: `${siteConfig.url}${path === "/" ? "" : path}`,
-    lastModified: new Date("2026-09-25"),
+    lastModified: new Date("2026-09-26"),
   }));
 }

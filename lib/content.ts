@@ -1,3 +1,5 @@
+import { extraGuides } from "@/lib/extraGuides";
+
 export const payments = [
   { id: "maybank", name: "Maybank", image: "/images/payment/maybank.png" },
   { id: "cimb", name: "CIMB", image: "/images/payment/cimb.png" },
@@ -50,7 +52,7 @@ export type Guide = {
   related: { href: string; label: string }[];
 };
 
-export const guides: Guide[] = [
+const coreGuides: Guide[] = [
   {
     slug: "how-to-register",
     title: "How to register",
@@ -191,6 +193,8 @@ export const guides: Guide[] = [
     ],
   },
 ];
+
+export const guides: Guide[] = [...coreGuides, ...extraGuides];
 
 export function guideBySlug(slug: string) {
   return guides.find((guide) => guide.slug === slug);

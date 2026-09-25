@@ -76,7 +76,7 @@ export default function HomePage() {
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>Slots</h3>
-                <p>A wide selection of video slots from the E9WIN lobby.</p>
+                <p>Browse video slot covers from the public catalog, then open a title in the lobby.</p>
                 <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
               </span>
             </Link>
@@ -85,7 +85,7 @@ export default function HomePage() {
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>Live Casino</h3>
-                <p>Baccarat, roulette, blackjack, and live table games.</p>
+                <p>Open live baccarat, roulette, sic bo, and other table covers from the catalog.</p>
                 <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
               </span>
             </Link>
@@ -94,7 +94,7 @@ export default function HomePage() {
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>Sports</h3>
-                <p>Sports markets and live horse racing.</p>
+                <p>Preview live horse racing, then read football markets inside the sportsbook.</p>
                 <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
               </span>
             </Link>
@@ -104,7 +104,7 @@ export default function HomePage() {
                 <span className="cat-shade" />
                 <span className="cat-copy">
                   <h3>4D Lottery</h3>
-                  <p>4D games including Magnum, Da Ma Cai, Toto, and Singapore.</p>
+                  <p>Choose Magnum, Da Ma Cai, Toto, or Singapore. Draws open in the lobby.</p>
                   <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
                 </span>
               </Link>
@@ -113,7 +113,7 @@ export default function HomePage() {
                 <span className="cat-shade" />
                 <span className="cat-copy">
                   <h3>Fishing</h3>
-                  <p>Arcade-style fishing games from the E9WIN lobby.</p>
+                  <p>Arcade fishing titles open after sign-in. Slot covers are not used here.</p>
                   <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
                 </span>
               </Link>
@@ -122,7 +122,7 @@ export default function HomePage() {
                 <span className="cat-shade" />
                 <span className="cat-copy">
                   <h3>Esports</h3>
-                  <p>Competitive gaming and esports markets.</p>
+                  <p>Esports markets sit with the sportsbook and open after you sign in.</p>
                   <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
                 </span>
               </Link>
@@ -168,6 +168,22 @@ export default function HomePage() {
             <li><span className="num">03</span><div><strong>Local payments</strong>Malaysian banks, e-wallets, telco PIN, and USDT are shown on the payment strip.</div></li>
             <li><span className="num">04</span><div><strong>People who can help</strong>WhatsApp, Facebook, and in-lobby chat are the support paths that are actually published.</div></li>
           </ol>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="lobby-map">
+        <div className="container prose">
+          <h2 id="lobby-map">How the lobby is organised</h2>
+          <p>Each category answers a different question. Use the page that matches what you want to open, then sign in when you are ready to play.</p>
+          <ul>
+            <li><Link href="/games/slots">Slots</Link> — video slot covers from Pragmatic Play and Lucky365.</li>
+            <li><Link href="/games/live-casino">Live casino</Link> — baccarat, roulette, sic bo, and other live covers.</li>
+            <li><Link href="/games/sports">Sports</Link> — horse racing in the catalog, football markets in the sportsbook.</li>
+            <li><Link href="/games/lottery">4D lottery</Link> — Magnum, Da Ma Cai, Toto, and Singapore.</li>
+            <li><Link href="/games/fishing">Fishing</Link> — arcade titles after sign-in, not sea-themed slots.</li>
+            <li><Link href="/games/esports">Esports</Link> — markets with the sportsbook, no fixture list on this site.</li>
+          </ul>
+          <p>Payments, access, and the rewards desk are separate: <Link href="/deposit">deposit</Link>, <Link href="/withdrawal">withdrawal</Link>, <Link href="/download">download</Link>, <Link href="/promotions">promotions</Link>, <Link href="/guides">guides</Link>.</p>
         </div>
       </section>
 

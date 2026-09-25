@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { CopySections, FaqBlock, RelatedLinks } from "@/components/content/CopySections";
 import { pageMeta } from "@/lib/seo";
 import { pageScenes } from "@/lib/scenes";
 import { siteConfig } from "@/lib/site";
@@ -28,6 +28,41 @@ export default function AgentPage() {
       <figure className="scene-banner">
         <img src={pageScenes.agent.src} alt={pageScenes.agent.alt} width={1280} height={720} />
       </figure>
+      <div className="prose">
+        <CopySections sections={[
+          {
+            title: "Who it is for",
+            paragraphs: [
+              "The agent path is for people who introduce players and work with a downline. It is not a job offer and it does not quote income.",
+            ],
+          },
+          {
+            title: "How the model is described",
+            paragraphs: [
+              "Players who join through your referral are the downline. Commission follows their play. The rate is confirmed during setup, not on this page.",
+              "Top-up and withdrawal for the network use the same cashier flow as a player account. There is no published application fee.",
+            ],
+          },
+          {
+            title: "What you are responsible for",
+            paragraphs: [
+              "Share only the referral link from your profile after login. Do not invent a bonus to recruit someone. Do not ask a player for their password.",
+            ],
+          },
+        ]} />
+        <FaqBlock items={[
+          { q: "Is a commission rate listed?", a: "No. Support confirms the rate during setup." },
+          { q: "Are earnings guaranteed?", a: "No. Results depend on downline activity and the rules you receive." },
+        ]} />
+        <section className="topic">
+          <h2>Related</h2>
+          <RelatedLinks links={[
+            { href: "/guides/account-guide", label: "Account guide" },
+            { href: "/contact", label: "Contact" },
+            { href: "/promotions", label: "Promotions" },
+          ]} />
+        </section>
+      </div>
       <div className="info-grid section">
         {points.map((point) => (
           <article className="panel" key={point.n}>
@@ -47,12 +82,6 @@ export default function AgentPage() {
             <li>Share only the referral link from your profile.</li>
           </ol>
           <a className="btn btn-primary" href={siteConfig.support.whatsapp}>WhatsApp support</a>
-        </article>
-        <article className="panel faq">
-          <h2>FAQ</h2>
-          <details><summary>Is a commission rate listed?</summary><p>No. Support confirms the rate during setup.</p></details>
-          <details><summary>Are earnings guaranteed?</summary><p>No. Results depend on downline activity and the rules you receive.</p></details>
-          <p><Link href="/guides/account-guide">Account guide</Link> · <Link href="/contact">Contact</Link></p>
         </article>
       </div>
     </div>

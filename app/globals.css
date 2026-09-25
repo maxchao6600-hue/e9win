@@ -352,6 +352,13 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
 .crumbs a:hover { color: var(--accent); }
 .page-hero { padding: 36px 0 8px; }
 .prose { max-width: 760px; }
+.topic { margin-top: 32px; }
+.topic h2 { font-size: 1.35rem; letter-spacing: -0.03em; margin: 0 0 8px; }
+.topic p, .topic li { color: var(--text-2); }
+.topic ul, .topic ol { margin: 8px 0 0; padding-left: 18px; }
+.topic li { margin: 6px 0; }
+.link-row { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.link-row a { color: var(--accent); }
 .prose p { color: var(--text-2); }
 .faq details { border-top: 1px solid var(--border); padding: 14px 0; }
 .faq summary { cursor: pointer; font-weight: 650; color: var(--text); }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { CopySections, FaqBlock, RelatedLinks } from "@/components/content/CopySections";
 import { pageMeta } from "@/lib/seo";
 import { pageScenes } from "@/lib/scenes";
 import { siteConfig } from "@/lib/site";
@@ -20,6 +21,46 @@ export default function DownloadPage() {
       <figure className="scene-banner">
         <img src={pageScenes.download.src} alt={pageScenes.download.alt} width={1280} height={720} />
       </figure>
+      <div className="prose">
+        <CopySections sections={[
+          {
+            title: "Three ways onto the lobby",
+            paragraphs: [
+              "Desktop and mobile web need no install. iPhone uses Safari’s Add to Home Screen. Android uses the download that opens the player portal from this page.",
+            ],
+            list: [
+              "Do not look for an App Store or Google Play listing. None is documented.",
+              "Do not install a file that did not come from the portal link.",
+              "Sign in with the same username after the lobby opens.",
+            ],
+          },
+          {
+            title: "After the lobby opens",
+            paragraphs: [
+              "The web version is described as updating when you load it, without a manual patch. Game rules and the cashier are inside that lobby, not in a separate desktop program.",
+            ],
+          },
+          {
+            title: "If access fails",
+            paragraphs: [
+              "Reload on a current Chrome or Safari build and a stable connection. E9WIN does not publish a device matrix. If the portal link fails, use WhatsApp support rather than a third-party download site.",
+            ],
+          },
+        ]} />
+        <FaqBlock items={[
+          { q: "What are the system requirements?", a: "A device list is not published. A current phone browser is enough for the web lobby." },
+          { q: "Does the web version update itself?", a: "The official description says the web lobby updates when you load it." },
+        ]} />
+        <section className="topic">
+          <h2>Related</h2>
+          <RelatedLinks links={[
+            { href: "/guides/how-to-download", label: "Download guide" },
+            { href: "/guides/mobile-guide", label: "Mobile guide" },
+            { href: "/guides/how-to-login", label: "How to login" },
+            { href: "/games", label: "Games" },
+          ]} />
+        </section>
+      </div>
       <div className="split section">
         <article className="panel">
           <h2>Android</h2>
@@ -45,12 +86,6 @@ export default function DownloadPage() {
             <li>Sign in with the same username after the lobby opens.</li>
           </ol>
         </article>
-      </div>
-      <div className="faq prose">
-        <h2>FAQ</h2>
-        <details><summary>What are the system requirements?</summary><p>E9WIN does not publish a device list. A current phone browser is enough for the web lobby.</p></details>
-        <details><summary>Does the web version update itself?</summary><p>The official description says the web lobby updates when you load it, without a manual patch.</p></details>
-        <p>More detail is in the <Link href="/guides/how-to-download">download guide</Link>.</p>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { CopySections, FaqBlock, RelatedLinks } from "@/components/content/CopySections";
 import { depositMethods, payments } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
 
@@ -35,6 +36,42 @@ export default function DepositPage() {
           <li>Keep the receipt until the wallet updates.</li>
         </ol>
         <p>Processing time is not published as a guarantee. See the <Link href="/guides/deposit-guide">deposit guide</Link> or <Link href="/contact">contact support</Link>.</p>
+      </div>
+      <div className="prose">
+        <CopySections sections={[
+          {
+            title: "Banks and e-wallets",
+            paragraphs: [
+              "The marks on this page are the published set: Maybank, CIMB, Public Bank, RHB, Hong Leong, AmBank, BSN, Touch 'n Go, Boost, GrabPay, ShopeePay, and USDT.",
+              "Instant transfer, manual bank transfer, telco PIN, and credit to a friend are cashier paths. The accepted PIN brands and the USDT network are shown in the cashier, not guessed here.",
+            ],
+          },
+          {
+            title: "If the credit is missing",
+            paragraphs: [
+              "Compare the amount and the reference with the receipt. Message support with the username. Do not send a password, and do not pay a new account number that arrived in a chat.",
+            ],
+          },
+          {
+            title: "Safety",
+            paragraphs: [
+              "The instruction on the cashier at the moment you pay is the one that counts. A screenshot from last month can be wrong. Withdrawals are a separate page and must match the profile name.",
+            ],
+          },
+        ]} />
+        <FaqBlock items={[
+          { q: "Is a minimum deposit listed?", a: "No. The cashier shows the limits for the method you pick." },
+          { q: "How long does a deposit take?", a: "A time is not guaranteed. It depends on the method." },
+        ]} />
+        <section className="topic">
+          <h2>Related</h2>
+          <RelatedLinks links={[
+            { href: "/withdrawal", label: "Withdrawal" },
+            { href: "/guides/deposit-guide", label: "Deposit guide" },
+            { href: "/guides/withdrawal-guide", label: "Withdrawal guide" },
+            { href: "/responsible-gaming", label: "Responsible gaming" },
+          ]} />
+        </section>
       </div>
     </div>
   );
