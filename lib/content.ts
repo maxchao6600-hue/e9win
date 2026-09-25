@@ -196,7 +196,18 @@ export function guideBySlug(slug: string) {
   return guides.find((guide) => guide.slug === slug);
 }
 
-export const promotions = [
+export type Promotion = {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  image?: string;
+  href?: string;
+  startDate?: string;
+  endDate?: string;
+};
+
+export const promotions: Promotion[] = [
   {
     id: "welcome",
     title: "Welcome campaigns",
@@ -239,7 +250,17 @@ export const promotions = [
       "The promotions index also lists daily missions and redeem codes. Codes and missions are entered inside the lobby when a campaign is active.",
     category: "Missions",
   },
-] as const;
+];
+
+export function homepagePromotions(today = new Date()): Array<Promotion & { image: string }> {
+  const day = today.toISOString().slice(0, 10);
+  return promotions.filter((item): item is Promotion & { image: string } => {
+    if (!item.image) return false;
+    if (item.startDate && item.startDate > day) return false;
+    if (item.endDate && item.endDate < day) return false;
+    return true;
+  });
+}
 
 export type FaqItem = { q: string; a: string };
 export type FaqGroup = { id: string; title: string; items: FaqItem[] };

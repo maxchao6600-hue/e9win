@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PaymentRail } from "@/components/home/PaymentRail";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { faqGroups, guides, payments, promotions } from "@/lib/content";
-import { categories, featuredGames } from "@/lib/games";
+import { faqGroups, guides, homepagePromotions, payments } from "@/lib/content";
+import { PromoSlider } from "@/components/home/PromoSlider";
+import { featuredGames } from "@/lib/games";
 import { pageMeta } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
@@ -16,92 +18,165 @@ const featured = featuredGames().slice(0, 8);
 const homeFaq = faqGroups.flatMap((group) => group.items).slice(0, 5);
 
 export default function HomePage() {
-  const slots = categories[0];
-  const live = categories[1];
-  const rest = categories.slice(2);
+  const slides = homepagePromotions();
   return (
     <>
       <section className="hero">
-        <div className="hero-grid">
-          <div className="hero-copy">
-            <p className="kicker">Malaysia online gaming</p>
-            <h1>E9WIN</h1>
-            <p className="lede">Slots, live casino, sports, and 4D lottery in one lobby.</p>
-            <div className="cta-row">
-              <Link className="btn btn-primary" href="/register">Register now</Link>
-              <Link className="btn btn-ghost" href="/games">Explore games</Link>
+        <div className="hero-world" aria-hidden="true">
+          <span className="wash wash-navy" />
+          <span className="wash wash-blue" />
+          <span className="wash wash-violet" />
+          <span className="wash wash-magenta" />
+          <span className="wash wash-gold" />
+          <span className="atmosphere" />
+          <span className="rays" />
+          <span className="band" />
+          <span className="motes" />
+          <span className="grain" />
+          <span className="vignette" />
+        </div>
+        <div className="hero-copy">
+          <p className="kicker">Malaysia online gaming</p>
+          <h1>E9WIN</h1>
+          <p className="lede">Slots, live casino, sports, and 4D lottery in one lobby.</p>
+          <div className="cta-row">
+            <Link className="btn btn-primary" href="/register">Register now</Link>
+            <Link className="btn btn-ghost" href="/games">Explore games</Link>
+          </div>
+        </div>
+        <div className="hero-figure">
+          <img
+            className="figure-main"
+            src="/images/games/gates-of-olympus.webp"
+            alt="Gates of Olympus artwork from the E9WIN lobby"
+            width={720}
+            height={960}
+            fetchPriority="high"
+          />
+        </div>
+      </section>
+
+      <section className="section promo-home" aria-labelledby="home-promos">
+        <div className="feat-wrap">
+          <div className="cat-head">
+            <p className="kicker">Promotions</p>
+            <div className="cat-head-row">
+              <h2 id="home-promos">Latest activities</h2>
+              <Link className="cat-all" href="/promotions">View all promotions <span aria-hidden="true">→</span></Link>
             </div>
+            <p>Latest activities and campaigns from E9WIN.</p>
           </div>
-          <div className="hero-art">
-            <img
-              src="/images/games/gates-of-olympus.webp"
-              alt="Gates of Olympus artwork from the E9WIN lobby"
-              width={720}
-              height={960}
-              fetchPriority="high"
-            />
-          </div>
+          {slides.length > 0 ? <PromoSlider items={slides} /> : <p className="promo-empty">No current promotions available.</p>}
         </div>
       </section>
 
       <section className="section follow" aria-labelledby="categories">
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <p className="kicker">Discover</p>
+        <div className="cat-wrap">
+          <div className="cat-head">
+            <p className="kicker">Discover</p>
+            <div className="cat-head-row">
               <h2 id="categories">Game categories</h2>
-              <p>Slots, live casino, sports, 4D lottery, fishing, and esports. Open a category, then play in the lobby.</p>
+              <Link className="cat-all" href="/games">View all games <span aria-hidden="true">→</span></Link>
             </div>
-            <Link className="btn btn-line" href="/games">View catalog</Link>
+            <p>Slots, live casino, sports, 4D lottery, fishing, and esports. Open a category, then play in the lobby.</p>
           </div>
-          <div className="cat-layout">
-            <Link className="cat-card large" href={`/games/${slots.slug}`}>
-              {slots.image ? <img src={slots.image} alt="" /> : null}
-              <div className="shade" />
-              <div className="copy">
-                <h3>{slots.title}</h3>
-                <p>{slots.short}</p>
-                <span className="btn btn-line">Open slots</span>
-              </div>
+          <div className="cat-showcase">
+            <Link className="cat-tile cat-slots" href="/games/slots">
+              <img src="/images/games/sweet-bonanza.webp" alt="Online slots games" width={720} height={960} loading="lazy" />
+              <span className="cat-shade" />
+              <span className="cat-copy">
+                <h3>Slots</h3>
+                <p>A wide selection of video slots from the E9WIN lobby.</p>
+                <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+              </span>
             </Link>
-            <div className="cat-stack">
-              <Link className="cat-card" href={`/games/${live.slug}`}>
-                {live.image ? <img src={live.image} alt="" /> : null}
-                <div className="shade" />
-                <div className="copy">
-                  <h3>{live.title}</h3>
-                  <p>{live.short}</p>
-                </div>
+            <Link className="cat-tile cat-live" href="/games/live-casino">
+              <img src="/images/games/gold-vault-roulette.webp" alt="Live casino games" width={720} height={960} loading="lazy" />
+              <span className="cat-shade" />
+              <span className="cat-copy">
+                <h3>Live Casino</h3>
+                <p>Baccarat, roulette, blackjack, and live table games.</p>
+                <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+              </span>
+            </Link>
+            <Link className="cat-tile cat-sports" href="/games/sports">
+              <img src="/images/games/horse-racing.webp" alt="Sports betting and horse racing" width={720} height={960} loading="lazy" />
+              <span className="cat-shade" />
+              <span className="cat-copy">
+                <h3>Sports</h3>
+                <p>Sports markets and live horse racing.</p>
+                <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+              </span>
+            </Link>
+            <div className="cat-row">
+              <Link className="cat-tile cat-lottery" href="/games/lottery">
+                <span className="cat-scene" aria-hidden="true">
+                  <svg viewBox="0 0 320 180">
+                    <circle cx="168" cy="78" r="34" fill="#f4efe4" />
+                    <circle cx="214" cy="96" r="30" fill="#f5d20a" />
+                    <circle cx="188" cy="128" r="26" fill="#efe6d4" />
+                    <circle cx="246" cy="132" r="22" fill="#ffe56a" />
+                    <text x="168" y="84" textAnchor="middle" fontSize="22" fontWeight="700" fill="#1a1408">8</text>
+                    <text x="214" y="102" textAnchor="middle" fontSize="20" fontWeight="700" fill="#1a1408">4</text>
+                    <text x="188" y="134" textAnchor="middle" fontSize="16" fontWeight="700" fill="#1a1408">2</text>
+                    <text x="246" y="138" textAnchor="middle" fontSize="14" fontWeight="700" fill="#1a1408">6</text>
+                  </svg>
+                </span>
+                <span className="cat-shade" />
+                <span className="cat-copy">
+                  <h3>4D Lottery</h3>
+                  <p>4D games including Magnum, Da Ma Cai, Toto, and Singapore.</p>
+                  <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+                </span>
               </Link>
-              <Link className="cat-card" href="/games/sports">
-                <img src="/images/games/horse-racing.webp" alt="" />
-                <div className="shade" />
-                <div className="copy">
-                  <h3>Sports</h3>
-                  <p>Football markets and live horse racing.</p>
-                </div>
+              <Link className="cat-tile cat-fishing" href="/games/fishing">
+                <span className="cat-scene" aria-hidden="true">
+                  <svg viewBox="0 0 320 180">
+                    <path d="M40 150c40-28 90-18 140-34" fill="none" stroke="rgba(180,230,255,0.35)" strokeWidth="1.5" />
+                    <path d="M70 40c30 18 20 40-8 48 28-2 48 16 42 36-22-14-48-10-62-2 8-18 6-36 28-82z" fill="#7fd4ea" opacity="0.9" />
+                    <path d="M150 70c36 10 58 8 78-8-8 22-6 36 10 48-28 2-52-6-78-12-8 16-28 22-46 16 10-16 22-28 36-44z" fill="#d7f6ff" />
+                    <circle cx="92" cy="62" r="2.2" fill="#073044" />
+                    <circle cx="196" cy="78" r="2" fill="#073044" />
+                  </svg>
+                </span>
+                <span className="cat-shade" />
+                <span className="cat-copy">
+                  <h3>Fishing</h3>
+                  <p>Arcade-style fishing games from the E9WIN lobby.</p>
+                  <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+                </span>
               </Link>
-            </div>
-            <div className="cat-band">
-              {rest.slice(1).map((category) => (
-                <Link className="band-link" key={category.slug} href={`/games/${category.slug}`}>
-                  <span className="tag">{category.title}</span>
-                  <strong>{category.short}</strong>
-                  <span className="arrow" aria-hidden="true">→</span>
-                </Link>
-              ))}
+              <Link className="cat-tile cat-esports" href="/games/esports">
+                <span className="cat-scene" aria-hidden="true">
+                  <svg viewBox="0 0 320 180">
+                    <path d="M118 108h84c10 0 16-8 16-16v-8c0-16-14-28-32-28h-52c-18 0-32 12-32 28v8c0 8 6 16 16 16z" fill="none" stroke="#f6f3ea" strokeWidth="3" />
+                    <path d="M102 92h-16c-8 0-14 6-14 14v6c0 8 8 14 16 12l14-6" fill="none" stroke="#f5d20a" strokeWidth="3" />
+                    <path d="M218 92h16c8 0 14 6 14 14v6c0 8-8 14-16 12l-14-6" fill="none" stroke="#f5d20a" strokeWidth="3" />
+                    <circle cx="142" cy="86" r="4" fill="#f5d20a" />
+                    <circle cx="178" cy="86" r="4" fill="#f6f3ea" />
+                  </svg>
+                </span>
+                <span className="cat-shade" />
+                <span className="cat-copy">
+                  <h3>Esports</h3>
+                  <p>Competitive gaming and esports markets.</p>
+                  <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+                </span>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       <section className="section" aria-labelledby="featured">
-        <div className="container">
-          <div className="section-head">
-            <div>
+        <div className="feat-wrap">
+          <div className="cat-head">
+            <p className="kicker">Featured</p>
+            <div className="cat-head-row">
               <h2 id="featured">Featured games</h2>
-              <p>A short list from the catalog. The full grid is on the games page.</p>
+              <Link className="cat-all" href="/games">View all games <span aria-hidden="true">→</span></Link>
             </div>
+            <p>A short list from the catalog. The full grid is on the games page.</p>
           </div>
           <div className="game-grid">
             {featured.map((game) => (
@@ -130,27 +205,6 @@ export default function HomePage() {
             <li><span className="num">03</span><div><strong>Local payments</strong>Malaysian banks, e-wallets, telco PIN, and USDT are shown on the payment strip.</div></li>
             <li><span className="num">04</span><div><strong>People who can help</strong>WhatsApp, Facebook, and in-lobby chat are the support paths that are actually published.</div></li>
           </ol>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <h2>Promotions</h2>
-              <p>Welcome, rebate, and mission campaigns. Active amounts and turnover are on the card in your account.</p>
-            </div>
-            <Link className="btn btn-line" href="/promotions">All promotions</Link>
-          </div>
-          <div className="promo-list">
-            {promotions.slice(0, 3).map((item) => (
-              <article className="promo" key={item.id}>
-                <p className="tag">{item.category}</p>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -193,21 +247,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="section-head">
-            <div>
-              <h2>Payments</h2>
-              <p>Marks shown on the E9WIN payment strip.</p>
+      <section className="section pay-section" aria-labelledby="payments">
+        <div className="feat-wrap">
+          <div className="cat-head">
+            <div className="cat-head-row">
+              <h2 id="payments">Payments</h2>
+              <Link className="cat-all" href="/deposit">Deposit guide <span aria-hidden="true">→</span></Link>
             </div>
-            <Link className="btn btn-line" href="/deposit">Deposit steps</Link>
-          </div>
-          <div className="pay-grid">
-            {payments.map((item) => (
-              <div className="pay" key={item.id}><img src={item.image} alt={item.name} /></div>
-            ))}
+            <p>Malaysia shown on the E9WIN payment strip.</p>
           </div>
         </div>
+        <PaymentRail items={payments} />
       </section>
 
       <section className="section">
