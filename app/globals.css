@@ -15,7 +15,7 @@
   --on-accent: #000000;
   --danger: #E15B4A;
   --header: 76px;
-  --container: 1220px;
+  --container: 1360px;
 }
 
 * { box-sizing: border-box; }
@@ -108,7 +108,7 @@ button, input, select { font: inherit; color: inherit; }
 .hero-layout {
   position: relative;
   z-index: 2;
-  width: min(1280px, calc(100% - 64px));
+  width: min(1360px, calc(100% - 64px));
   margin: 0 auto;
   min-height: min(88vh, 860px);
   padding: calc(var(--header) + 28px) 0 72px;
@@ -139,7 +139,7 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
   padding: 20px 0 72px;
   background: linear-gradient(180deg, var(--bg) 0%, var(--elevated) 48%, var(--bg) 100%);
 }
-.cat-wrap, .feat-wrap { width: min(1280px, calc(100% - 40px)); margin: 0 auto; }
+.cat-wrap, .feat-wrap { width: min(1360px, calc(100% - 40px)); margin: 0 auto; }
 .cat-head { margin-bottom: 22px; }
 .cat-head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
 .cat-head h2 { font-size: clamp(2rem, 4vw, 3.1rem); letter-spacing: -0.04em; line-height: 1; margin: 0; }
@@ -221,7 +221,7 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
 .game-card:hover .btn-line { color: var(--accent-hover); }
 .promo .btn { margin-top: 16px; }
 .game-card img {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -351,7 +351,8 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
 .crumbs a { color: var(--text); }
 .crumbs a:hover { color: var(--accent); }
 .page-hero { padding: 36px 0 8px; }
-.prose { max-width: 760px; }
+.prose { max-width: none; }
+.prose p, .prose li { max-width: 68ch; }
 .topic { margin-top: 32px; }
 .topic h2 { font-size: 1.35rem; letter-spacing: -0.03em; margin: 0 0 8px; }
 .topic p, .topic li { color: var(--text-2); }

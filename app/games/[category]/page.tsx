@@ -6,34 +6,37 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { GameBrowser } from "@/components/games/GameBrowser";
 import { CopySections, FaqBlock, RelatedLinks } from "@/components/content/CopySections";
 import { categoryCopy } from "@/lib/categoryCopy";
-import { categories, categoryBySlug, gamesByCategory } from "@/lib/games";
+import { categories, categoryFromParam, categoryPath, gamesByCategory } from "@/lib/games";
 import { pageMeta } from "@/lib/seo";
 import { categoryScenes } from "@/lib/scenes";
 import { absoluteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
-  return categories.map((category) => ({ category: category.slug }));
+  return [
+    ...categories.map((category) => ({ category: category.slug === "lottery" ? "4d" : category.slug })),
+    { category: "lottery" },
+  ];
 }
 
 export function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
   return params.then(({ category }) => {
-    const item = categoryBySlug(category);
+    const item = categoryFromParam(category);
     if (!item) return { title: "Games" };
-    const title = `E9WIN ${item.title} | ${item.title} in the lobby`;
-    return pageMeta({ title, description: item.description, path: `/games/${item.slug}` });
+    const title = item.slug === "lottery" ? "E9WIN 4D Lottery | Magnum, Da Ma Cai, Toto, Singapore" : `E9WIN ${item.title} | ${item.title} in the lobby`;
+    return pageMeta({ title, description: item.description, path: categoryPath(item.slug) });
   });
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
-  const item = categoryBySlug(category);
+  const item = categoryFromParam(category);
   if (!item) notFound();
   const list = gamesByCategory(item.slug);
   const copy = categoryCopy[item.slug];
   return (
     <div className="container page-hero">
-      <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/games", label: "Games" }, { label: item.title }]} />
-      <h1>{item.title}</h1>
+      <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/games", label: "Games" }, { href: categoryPath(item.slug), label: item.slug === "lottery" ? "4D Lottery" : item.title }]} />
+      <h1>{item.slug === "lottery" ? "4D Lottery" : item.title}</h1>
       <p>{copy.lead}</p>
       {categoryScenes[item.slug] ? (
         <figure className="scene-banner">
@@ -49,6 +52,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       <div className="section prose">
         <CopySections sections={copy.sections} />
         <FaqBlock items={copy.faq} />
+        <section className="topic">
+          <h2>Other categories</h2>
+          <RelatedLinks links={categories.filter((entry) => entry.slug !== item.slug).map((entry) => ({ href: categoryPath(entry.slug), label: entry.slug === "lottery" ? "4D Lottery" : entry.title }))} />
+        </section>
         <section className="topic">
           <h2>Related</h2>
           <RelatedLinks links={copy.links} />
@@ -69,7 +76,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
           { "@type": "ListItem", position: 2, name: "Games", item: absoluteUrl("/games") },
-          { "@type": "ListItem", position: 3, name: item.title, item: absoluteUrl(`/games/${item.slug}`) },
+          { "@type": "ListItem", position: 3, name: item.slug === "lottery" ? "4D Lottery" : item.title, item: absoluteUrl(categoryPath(item.slug)) },
         ],
       }} />
     </div>

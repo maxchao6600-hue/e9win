@@ -12,7 +12,9 @@ const paths = [
   "/vip",
   "/download",
   "/agent",
+  "/payment-methods",
   "/deposit",
+  "/games/4d",
   "/withdrawal",
   "/guides",
   "/faq",
@@ -21,13 +23,13 @@ const paths = [
   "/responsible-gaming",
   "/terms",
   "/privacy",
-  ...categories.map((category) => `/games/${category.slug}`),
+  ...categories.filter((category) => category.slug !== "lottery").map((category) => `/games/${category.slug}`),
   ...guides.map((guide) => `/guides/${guide.slug}`),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((path) => ({
     url: `${siteConfig.url}${path === "/" ? "" : path}`,
-    lastModified: new Date("2026-09-26"),
+    lastModified: new Date("2026-09-27"),
   }));
 }

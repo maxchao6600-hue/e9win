@@ -128,3 +128,11 @@ export function featuredGames() {
 export function categoryBySlug(slug: string) {
   return categories.find((category) => category.slug === slug);
 }
+
+export function categoryFromParam(param: string) {
+  return categoryBySlug(param === "4d" ? "lottery" : param);
+}
+
+export function categoryPath(slug: string) {
+  return slug === "lottery" ? "/games/4d" : `/games/${slug}`;
+}

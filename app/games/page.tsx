@@ -5,7 +5,7 @@ import { CopySections, FaqBlock, RelatedLinks } from "@/components/content/CopyS
 import { JsonLd } from "@/components/seo/JsonLd";
 import { GameBrowser } from "@/components/games/GameBrowser";
 import { categoryCopy } from "@/lib/categoryCopy";
-import { categories, games } from "@/lib/games";
+import { categories, categoryPath, games } from "@/lib/games";
 import { pageMeta } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
@@ -28,7 +28,7 @@ export default function GamesPage() {
           <ul>
             {categories.map((category) => (
               <li key={category.slug}>
-                <Link href={`/games/${category.slug}`}>{category.title}</Link> — {categoryCopy[category.slug].lead}
+                <Link href={categoryPath(category.slug)}>{category.slug === "lottery" ? "4D Lottery" : category.title}</Link> — {categoryCopy[category.slug].lead}
               </li>
             ))}
           </ul>
@@ -87,7 +87,7 @@ export default function GamesPage() {
           "@type": "ListItem",
           position: index + 1,
           name: game.name,
-          url: absoluteUrl(`/games/${game.category}`),
+          url: absoluteUrl(categoryPath(game.category)),
         })),
       }} />
     </div>

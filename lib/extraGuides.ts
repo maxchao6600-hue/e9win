@@ -72,7 +72,7 @@ export const extraGuides: Guide[] = [
       "Do not use a sea-themed slot or a live game show as a substitute for 4D.",
     ],
     related: [
-      { href: "/games/lottery", label: "4D lottery" },
+      { href: "/games/4d", label: "4D lottery" },
       { href: "/guides/how-to-register", label: "How to register" },
       { href: "/games", label: "All games" },
     ],
@@ -130,6 +130,25 @@ export const extraGuides: Guide[] = [
       { href: "/promotions", label: "Promotions" },
       { href: "/guides/deposit-guide", label: "Deposit guide" },
       { href: "/guides/account-guide", label: "Account guide" },
+    ],
+  },
+  {
+    slug: "security-guide",
+    title: "How to keep the account yours",
+    excerpt: "Use one login, ignore unofficial downloads, and never send a password to support.",
+    category: "Security",
+    updatedAt: "2026-09-26",
+    steps: [
+      "Create one account and keep the username private enough that you can still tell support who you are.",
+      "Do not send the password on WhatsApp or Facebook. Support can work from the username.",
+      "Install Android only from the portal link on the download page. There is no store listing to trust instead.",
+      "Pay only the cashier instruction shown at that moment. A number from a chat is not a deposit account.",
+      "Withdraw to a bank or e-wallet in the same name as the profile.",
+    ],
+    related: [
+      { href: "/guides/account-guide", label: "Account guide" },
+      { href: "/download", label: "Download" },
+      { href: "/contact", label: "Contact" },
     ],
   },
   {

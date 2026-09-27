@@ -11,7 +11,7 @@ export const metadata: Metadata = pageMeta({
   path: "/guides",
 });
 
-const order = ["Account", "Download", "Payments", "Games", "Slots", "Live Casino", "Sports", "Lottery", "Fishing", "Esports", "Promotions", "Responsible gaming"];
+const order = ["Account", "Download", "Payments", "Security", "Games", "Slots", "Live Casino", "Sports", "Lottery", "Fishing", "Esports", "Promotions", "Responsible gaming"];
 
 export default function GuidesPage() {
   const groups = order

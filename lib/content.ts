@@ -373,6 +373,92 @@ export const faqGroups: FaqGroup[] = [
     ],
   },
   {
+    id: "slots",
+    title: "Slots",
+    items: [
+      {
+        q: "Which slot studios have covers on this site?",
+        a: "Pragmatic Play and Lucky365. Playtech is named in the lobby description, but a slot without a cover here is not published as artwork.",
+      },
+      {
+        q: "Where is the paytable?",
+        a: "Inside the game in the lobby. This website does not reprint RTP or stake ranges.",
+      },
+    ],
+  },
+  {
+    id: "live",
+    title: "Live casino",
+    items: [
+      {
+        q: "Which live titles have covers?",
+        a: "Evolution and Playtech titles in the catalog, including baccarat, roulette, sic bo, and dragon tiger.",
+      },
+      {
+        q: "Is VIP Baccarat the membership programme?",
+        a: "No. VIP Baccarat is a Playtech table. Membership is described on the VIP page without cash figures.",
+      },
+    ],
+  },
+  {
+    id: "sports",
+    title: "Sports and esports",
+    items: [
+      {
+        q: "Why are there no odds on the sports page?",
+        a: "Odds are not stored here. Live horse racing has a cover. Football, including the World Cup and the Premier League, is named and opens in the sportsbook.",
+      },
+      {
+        q: "Where are esports fixtures?",
+        a: "They are not listed on this site. Esports markets are offered with the sportsbook after you sign in.",
+      },
+    ],
+  },
+  {
+    id: "lottery",
+    title: "4D",
+    items: [
+      {
+        q: "Which 4D games are named?",
+        a: "Magnum, Da Ma Cai, Toto, and Singapore. Draw results are not reprinted here.",
+      },
+    ],
+  },
+  {
+    id: "fishing",
+    title: "Fishing",
+    items: [
+      {
+        q: "Why is there no fishing thumbnail grid?",
+        a: "Fishing covers are not in the public catalog. Great Blue and Dolphin Reef are slots, not fishing games.",
+      },
+    ],
+  },
+  {
+    id: "vip",
+    title: "VIP",
+    items: [
+      {
+        q: "Are VIP levels or cash rewards listed?",
+        a: "No. Those figures are omitted until E9WIN publishes them.",
+      },
+    ],
+  },
+  {
+    id: "responsible",
+    title: "Responsible gaming",
+    items: [
+      {
+        q: "Who can play?",
+        a: "Adults aged 18 and over. Set a budget before you deposit.",
+      },
+      {
+        q: "Can this website turn on a deposit limit?",
+        a: "No. Deposit limits and self-exclusion are described as account tools when the lobby offers them.",
+      },
+    ],
+  },
+  {
     id: "support",
     title: "Support",
     items: [

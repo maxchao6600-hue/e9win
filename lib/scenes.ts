@@ -87,6 +87,10 @@ export const guideScenes: Record<string, Scene> = {
     src: "/images/promotions/promo-welcome.webp",
     alt: "A dark entrance lit with gold, used as the welcome campaign still",
   },
+  Security: {
+    src: "/images/brand/scene-account.webp",
+    alt: "A quiet desk beside a night window",
+  },
   "Responsible gaming": {
     src: "/images/brand/scene-account.webp",
     alt: "A quiet desk beside a night window",

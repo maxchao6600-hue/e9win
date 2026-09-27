@@ -46,6 +46,7 @@ export default function WithdrawalPage() {
         <section className="topic">
           <h2>Related</h2>
           <RelatedLinks links={[
+            { href: "/payment-methods", label: "Payment methods" },
             { href: "/deposit", label: "Deposit" },
             { href: "/guides/withdrawal-guide", label: "Withdrawal guide" },
             { href: "/promotions", label: "Promotions" },

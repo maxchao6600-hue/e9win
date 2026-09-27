@@ -4,7 +4,7 @@ import { PaymentRail } from "@/components/home/PaymentRail";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqGroups, guides, homepagePromotions, payments } from "@/lib/content";
 import { PromoSlider } from "@/components/home/PromoSlider";
-import { featuredGames } from "@/lib/games";
+import { categoryPath, featuredGames } from "@/lib/games";
 import { pageMeta } from "@/lib/seo";
 import { categoryScenes, guideScenes, pageScenes } from "@/lib/scenes";
 import { siteConfig } from "@/lib/site";
@@ -99,7 +99,7 @@ export default function HomePage() {
               </span>
             </Link>
             <div className="cat-row">
-              <Link className="cat-tile cat-lottery" href="/games/lottery">
+              <Link className="cat-tile cat-lottery" href="/games/4d">
                 <img src={categoryScenes.lottery.src} alt={categoryScenes.lottery.alt} width={1280} height={720} loading="lazy" />
                 <span className="cat-shade" />
                 <span className="cat-copy">
@@ -148,7 +148,7 @@ export default function HomePage() {
                 <div className="meta">
                   <h3>{game.name}</h3>
                   <p>{game.provider}</p>
-                  <Link className="btn btn-line" href={`/games/${game.category}`}>Play in lobby</Link>
+                  <Link className="btn btn-line" href={categoryPath(game.category)}>Play in lobby</Link>
                 </div>
               </article>
             ))}
@@ -179,11 +179,19 @@ export default function HomePage() {
             <li><Link href="/games/slots">Slots</Link> — video slot covers from Pragmatic Play and Lucky365.</li>
             <li><Link href="/games/live-casino">Live casino</Link> — baccarat, roulette, sic bo, and other live covers.</li>
             <li><Link href="/games/sports">Sports</Link> — horse racing in the catalog, football markets in the sportsbook.</li>
-            <li><Link href="/games/lottery">4D lottery</Link> — Magnum, Da Ma Cai, Toto, and Singapore.</li>
+            <li><Link href="/games/4d">4D lottery</Link> — Magnum, Da Ma Cai, Toto, and Singapore.</li>
             <li><Link href="/games/fishing">Fishing</Link> — arcade titles after sign-in, not sea-themed slots.</li>
             <li><Link href="/games/esports">Esports</Link> — markets with the sportsbook, no fixture list on this site.</li>
           </ul>
-          <p>Payments, access, and the rewards desk are separate: <Link href="/deposit">deposit</Link>, <Link href="/withdrawal">withdrawal</Link>, <Link href="/download">download</Link>, <Link href="/promotions">promotions</Link>, <Link href="/guides">guides</Link>.</p>
+          <p>Payments, access, and the rewards desk are separate: <Link href="/payment-methods">payment methods</Link>, <Link href="/deposit">deposit</Link>, <Link href="/withdrawal">withdrawal</Link>, <Link href="/download">download</Link>, <Link href="/promotions">promotions</Link>, <Link href="/guides">guides</Link>.</p>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="mobile-play">
+        <div className="container prose">
+          <h2 id="mobile-play">Play in the browser you already have</h2>
+          <p>The lobby does not require a store app. On a phone, the same categories are available in the mobile site. An iPhone can add that site to the home screen from Safari. Android can use the portal download on the download page. A desktop browser is enough on Windows, Mac, and Linux.</p>
+          <p>Reload the page to pick up the web lobby. E9WIN does not publish a device list or a manual patch. If the portal link fails, use <Link href="/contact">WhatsApp</Link> rather than a file from another site. The steps are in the <Link href="/guides/mobile-guide">mobile guide</Link> and the <Link href="/guides/how-to-download">download guide</Link>.</p>
         </div>
       </section>
 
@@ -234,7 +242,7 @@ export default function HomePage() {
           <div className="cat-head">
             <div className="cat-head-row">
               <h2 id="payments">Payments</h2>
-              <Link className="cat-all" href="/deposit">Deposit guide <span aria-hidden="true">→</span></Link>
+              <Link className="cat-all" href="/payment-methods">Payment methods <span aria-hidden="true">→</span></Link>
             </div>
             <p>Malaysia shown on the E9WIN payment strip.</p>
           </div>

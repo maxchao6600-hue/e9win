@@ -25,7 +25,7 @@ export default function PromotionsPage() {
             title: "How promotions are published",
             paragraphs: [
               "A campaign on this website is a name and a short description. The homepage slider shows four of those names with stills. Birthday and missions stay in the list below because they do not have homepage artwork.",
-              "Older campaign windows that were dated on the public site have closed. They are not relabelled as live offers.",
+              "Older campaign windows that were dated on the public site have closed. They are not relabelled as live offers. Cards below are either homepage featured or listed. None of them carry a start or end date, so none are marked active, upcoming, or historical.",
             ],
           },
           {
@@ -70,10 +70,10 @@ export default function PromotionsPage() {
         </section>
       </div>
       <div className="guide-grid section">
-        {promotions.map((item, index) => (
+        {promotions.map((item) => (
           <article className="promo" key={item.id}>
             {item.image ? <img className="promo-art" src={item.image} alt="" width={1280} height={720} /> : null}
-            <p className="tag">{String(index + 1).padStart(2, "0")} · {item.category}</p>
+            <p className="tag">{item.homepageFeatured ? "Homepage featured" : "Listed"} · {item.category}</p>
             <h2>{item.title}</h2>
             <p>{item.description}</p>
             <Link className="btn btn-line" href="/register">View in account</Link>

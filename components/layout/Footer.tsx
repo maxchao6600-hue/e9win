@@ -16,7 +16,9 @@ export function Footer() {
           <Link href="/games/slots">Slots</Link>
           <Link href="/games/live-casino">Live casino</Link>
           <Link href="/games/sports">Sports</Link>
-          <Link href="/games/lottery">Lottery</Link>
+          <Link href="/games/4d">4D lottery</Link>
+          <Link href="/games/fishing">Fishing</Link>
+          <Link href="/games/esports">Esports</Link>
         </div>
         <div>
           <h2>Information</h2>
@@ -31,6 +33,7 @@ export function Footer() {
           <h2>Support</h2>
           <Link href="/faq">FAQ</Link>
           <Link href="/contact">Contact</Link>
+          <Link href="/payment-methods">Payment methods</Link>
           <Link href="/deposit">Deposit</Link>
           <Link href="/withdrawal">Withdrawal</Link>
           <a href={siteConfig.support.whatsapp} rel="noopener noreferrer">WhatsApp</a>

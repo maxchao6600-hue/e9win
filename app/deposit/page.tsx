@@ -66,6 +66,7 @@ export default function DepositPage() {
         <section className="topic">
           <h2>Related</h2>
           <RelatedLinks links={[
+            { href: "/payment-methods", label: "Payment methods" },
             { href: "/withdrawal", label: "Withdrawal" },
             { href: "/guides/deposit-guide", label: "Deposit guide" },
             { href: "/guides/withdrawal-guide", label: "Withdrawal guide" },

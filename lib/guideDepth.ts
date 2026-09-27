@@ -147,6 +147,23 @@ export const guideDepth: Record<string, Depth> = {
     trouble: [{ q: "The homepage slider and the account disagree.", a: "The account card is the offer. The public page explains the type of campaign and points you there." }],
     faq: [{ q: "Do birthday and missions have banners?", a: "They are listed in writing. They are not in the homepage slider." }],
   },
+  "security-guide": {
+    covers: ["One account", "Passwords", "Official download", "Cashier instructions"],
+    notes: [
+      "This site does not publish a security certification. The practical rules are about who you talk to and which link you use.",
+      "In-lobby chat is available after sign-in. Public contact is WhatsApp and Facebook only.",
+    ],
+    mistakes: [
+      "Sharing a login with a friend.",
+      "Paying an account number that was not on the cashier.",
+    ],
+    trouble: [
+      { q: "Someone asked for my password.", a: "Do not send it. Use the username with WhatsApp support, or the recovery step in the lobby." },
+    ],
+    faq: [
+      { q: "Is there a published security badge?", a: "No. Do not treat a badge on another site as an E9WIN certification." },
+    ],
+  },
   "responsible-gaming-guide": {
     covers: ["Budget first", "Account tools that are only described", "Where to ask for help"],
     notes: ["E9WIN is for adults 18 and over. Deposit limits and self-exclusion are described as account tools if the lobby offers them."],
