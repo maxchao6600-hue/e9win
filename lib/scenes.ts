@@ -3,27 +3,27 @@ export type Scene = { src: string; alt: string };
 export const categoryScenes: Record<string, Scene> = {
   slots: {
     src: "/images/brand/scene-slots.webp",
-    alt: "A desktop and phone lobby showing six slot covers from the catalog",
+    alt: "A black gaming monitor showing one online slot game in gold light",
   },
   "live-casino": {
     src: "/images/brand/scene-live.webp",
-    alt: "A desktop and phone lobby showing live casino covers from the catalog",
+    alt: "A black gaming monitor showing an online baccarat table",
   },
   sports: {
     src: "/images/brand/scene-sports.webp",
-    alt: "A sports lobby screen with live horse racing and named football markets",
+    alt: "A black gaming monitor showing a dark sportsbook of blank match cards",
   },
   lottery: {
     src: "/images/brand/scene-lottery.webp",
-    alt: "A 4D selection screen listing Magnum, Da Ma Cai, Toto, and Singapore",
+    alt: "A black gaming monitor showing four empty 4D selection wells",
   },
   fishing: {
     src: "/images/brand/scene-fishing.webp",
-    alt: "A fishing lobby screen that opens after sign-in",
+    alt: "A black gaming monitor showing an online fishing scene without scores",
   },
   esports: {
     src: "/images/brand/scene-esports.webp",
-    alt: "An esports market screen that opens after sign-in",
+    alt: "A black gaming desk with a headset and an online arena on the monitor",
   },
 };
 
@@ -57,31 +57,31 @@ export const guideScenes: Record<string, Scene> = {
   },
   Games: {
     src: "/images/brand/scene-slots.webp",
-    alt: "A desktop and phone lobby showing six slot covers from the catalog",
+    alt: "A black gaming monitor showing one online slot game in gold light",
   },
   Slots: {
     src: "/images/brand/scene-slots.webp",
-    alt: "A desktop and phone lobby showing six slot covers from the catalog",
+    alt: "A black gaming monitor showing one online slot game in gold light",
   },
   "Live Casino": {
     src: "/images/brand/scene-live.webp",
-    alt: "A desktop and phone lobby showing live casino covers from the catalog",
+    alt: "A black gaming monitor showing an online baccarat table",
   },
   Sports: {
     src: "/images/brand/scene-sports.webp",
-    alt: "A sports lobby screen with live horse racing and named football markets",
+    alt: "A black gaming monitor showing a dark sportsbook of blank match cards",
   },
   Lottery: {
     src: "/images/brand/scene-lottery.webp",
-    alt: "A 4D selection screen listing Magnum, Da Ma Cai, Toto, and Singapore",
+    alt: "A black gaming monitor showing four empty 4D selection wells",
   },
   Fishing: {
     src: "/images/brand/scene-fishing.webp",
-    alt: "A fishing lobby screen that opens after sign-in",
+    alt: "A black gaming monitor showing an online fishing scene without scores",
   },
   Esports: {
     src: "/images/brand/scene-esports.webp",
-    alt: "An esports market screen that opens after sign-in",
+    alt: "A black gaming desk with a headset and an online arena on the monitor",
   },
   Promotions: {
     src: "/images/promotions/promo-welcome.webp",
