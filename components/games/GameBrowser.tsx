@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { categories, games, type GameCategory } from "@/lib/games";
+import { categories, categoryPath, games, type GameCategory } from "@/lib/games";
 
 const PAGE = 12;
 
@@ -21,9 +21,12 @@ export function GameBrowser({ initialCategory = "all" }: { initialCategory?: Gam
   }, [category, query]);
 
   const shown = filtered.slice(0, visible);
+  const selected = categories.find((item) => item.slug === category);
+  const selectedHasCovers = category === "all" || games.some((game) => game.category === category);
 
   return (
     <div>
+      <p className="hub-note">Search matches the title and the studio printed on a cover. Category chips limit that same catalog. A title still opens in the lobby after you sign in, and the category pages explain 4D, fishing, and esports when this grid has no artwork.</p>
       <div className="filters">
         <input
           aria-label="Search games"
@@ -38,10 +41,20 @@ export function GameBrowser({ initialCategory = "all" }: { initialCategory?: Gam
           </button>
         ))}
       </div>
+      <p className="hub-count" role="status">{selectedHasCovers ? `${shown.length} of ${filtered.length} catalog covers` : "No public covers in this category"}</p>
       {shown.length === 0 ? (
         <div className="empty">
-          <p>No catalog artwork matches that search. Sports, lottery, fishing, and esports are opened inside the lobby rather than as a thumbnail grid.</p>
-          <Link className="btn btn-line" href="/download">Open the lobby</Link>
+          {selected && !selectedHasCovers ? (
+            <>
+              <p>{selected.title} is a lobby category. This site does not store a thumbnail for it, so the chip cannot show a cover.</p>
+              <Link className="btn btn-line" href={categoryPath(selected.slug)}>Open {selected.title}</Link>
+            </>
+          ) : (
+            <>
+              <p>No cover title or studio matches that search.</p>
+              <button type="button" className="btn btn-line" onClick={() => { setQuery(""); setCategory("all"); setVisible(PAGE); }}>Show the full catalog</button>
+            </>
+          )}
         </div>
       ) : (
         <div className="game-grid">
