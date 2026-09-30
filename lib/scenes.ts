@@ -3,27 +3,27 @@ export type Scene = { src: string; alt: string };
 export const categoryScenes: Record<string, Scene> = {
   slots: {
     src: "/images/brand/scene-slots.webp",
-    alt: "A black gaming monitor showing one online slot game in gold light",
+    alt: "Gates of Olympus on a display in a dark private room",
   },
   "live-casino": {
     src: "/images/brand/scene-live.webp",
-    alt: "A black gaming monitor showing an online baccarat table",
+    alt: "Playtech baccarat key art of a dealer holding cards",
   },
   sports: {
     src: "/images/brand/scene-sports.webp",
-    alt: "A black gaming monitor showing a dark sportsbook of blank match cards",
+    alt: "A worn football on a night pitch under warm stadium lights",
   },
   lottery: {
     src: "/images/brand/scene-lottery.webp",
-    alt: "A black gaming monitor showing four empty 4D selection wells",
+    alt: "An empty brass lottery cage in a single warm light",
   },
   fishing: {
     src: "/images/brand/scene-fishing.webp",
-    alt: "A black gaming monitor showing an online fishing scene without scores",
+    alt: "A koi crossing a gold light shaft beside a submerged arch",
   },
   esports: {
     src: "/images/brand/scene-esports.webp",
-    alt: "A black gaming desk with a headset and an online arena on the monitor",
+    alt: "Hands on a keyboard lit by warm gold light",
   },
 };
 
@@ -57,31 +57,31 @@ export const guideScenes: Record<string, Scene> = {
   },
   Games: {
     src: "/images/brand/scene-slots.webp",
-    alt: "A black gaming monitor showing one online slot game in gold light",
+    alt: "Gates of Olympus on a display in a dark private room",
   },
   Slots: {
     src: "/images/brand/scene-slots.webp",
-    alt: "A black gaming monitor showing one online slot game in gold light",
+    alt: "Gates of Olympus on a display in a dark private room",
   },
   "Live Casino": {
     src: "/images/brand/scene-live.webp",
-    alt: "A black gaming monitor showing an online baccarat table",
+    alt: "Playtech baccarat key art of a dealer holding cards",
   },
   Sports: {
     src: "/images/brand/scene-sports.webp",
-    alt: "A black gaming monitor showing a dark sportsbook of blank match cards",
+    alt: "A worn football on a night pitch under warm stadium lights",
   },
   Lottery: {
     src: "/images/brand/scene-lottery.webp",
-    alt: "A black gaming monitor showing four empty 4D selection wells",
+    alt: "An empty brass lottery cage in a single warm light",
   },
   Fishing: {
     src: "/images/brand/scene-fishing.webp",
-    alt: "A black gaming monitor showing an online fishing scene without scores",
+    alt: "A koi crossing a gold light shaft beside a submerged arch",
   },
   Esports: {
     src: "/images/brand/scene-esports.webp",
-    alt: "A black gaming desk with a headset and an online arena on the monitor",
+    alt: "Hands on a keyboard lit by warm gold light",
   },
   Promotions: {
     src: "/images/promotions/promo-welcome.webp",

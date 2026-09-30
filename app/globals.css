@@ -164,10 +164,25 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
   position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover;
   transition: transform 0.45s ease, filter 0.45s ease;
 }
-.cat-slots .cat-shade { background: linear-gradient(180deg, transparent 40%, rgba(5, 5, 5, 0.35) 58%, rgba(5, 5, 5, 0.94) 82%); }
+.cat-slots img { object-position: 36% 22%; }
+.cat-live img { object-position: center 22%; }
+.cat-sports img { object-position: left 46%; }
+.cat-lottery img { object-position: 72% center; }
+.cat-fishing img { object-position: center 40%; }
+.cat-esports img { object-position: center 42%; }
+.cat-slots .cat-shade {
+  background:
+    linear-gradient(180deg, transparent 40%, rgba(5, 5, 5, 0.72) 72%, rgba(5, 5, 5, 0.94) 100%),
+    linear-gradient(90deg, rgba(5, 5, 5, 0.86) 0%, rgba(5, 5, 5, 0.55) 28%, transparent 52%);
+}
+.cat-live .cat-shade {
+  background:
+    linear-gradient(180deg, transparent 46%, rgba(5, 5, 5, 0.9) 100%),
+    linear-gradient(90deg, rgba(5, 5, 5, 0.62) 0%, rgba(5, 5, 5, 0.2) 46%, transparent 70%);
+}
 .cat-shade {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(5, 5, 5, 0) 28%, rgba(5, 5, 5, 0.15) 52%, rgba(5, 5, 5, 0.92) 100%);
+  background: linear-gradient(180deg, transparent 52%, rgba(5, 5, 5, 0.82) 100%);
 }
 .cat-copy { position: relative; z-index: 1; padding: 18px; }
 .cat-copy h3 { margin: 0 0 4px; font-size: 1.35rem; letter-spacing: -0.03em; color: var(--text); transition: transform 0.25s ease; }
@@ -353,6 +368,12 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
 .page-hero { padding: 36px 0 8px; }
 .prose { max-width: none; }
 .prose p, .prose li { max-width: 68ch; }
+.page-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.55fr); gap: 36px; align-items: start; }
+.page-aside { position: sticky; top: calc(var(--header) + 16px); display: grid; gap: 12px; }
+.page-aside .panel p, .page-aside .panel li { max-width: none; }
+.callout { margin: 12px 0 0; padding: 12px 14px; border-left: 3px solid var(--accent); background: var(--surface); color: var(--text-2); max-width: 68ch; }
+.topic-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.topic-grid p, .topic-grid li { max-width: none; }
 .topic { margin-top: 32px; }
 .topic h2 { font-size: 1.35rem; letter-spacing: -0.03em; margin: 0 0 8px; }
 .topic p, .topic li { color: var(--text-2); }
@@ -399,9 +420,10 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
   .cat-showcase { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
   .cat-slots { grid-row: auto; grid-column: 1 / -1; min-height: 300px; }
   .cat-live, .cat-sports { min-height: 230px; }
-  .why, .promo-list, .split, .footer-grid { grid-template-columns: 1fr; }
+  .why, .promo-list, .split, .footer-grid, .page-grid, .topic-grid { grid-template-columns: 1fr; }
+  .page-aside { position: static; }
   .game-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .guide-grid, .info-grid { grid-template-columns: repeat(2, 1fr); }
+  .guide-grid, .info-grid, .topic-grid { grid-template-columns: repeat(2, 1fr); }
   .pay-grid { grid-template-columns: repeat(3, 1fr); }
   .cat-band { grid-template-columns: 1fr; }
   .band-link { border-right: 0; border-bottom: 1px solid var(--border); padding-left: 0; }
@@ -440,9 +462,15 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
   .cat-head-row { flex-direction: column; align-items: flex-start; }
   .cat-showcase, .cat-row { grid-template-columns: 1fr; }
   .cat-tile { min-height: 240px; }
+  .cat-slots { min-height: 380px; }
+  .cat-slots .cat-copy {
+    background: linear-gradient(180deg, transparent, rgba(5, 5, 5, 0.82) 42%);
+    max-width: 16rem;
+  }
   .promo-stage img, .scene-banner img { height: 220px; }
   .promo-copy { padding: 48px 16px 16px; }
   .promo-copy strong { font-size: 1.35rem; }
   .game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .topic-grid, .guide-grid, .info-grid { grid-template-columns: 1fr; }
   .section { padding: 64px 0; }
 }
