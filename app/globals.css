@@ -440,6 +440,9 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
 .hub-cta { padding: 28px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
 .hub-cta h2 { margin: 0; }
 .hub-cta p { margin: 10px 0 0; }
+.offer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.offer-listed { margin-top: 14px; }
+.offer-grid .promo h3 { font-size: 1.35rem; letter-spacing: -0.03em; }
 
 @media (max-width: 1024px) {
   .hero { min-height: min(86vh, 760px); }
@@ -456,7 +459,7 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
   .cat-showcase { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
   .cat-slots { grid-row: auto; grid-column: 1 / -1; min-height: 300px; }
   .cat-live, .cat-sports { min-height: 230px; }
-  .why, .promo-list, .split, .footer-grid, .page-grid, .topic-grid { grid-template-columns: 1fr; }
+  .why, .promo-list, .split, .footer-grid, .page-grid, .topic-grid, .offer-grid { grid-template-columns: 1fr; }
   .page-aside { position: static; }
   .game-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .guide-grid, .info-grid, .topic-grid { grid-template-columns: repeat(2, 1fr); }
