@@ -71,7 +71,7 @@ export function PromoSlider({ items }: { items: Slide[] }) {
           >
             <img
               src={item.image}
-              alt=""
+              alt={item.title}
               width={1280}
               height={720}
               fetchPriority={slide === 0 ? "high" : undefined}

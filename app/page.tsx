@@ -6,6 +6,7 @@ import { faqGroups, guides, homepagePromotions, payments } from "@/lib/content";
 import { PromoSlider } from "@/components/home/PromoSlider";
 import { categoryPath, featuredGames } from "@/lib/games";
 import { pageMeta } from "@/lib/seo";
+import { VisualSplit } from "@/components/content/VisualSplit";
 import { categoryScenes, guideScenes, pageScenes } from "@/lib/scenes";
 import { siteConfig } from "@/lib/site";
 
@@ -16,7 +17,24 @@ export const metadata: Metadata = pageMeta({
 });
 
 const featured = featuredGames().slice(0, 8);
-const homeFaq = faqGroups.flatMap((group) => group.items).slice(0, 5);
+const homeGuideSlugs = ["how-to-register", "how-to-start", "games-guide", "mobile-guide", "deposit-guide", "promotions-guide", "security-guide", "responsible-gaming-guide"];
+const homeGuides = homeGuideSlugs.flatMap((slug) => {
+  const guide = guides.find((item) => item.slug === slug);
+  return guide ? [guide] : [];
+});
+const homeFaqTitles = [
+  "How do I open an E9WIN account?",
+  "How do I sign in?",
+  "Where do I open a game?",
+  "Which payment methods are shown?",
+  "Do I have to install an app?",
+  "How do I claim a promotion?",
+  "How do I reach support?",
+];
+const homeFaq = homeFaqTitles.flatMap((question) => {
+  const item = faqGroups.flatMap((group) => group.items).find((entry) => entry.q === question);
+  return item ? [item] : [];
+});
 
 export default function HomePage() {
   const slides = homepagePromotions();
@@ -41,6 +59,17 @@ export default function HomePage() {
               <Link className="btn btn-ghost" href="/games">Explore games</Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <VisualSplit plain src="/images/brand/scene-slots.webp" alt="Gates of Olympus on a display in a dark private room">
+            <h2>What E9WIN is</h2>
+            <p>E9WIN is a Malaysia-facing gaming lobby. This website is the public guide to that lobby: the categories you can open, the payment marks that are published, and the support channels that are actually listed.</p>
+            <p>Stakes, paytables, and cashier limits stay in the player lobby after you sign in. The pages here explain the path. They do not reprint odds, bonus amounts, or a licence that the site has not published.</p>
+            <p><Link href="/about">About E9WIN</Link> · <Link href="/games">Games</Link> · <Link href="/faq">FAQ</Link></p>
+          </VisualSplit>
         </div>
       </section>
 
@@ -161,37 +190,42 @@ export default function HomePage() {
           <div>
             <h2>Why players open E9WIN</h2>
             <p className="lede">One lobby for slots, live tables, sports, lottery, and mobile play.</p>
+            <img src="/images/brand/scene-live.webp" alt="Playtech baccarat key art of a dealer holding cards" width={1600} height={760} loading="lazy" />
           </div>
           <ol>
-            <li><span className="num">01</span><div><strong>One catalog</strong>Slots, live tables, sports, lottery, fishing, and esports are described on the official pages.</div></li>
-            <li><span className="num">02</span><div><strong>Phone or browser</strong>Android download, iOS home screen, and a web lobby that does not need an install.</div></li>
-            <li><span className="num">03</span><div><strong>Local payments</strong>Malaysian banks, e-wallets, telco PIN, and USDT are shown on the payment strip.</div></li>
-            <li><span className="num">04</span><div><strong>People who can help</strong>WhatsApp, Facebook, and in-lobby chat are the support paths that are actually published.</div></li>
+            <li><span className="num">01</span><div><strong>One catalog</strong>Slots and live tables have public covers. Sports has live horse racing. 4D, fishing, and esports open in the lobby after you sign in, on their own pages.</div></li>
+            <li><span className="num">02</span><div><strong>Phone or browser</strong>The web lobby needs no install. iPhone uses Safari’s Add to Home Screen. Android uses the portal link on the download page. There is no store listing.</div></li>
+            <li><span className="num">03</span><div><strong>Local payments</strong>The strip shows Malaysian banks, Touch ’n Go, Boost, GrabPay, ShopeePay, and USDT. The cashier also offers instant transfer, telco PIN, and bank transfer. Limits are on that screen.</div></li>
+            <li><span className="num">04</span><div><strong>People who can help</strong>WhatsApp and Facebook are the public channels. In-lobby chat is available after sign-in. Send a username, not a password.</div></li>
           </ol>
         </div>
       </section>
 
       <section className="section" aria-labelledby="lobby-map">
-        <div className="container prose">
+        <div className="container">
+          <VisualSplit plain reverse src="/images/brand/scene-sports.webp" alt="A worn football on a night pitch under warm stadium lights">
           <h2 id="lobby-map">How the lobby is organised</h2>
           <p>Each category answers a different question. Use the page that matches what you want to open, then sign in when you are ready to play.</p>
-          <ul>
-            <li><Link href="/games/slots">Slots</Link> — video slot covers from Pragmatic Play and Lucky365.</li>
-            <li><Link href="/games/live-casino">Live casino</Link> — baccarat, roulette, sic bo, and other live covers.</li>
-            <li><Link href="/games/sports">Sports</Link> — horse racing in the catalog, football markets in the sportsbook.</li>
-            <li><Link href="/games/4d">4D lottery</Link> — Magnum, Da Ma Cai, Toto, and Singapore.</li>
-            <li><Link href="/games/fishing">Fishing</Link> — arcade titles after sign-in, not sea-themed slots.</li>
-            <li><Link href="/games/esports">Esports</Link> — markets with the sportsbook, no fixture list on this site.</li>
-          </ul>
-          <p>Payments, access, and the rewards desk are separate: <Link href="/payment-methods">payment methods</Link>, <Link href="/deposit">deposit</Link>, <Link href="/withdrawal">withdrawal</Link>, <Link href="/download">download</Link>, <Link href="/promotions">promotions</Link>, <Link href="/guides">guides</Link>.</p>
+          <div className="topic-grid">
+            <article className="panel"><h3><Link href="/games/slots">Slots</Link></h3><p>Video slot covers from Pragmatic Play and Lucky365. Rules and stake range are on the paytable inside the game.</p></article>
+            <article className="panel"><h3><Link href="/games/live-casino">Live casino</Link></h3><p>Evolution and Playtech covers for baccarat, roulette, sic bo, and other tables. VIP Baccarat is a table name, not membership.</p></article>
+            <article className="panel"><h3><Link href="/games/sports">Sports</Link></h3><p>Live horse racing has a cover. Football, including the World Cup and the Premier League, is named. Odds stay in the sportsbook.</p></article>
+            <article className="panel"><h3><Link href="/games/4d">4D lottery</Link></h3><p>Magnum, Da Ma Cai, Toto, and Singapore. Number selection opens in the lobby. Results are not reprinted here.</p></article>
+            <article className="panel"><h3><Link href="/games/fishing">Fishing</Link></h3><p>Arcade titles after sign-in. Great Blue and Dolphin Reef remain slots, so they are not used as fishing art.</p></article>
+            <article className="panel"><h3><Link href="/games/esports">Esports</Link></h3><p>Markets with the sportsbook. No fixture list, scores, or odds are stored on this site.</p></article>
+          </div>
+          <p>Payments, access, and the rewards desk are separate: <Link href="/payment-methods">payment methods</Link>, <Link href="/deposit">deposit</Link>, <Link href="/withdrawal">withdrawal</Link>, <Link href="/download">download</Link>, <Link href="/promotions">promotions</Link>, <Link href="/vip">VIP</Link>, <Link href="/guides">guides</Link>.</p>
+          </VisualSplit>
         </div>
       </section>
 
       <section className="section" aria-labelledby="mobile-play">
-        <div className="container prose">
+        <div className="container">
+          <VisualSplit plain src={pageScenes.download.src} alt={pageScenes.download.alt}>
           <h2 id="mobile-play">Play in the browser you already have</h2>
           <p>The lobby does not require a store app. On a phone, the same categories are available in the mobile site. An iPhone can add that site to the home screen from Safari. Android can use the portal download on the download page. A desktop browser is enough on Windows, Mac, and Linux.</p>
           <p>Reload the page to pick up the web lobby. E9WIN does not publish a device list or a manual patch. If the portal link fails, use <Link href="/contact">WhatsApp</Link> rather than a file from another site. The steps are in the <Link href="/guides/mobile-guide">mobile guide</Link> and the <Link href="/guides/how-to-download">download guide</Link>.</p>
+          </VisualSplit>
         </div>
       </section>
 
@@ -208,7 +242,7 @@ export default function HomePage() {
             <img src={pageScenes.vip.src} alt={pageScenes.vip.alt} width={1280} height={720} loading="lazy" />
             <p className="tag">VIP</p>
             <h2>A membership path, not a made-up ladder</h2>
-            <p>VIP sits with missions, rebates, and account notices. Tier details are shown in your account.</p>
+            <p>VIP is a membership label read in the lobby rewards area. Levels and cash figures are not published on this site.</p>
             <Link className="btn btn-ghost" href="/vip">Read VIP</Link>
           </article>
         </div>
@@ -227,10 +261,13 @@ export default function HomePage() {
             <p className="tag">How it works</p>
             <h2>Register, fund, play, withdraw</h2>
             <ol className="steps">
-              <li>Create an account with details you can verify.</li>
-              <li>Deposit by bank, e-wallet, telco PIN, or USDT.</li>
-              <li>Open a game from the lobby.</li>
-              <li>Request a withdrawal to a matching account.</li>
+              <li>Create an account with a name you can match to a payout.</li>
+              <li>Sign in. This site does not keep the session.</li>
+              <li>Browse a category, then open the title in the lobby.</li>
+              <li>Read a promotion card before you opt in.</li>
+              <li>Deposit with the cashier instruction for that attempt.</li>
+              <li>Request a withdrawal to an account in the same name.</li>
+              <li>Use WhatsApp or in-lobby chat if a step fails. Do not send the password.</li>
             </ol>
             <Link className="btn btn-line" href="/guides/how-to-register">Registration guide</Link>
           </article>
@@ -260,9 +297,9 @@ export default function HomePage() {
             <Link className="btn btn-line" href="/guides">Guide hub</Link>
           </div>
           <div className="guide-grid">
-            {guides.slice(0, 4).map((guide) => (
+            {homeGuides.map((guide) => (
               <Link className="guide-card" key={guide.slug} href={`/guides/${guide.slug}`}>
-                <img src={guideScenes[guide.category].src} alt="" width={1280} height={720} loading="lazy" />
+                <img src={guideScenes[guide.category].src} alt={guideScenes[guide.category].alt} width={1280} height={720} loading="lazy" />
                 <span className="guide-body">
                   <p className="tag">{guide.category}</p>
                   <h3>{guide.title}</h3>
@@ -287,6 +324,7 @@ export default function HomePage() {
             <Link className="btn btn-line" href="/faq">Full FAQ</Link>
           </div>
           <article className="panel">
+            <img className="still" src="/images/brand/scene-account.webp" alt="A quiet desk beside a night window" width={1600} height={760} loading="lazy" />
             <p className="tag">Responsible gaming</p>
             <h2>18+ and your own limits</h2>
             <p>E9WIN is for adults. Set a budget before you play, and stop when it is gone. Deposit limits and self-exclusion are described as account tools. Use them if the lobby offers them.</p>
@@ -296,13 +334,15 @@ export default function HomePage() {
       </section>
 
       <section className="section">
-        <div className="container panel">
+        <div className="container">
+          <VisualSplit plain reverse src="/images/promotions/promo-welcome.webp" alt="A dark entrance lit with gold">
           <h2>Open an account or talk to support</h2>
           <p>Register to reach the player lobby. For help, use WhatsApp or the Facebook page published by E9WIN.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="/register">Register now</Link>
             <a className="btn btn-ghost" href={siteConfig.support.whatsapp}>WhatsApp</a>
           </div>
+          </VisualSplit>
         </div>
       </section>
       <JsonLd data={{

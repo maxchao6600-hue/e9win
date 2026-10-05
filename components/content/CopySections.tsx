@@ -13,6 +13,12 @@ export function CopySections({ sections }: { sections: CopySection[] }) {
               {section.list.map((item) => <li key={item}>{item}</li>)}
             </ul>
           ) : null}
+          {section.steps ? (
+            <ol className="steps">
+              {section.steps.map((item) => <li key={item}>{item}</li>)}
+            </ol>
+          ) : null}
+          {section.note ? <p className="callout">{section.note}</p> : null}
         </section>
       ))}
     </>

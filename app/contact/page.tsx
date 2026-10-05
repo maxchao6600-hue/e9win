@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { VisualSplit } from "@/components/content/VisualSplit";
 import { FaqBlock, RelatedLinks } from "@/components/content/CopySections";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { pageMeta } from "@/lib/seo";
@@ -31,8 +32,18 @@ export default function ContactPage() {
   return (
     <div className="container page-hero">
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Contact" }]} />
-      <h1>Contact</h1>
-      <p>Public support is WhatsApp and Facebook. After you sign in, live chat is also in the lobby. No other contact is published here.</p>
+      <section className="hub-hero">
+        <div>
+          <p className="tag">Support</p>
+          <h1>Contact</h1>
+          <p>Public support is WhatsApp and Facebook. After you sign in, live chat is also in the lobby. No email address or phone number is published here.</p>
+          <div className="cta-row">
+            <a className="btn btn-primary" href={siteConfig.support.whatsapp}>Open WhatsApp</a>
+            <a className="btn btn-line" href={siteConfig.support.facebook}>Facebook</a>
+          </div>
+        </div>
+        <img src="/images/brand/scene-account.webp" alt="A quiet desk beside a night window" width={1600} height={760} />
+      </section>
       <div className="split section">
         <article className="panel">
           <h2>WhatsApp</h2>
@@ -55,6 +66,11 @@ export default function ContactPage() {
         ))}
       </div>
       <div className="prose section">
+      <VisualSplit src="/images/brand/scene-payments.webp" alt="A card and a phone on a dark cashier counter" reverse>
+        <h2>What to include</h2>
+        <p>Send the username and a short description of the page or cashier step. For a payment, include the amount and the reference from the receipt. Do not include the password.</p>
+        <p>Account questions can start from <Link href="/guides/security-guide">account safety</Link>. Payment questions can start from <Link href="/payment-methods">payment methods</Link>. Promotion questions belong on the <Link href="/promotions">promotions</Link> card, then here if the card and the account disagree.</p>
+      </VisualSplit>
         <FaqBlock items={faq} />
         <section className="topic">
           <h2>Related</h2>

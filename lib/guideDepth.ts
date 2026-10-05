@@ -171,4 +171,70 @@ export const guideDepth: Record<string, Depth> = {
     trouble: [{ q: "I cannot find a limit switch on this website.", a: "Look in the lobby account tools, or ask WhatsApp support. This page does not toggle the account." }],
     faq: [{ q: "Does this page give medical advice?", a: "No. It explains how to pause and where to ask. Use a counselling service you trust." }],
   },
+  "how-to-start": {
+    covers: ["One account", "Where play actually starts", "What this website cannot accept"],
+    notes: [
+      "The register and login forms on this site check fields in the browser. The player lobby is where the account and the cashier continue.",
+      "Pick the category that matches the product. A sea-themed slot is still a slot. 4D, fishing, and esports open after sign-in.",
+    ],
+    mistakes: [
+      "Depositing before you know which category you are opening.",
+      "Opening a second account because the first login failed.",
+    ],
+    trouble: [
+      { q: "I registered but I am not inside a game.", a: "This website does not launch stakes. Continue in the player lobby and open the title there." },
+    ],
+    faq: [
+      { q: "Do I need the Android file to start?", a: "No. The browser lobby is enough. Android and the iPhone home-screen icon are optional access paths." },
+    ],
+  },
+  "android-guide": {
+    covers: ["Portal link", "What not to install", "Signing in afterwards"],
+    notes: [
+      "The download page links to the player portal. That is the Android path described on this site. A Google Play listing is not part of it.",
+    ],
+    mistakes: [
+      "Installing an APK that arrived in a message.",
+      "Treating the portal file as an App Store product.",
+    ],
+    trouble: [
+      { q: "The portal will not open.", a: "Reload on a current Chrome build. If it still fails, use WhatsApp and the username. Do not search for a replacement file." },
+    ],
+    faq: [
+      { q: "Is the portal file a published store app?", a: "No store listing is documented. Use only the portal action on the download page." },
+    ],
+  },
+  "iphone-guide": {
+    covers: ["Safari", "Home-screen shortcut", "Staying in the browser"],
+    notes: [
+      "Add to Home Screen creates a shortcut to the web lobby. It does not install a separate E9WIN binary, and there is no App Store listing to compare it with.",
+    ],
+    mistakes: [
+      "Looking for E9WIN in the App Store.",
+      "Adding the icon from a page that is not the E9WIN site.",
+    ],
+    trouble: [
+      { q: "Share does not show Add to Home Screen.", a: "Use Safari. The download page describes that path, not a file install." },
+    ],
+    faq: [
+      { q: "Will the icon update the lobby?", a: "The web lobby updates when you load it. The icon opens that site." },
+    ],
+  },
+  "payment-guide": {
+    covers: ["Name match", "One-time cashier instructions", "Friend credit versus withdrawal"],
+    notes: [
+      "Limits, fees, and processing times are not printed on this website. The cashier shows the limits for the method you pick.",
+      "A chat message with an account number is not a substitute for the cashier instruction.",
+    ],
+    mistakes: [
+      "Reusing a screenshot from an older deposit.",
+      "Withdrawing to a name that does not match the profile.",
+    ],
+    trouble: [
+      { q: "I paid but the wallet did not move.", a: "Compare the amount and reference with the receipt, then message support with the username. Do not send the password." },
+    ],
+    faq: [
+      { q: "Which banks are on the strip?", a: "Maybank, CIMB, Public Bank, RHB, Hong Leong, AmBank, and BSN, plus Touch 'n Go, Boost, GrabPay, ShopeePay, and USDT." },
+    ],
+  },
 };

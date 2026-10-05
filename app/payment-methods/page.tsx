@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { CopySections, FaqBlock, RelatedLinks } from "@/components/content/CopySections";
+import { AnchoredSections } from "@/components/content/AnchoredSections";
+import { FaqBlock, RelatedLinks } from "@/components/content/CopySections";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { depositMethods, payments } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
@@ -22,8 +23,18 @@ export default function PaymentMethodsPage() {
   return (
     <div className="container page-hero">
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Payment methods" }]} />
-      <h1>Payment methods</h1>
-      <p>These are the payment marks published with E9WIN. The cashier is where you pick one, copy the instruction, and later request a withdrawal to a matching name.</p>
+      <section className="hub-hero">
+        <div>
+          <p className="tag">Payments</p>
+          <h1>Payment methods</h1>
+          <p>These are the payment marks published with E9WIN. The cashier is where you pick one, copy the instruction, and later request a withdrawal to a matching name.</p>
+          <div className="cta-row">
+            <Link className="btn btn-primary" href="/deposit">Deposit</Link>
+            <Link className="btn btn-line" href="/withdrawal">Withdrawal</Link>
+          </div>
+        </div>
+        <img src="/images/brand/scene-payments.webp" alt="A card and a phone on a dark cashier counter" width={1600} height={760} />
+      </section>
       <div className="pay-grid section">
         {payments.map((item) => (
           <div className="pay" key={item.id}><img src={item.image} alt={item.name} /></div>
@@ -35,7 +46,7 @@ export default function PaymentMethodsPage() {
         ))}
       </div>
       <div className="prose section">
-        <CopySections sections={[
+        <AnchoredSections sections={[
           {
             title: "Banks",
             paragraphs: [
@@ -61,11 +72,27 @@ export default function PaymentMethodsPage() {
             ],
           },
           {
+            title: "Failed deposit",
+            paragraphs: [
+              "A deposit that does not appear should be checked against the receipt: amount, time, and reference. Message WhatsApp with the username. Do not send a second payment to a different account number from a chat.",
+            ],
+          },
+          {
+            title: "Pending withdrawal",
+            paragraphs: [
+              "A withdrawal can wait on a name check, a missing profile step, or turnover printed on an active promotion card. No processing time is published. Read the withdrawal history before you submit another request.",
+            ],
+          },
+          {
             title: "When something stalls",
             paragraphs: [
               "Compare the amount and reference with the receipt, then message WhatsApp support with the username. Do not send the password.",
             ],
           },
+        ]} scenes={[
+          { src: "/images/brand/scene-account.webp", alt: "A quiet desk beside a night window" },
+          { src: "/images/brand/scene-devices.webp", alt: "A phone and a laptop on a dark marble desk" },
+          { src: "/images/promotions/promo-welcome.webp", alt: "A dark entrance lit with gold" },
         ]} />
         <FaqBlock items={faq} />
         <section className="topic">

@@ -34,6 +34,7 @@ export const extraGuides: Guide[] = [
       "Leave the table when the session stops being the stake you planned.",
     ],
     related: [
+      { href: "/games", label: "Games hub" },
       { href: "/games/live-casino", label: "Live casino" },
       { href: "/vip", label: "VIP" },
       { href: "/guides/how-to-login", label: "How to login" },
@@ -53,6 +54,7 @@ export const extraGuides: Guide[] = [
       "Esports is a separate category beside the sportsbook.",
     ],
     related: [
+      { href: "/games", label: "Games hub" },
       { href: "/games/sports", label: "Sports" },
       { href: "/games/esports", label: "Esports" },
       { href: "/responsible-gaming", label: "Responsible gaming" },
@@ -90,6 +92,7 @@ export const extraGuides: Guide[] = [
       "Use mobile web or the download path if you are on a phone.",
     ],
     related: [
+      { href: "/games", label: "Games hub" },
       { href: "/games/fishing", label: "Fishing" },
       { href: "/games/slots", label: "Slots" },
       { href: "/download", label: "Download" },
@@ -108,6 +111,7 @@ export const extraGuides: Guide[] = [
       "If you wanted football or racing, use the sports page instead.",
     ],
     related: [
+      { href: "/games", label: "Games hub" },
       { href: "/games/esports", label: "Esports" },
       { href: "/games/sports", label: "Sports" },
       { href: "/guides/sports-guide", label: "Sports guide" },
@@ -168,6 +172,80 @@ export const extraGuides: Guide[] = [
       { href: "/responsible-gaming", label: "Responsible gaming" },
       { href: "/deposit", label: "Deposit" },
       { href: "/contact", label: "Contact" },
+    ],
+  },
+  {
+    slug: "how-to-start",
+    title: "How to start playing",
+    excerpt: "Register, open the lobby, pick a category, and read the stake screen before the first bet.",
+    category: "Games",
+    updatedAt: "2026-09-27",
+    steps: [
+      "Create one account with a name that matches the bank or e-wallet you will use later.",
+      "Sign in through the player lobby. This website does not keep a session.",
+      "Open Games and choose slots, live casino, sports, 4D, fishing, or esports.",
+      "Read the paytable, table limits, or market on that screen. This site does not reprint them.",
+      "Deposit only after you have decided the amount, using the cashier instruction for that attempt.",
+    ],
+    related: [
+      { href: "/guides/how-to-register", label: "How to register" },
+      { href: "/games", label: "Games" },
+      { href: "/deposit", label: "Deposit" },
+    ],
+  },
+  {
+    slug: "android-guide",
+    title: "Android access",
+    excerpt: "Open the player portal from the download page. There is no Google Play listing to follow.",
+    category: "Download",
+    updatedAt: "2026-09-27",
+    steps: [
+      "On the download page, use the Android action. It opens the player portal.",
+      "Install only the file that portal gives you. Do not use an APK from a search result or a chat.",
+      "Open the lobby and sign in with the username you registered.",
+      "If the portal link fails, message WhatsApp support. Do not switch to another download site.",
+    ],
+    related: [
+      { href: "/download", label: "Download" },
+      { href: "/guides/iphone-guide", label: "iPhone access" },
+      { href: "/guides/mobile-guide", label: "Mobile guide" },
+    ],
+  },
+  {
+    slug: "iphone-guide",
+    title: "iPhone access",
+    excerpt: "Use Safari, then Add to Home Screen. E9WIN does not publish an App Store listing.",
+    category: "Download",
+    updatedAt: "2026-09-27",
+    steps: [
+      "Open the E9WIN site in Safari. Other browsers on iPhone may not offer Add to Home Screen the same way.",
+      "Tap Share, then Add to Home Screen, and confirm the icon.",
+      "Open the icon and sign in. The shortcut is the web lobby, not a separate app binary.",
+      "You can also stay in the Safari tab without adding an icon.",
+    ],
+    related: [
+      { href: "/download", label: "Download" },
+      { href: "/guides/android-guide", label: "Android access" },
+      { href: "/guides/how-to-login", label: "How to login" },
+    ],
+  },
+  {
+    slug: "payment-guide",
+    title: "How to choose a payment method",
+    excerpt: "Match the cashier method to the account you control, then follow the instruction on that attempt.",
+    category: "Payments",
+    updatedAt: "2026-09-27",
+    steps: [
+      "Open the cashier after you sign in. The methods on the public strip are banks, e-wallets, telco PIN, and USDT.",
+      "For a bank or e-wallet, use an account in the same name as the profile.",
+      "Copy the account, reference, wallet address, or PIN instruction shown for that attempt.",
+      "Friend credit moves balance between player accounts. It is not a bank withdrawal.",
+      "Keep the receipt until the wallet updates, then use the withdrawal guide when you cash out.",
+    ],
+    related: [
+      { href: "/payment-methods", label: "Payment methods" },
+      { href: "/guides/deposit-guide", label: "Deposit guide" },
+      { href: "/guides/withdrawal-guide", label: "Withdrawal guide" },
     ],
   },
 ];

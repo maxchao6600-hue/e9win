@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { CopySections, FaqBlock, RelatedLinks } from "@/components/content/CopySections";
+import { AnchoredSections } from "@/components/content/AnchoredSections";
+import { FaqBlock, RelatedLinks } from "@/components/content/CopySections";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { depositMethods, payments } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
 
@@ -11,12 +13,27 @@ export const metadata: Metadata = pageMeta({
   path: "/deposit",
 });
 
+const faq = [
+  { q: "Is a minimum deposit listed?", a: "No. The cashier shows the limits for the method you pick." },
+  { q: "How long does a deposit take?", a: "A time is not guaranteed. It depends on the method." },
+];
+
 export default function DepositPage() {
   return (
     <div className="container page-hero">
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Deposit" }]} />
-      <h1>Deposit</h1>
-      <p>The cashier covers instant transfer, e-wallet, telco PIN, bank transfer, USDT, and sending credit to a friend.</p>
+      <section className="hub-hero">
+        <div>
+          <p className="tag">Cashier</p>
+          <h1>Deposit</h1>
+          <p>The cashier covers instant transfer, e-wallet, telco PIN, bank transfer, USDT, and sending credit to a friend. Limits and timing stay on the screen for that attempt.</p>
+          <div className="cta-row">
+            <Link className="btn btn-primary" href="/login">Sign in</Link>
+            <Link className="btn btn-line" href="/payment-methods">Payment methods</Link>
+          </div>
+        </div>
+        <img src="/images/brand/scene-payments.webp" alt="A card and a phone on a dark cashier counter" width={1600} height={760} />
+      </section>
       <div className="pay-grid section">
         {payments.map((item) => (
           <div className="pay" key={item.id}><img src={item.image} alt={item.name} /></div>
@@ -38,13 +55,20 @@ export default function DepositPage() {
         <p>Processing time is not published as a guarantee. See the <Link href="/guides/deposit-guide">deposit guide</Link> or <Link href="/contact">contact support</Link>.</p>
       </div>
       <div className="prose">
-        <CopySections sections={[
+        <AnchoredSections sections={[
           {
             title: "Banks and e-wallets",
             paragraphs: [
               "The marks on this page are the published set: Maybank, CIMB, Public Bank, RHB, Hong Leong, AmBank, BSN, Touch 'n Go, Boost, GrabPay, ShopeePay, and USDT.",
               "Instant transfer, manual bank transfer, telco PIN, and credit to a friend are cashier paths. The accepted PIN brands and the USDT network are shown in the cashier, not guessed here.",
             ],
+          },
+          {
+            title: "Choosing a method",
+            paragraphs: [
+              "Use a bank or e-wallet you already control, in the same name as the profile. Telco PIN and USDT are also cashier paths. Friend credit moves balance to another player account and is not a deposit from a bank.",
+            ],
+            note: "Fees, minimums, and processing times are not published on this page. The cashier shows the limits for the method you select.",
           },
           {
             title: "If the credit is missing",
@@ -58,22 +82,32 @@ export default function DepositPage() {
               "The instruction on the cashier at the moment you pay is the one that counts. A screenshot from last month can be wrong. Withdrawals are a separate page and must match the profile name.",
             ],
           },
+        ]} scenes={[
+          { src: "/images/brand/scene-account.webp", alt: "A quiet desk beside a night window" },
+          { src: "/images/brand/scene-slots.webp", alt: "Gates of Olympus on a display in a dark private room" },
         ]} />
-        <FaqBlock items={[
-          { q: "Is a minimum deposit listed?", a: "No. The cashier shows the limits for the method you pick." },
-          { q: "How long does a deposit take?", a: "A time is not guaranteed. It depends on the method." },
-        ]} />
+        <FaqBlock items={faq} />
         <section className="topic">
           <h2>Related</h2>
           <RelatedLinks links={[
             { href: "/payment-methods", label: "Payment methods" },
             { href: "/withdrawal", label: "Withdrawal" },
+            { href: "/guides/payment-guide", label: "How to choose a payment method" },
             { href: "/guides/deposit-guide", label: "Deposit guide" },
             { href: "/guides/withdrawal-guide", label: "Withdrawal guide" },
             { href: "/responsible-gaming", label: "Responsible gaming" },
           ]} />
         </section>
       </div>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: { "@type": "Answer", text: item.a },
+        })),
+      }} />
     </div>
   );
 }

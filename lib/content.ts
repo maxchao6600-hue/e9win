@@ -171,6 +171,7 @@ const coreGuides: Guide[] = [
       "Use a current version of Chrome or Safari and a stable connection.",
     ],
     related: [
+      { href: "/games", label: "Games hub" },
       { href: "/download", label: "Download" },
       { href: "/guides/how-to-login", label: "How to login" },
     ],
@@ -285,13 +286,37 @@ export type FaqGroup = { id: string; title: string; items: FaqItem[] };
 
 export const faqGroups: FaqGroup[] = [
   {
-    id: "account",
-    title: "Account",
+    id: "general",
+    title: "General",
+    items: [
+      {
+        q: "What is this website for?",
+        a: "It explains the E9WIN lobby: games, payments, promotions, and how to reach support. Stakes are placed in the player lobby, not on these pages.",
+      },
+      {
+        q: "Which games are on E9WIN?",
+        a: "The lobby includes slots and live tables from Pragmatic Play, Evolution, Playtech, and Lucky365, plus sports, 4D lottery, fishing, and esports.",
+      },
+    ],
+  },
+  {
+    id: "registration",
+    title: "Registration",
     items: [
       {
         q: "How do I open an E9WIN account?",
         a: "Use the register form, then continue in the player portal. Provide a real name, mobile number, and login you can verify later.",
       },
+      {
+        q: "Does this website store my registration?",
+        a: "The form checks the fields in your browser and does not create a session here. The player lobby is where the account continues.",
+      },
+    ],
+  },
+  {
+    id: "login",
+    title: "Login",
+    items: [
       {
         q: "How do I sign in?",
         a: "Enter the username and password from registration. Play continues in the E9WIN lobby.",
@@ -307,12 +332,12 @@ export const faqGroups: FaqGroup[] = [
     title: "Games",
     items: [
       {
-        q: "Which games are on E9WIN?",
-        a: "The lobby includes slots and live tables from Pragmatic Play, Evolution, Playtech, and Lucky365, plus sports, 4D lottery, fishing, and esports.",
+        q: "Where do I open a game?",
+        a: "Browse covers on the games pages, then launch the title in the lobby after you sign in. Fishing, 4D, and esports have no public thumbnail grid.",
       },
       {
         q: "Can I play on a phone?",
-        a: "Yes. Use mobile web, add the site to the iPhone home screen, or download on Android from the official download link.",
+        a: "Yes. Use mobile web, add the site to the iPhone home screen, or use the Android portal link on the download page. Store listings are not part of that path.",
       },
     ],
   },
@@ -339,8 +364,42 @@ export const faqGroups: FaqGroup[] = [
         a: "Published marks include Maybank, CIMB, Public Bank, RHB, Hong Leong, AmBank, BSN, Touch 'n Go, Boost, GrabPay, ShopeePay, and USDT. The cashier also lists instant transfer, telco PIN, and bank transfer.",
       },
       {
+        q: "What if a deposit does not appear?",
+        a: "Compare the amount and reference with the receipt, then message WhatsApp support with the username. Do not pay an account number that arrived in chat.",
+      },
+    ],
+  },
+  {
+    id: "withdrawals",
+    title: "Withdrawals",
+    items: [
+      {
         q: "How long does a withdrawal take?",
         a: "The platform does not publish a guaranteed time. It depends on the method and any account checks. Confirm the status in the withdrawal history.",
+      },
+      {
+        q: "Which name can receive a withdrawal?",
+        a: "Use a bank or e-wallet in the same name as the profile. Friend credit is a transfer between player accounts, not a bank withdrawal.",
+      },
+    ],
+  },
+  {
+    id: "mobile",
+    title: "Mobile",
+    items: [
+      {
+        q: "Do I have to install an app?",
+        a: "No. The web lobby runs in the browser. Android can use the portal download. iPhone uses Safari, then Add to Home Screen.",
+      },
+    ],
+  },
+  {
+    id: "security",
+    title: "Security",
+    items: [
+      {
+        q: "Should I send my password to support?",
+        a: "No. Support can work from the username. Pay only the cashier instruction shown for that attempt.",
       },
     ],
   },
@@ -402,12 +461,18 @@ export const faqGroups: FaqGroup[] = [
   },
   {
     id: "sports",
-    title: "Sports and esports",
+    title: "Sports",
     items: [
       {
         q: "Why are there no odds on the sports page?",
         a: "Odds are not stored here. Live horse racing has a cover. Football, including the World Cup and the Premier League, is named and opens in the sportsbook.",
       },
+    ],
+  },
+  {
+    id: "esports",
+    title: "Esports",
+    items: [
       {
         q: "Where are esports fixtures?",
         a: "They are not listed on this site. Esports markets are offered with the sportsbook after you sign in.",

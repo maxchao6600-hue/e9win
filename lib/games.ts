@@ -48,7 +48,7 @@ export const categories: {
   },
   {
     slug: "lottery",
-    title: "Lottery",
+    title: "4D Lottery",
     short: "4D games including Magnum, Da Ma Cai, Toto, and Singapore.",
     description:
       "4D lottery covers Magnum, Da Ma Cai, Toto, and Singapore. Draw details open in the lobby.",

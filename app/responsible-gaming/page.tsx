@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { CopySections, FaqBlock, RelatedLinks } from "@/components/content/CopySections";
+import { AnchoredSections } from "@/components/content/AnchoredSections";
+import { VisualSplit } from "@/components/content/VisualSplit";
+import { FaqBlock, RelatedLinks } from "@/components/content/CopySections";
 import { pageMeta } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
@@ -15,18 +17,39 @@ export default function ResponsiblePage() {
   return (
     <div className="container page-hero prose">
       <Breadcrumbs items={[{ href: "/", label: "Home" }, { label: "Responsible gaming" }]} />
-      <h1>Responsible gaming</h1>
-      <p>E9WIN is for adults aged 18 and over. Gambling can be addictive. Only use money you can afford to lose, and treat play as entertainment.</p>
+      <section className="hub-hero">
+        <div>
+          <p className="tag">18+</p>
+          <h1>Responsible gaming</h1>
+          <p>E9WIN is for adults aged 18 and over. Gambling can be addictive. Only use money you can afford to lose, and treat play as entertainment.</p>
+        </div>
+        <img src="/images/brand/scene-account.webp" alt="A quiet desk beside a night window" width={1600} height={760} />
+      </section>
+      <section className="section prose">
       <h2>Keep control of the account</h2>
-      <ul className="steps">
+      <ul>
         <li>Set a budget before you deposit.</li>
         <li>Do not chase losses.</li>
         <li>Take breaks, and do not play when you are upset or drinking.</li>
         <li>The platform describes deposit limits and self-exclusion as account tools. Use them in the lobby if they are offered on your account.</li>
       </ul>
+      </section>
+      <VisualSplit src="/images/brand/scene-devices.webp" alt="A phone and a laptop on a dark marble desk" reverse>
       <h2>If play stops being fun</h2>
       <p>Stop depositing and message support on <a href={siteConfig.support.whatsapp}>WhatsApp</a> to ask about account limits. For personal help in Malaysia, contact a local counselling service you trust.</p>
-      <CopySections sections={[
+      </VisualSplit>
+      <AnchoredSections sections={[
+        {
+          title: "Set the limit before the session",
+          paragraphs: [
+            "Decide the amount, then stop when it is gone. A new deposit to recover a loss in the same session is the behaviour this page is asking you to avoid.",
+          ],
+          list: [
+            "Keep play separate from rent, food, and money you cannot lose.",
+            "Take a break when you are upset or drinking.",
+            "Do not borrow to continue a session.",
+          ],
+        },
         {
           title: "What gambling can do",
           paragraphs: [
@@ -51,6 +74,9 @@ export default function ResponsiblePage() {
             "For personal support in Malaysia, use a counselling service you trust. Befrienders is a listening service with a public site at befrienders.org.my. This page does not provide therapy and does not claim a treatment outcome.",
           ],
         },
+      ]} scenes={[
+        { src: "/images/brand/scene-payments.webp", alt: "A card and a phone on a dark cashier counter" },
+        { src: "/images/promotions/promo-welcome.webp", alt: "A dark entrance lit with gold" },
       ]} />
       <FaqBlock items={[
         { q: "Is E9WIN for under 18s?", a: "No. The platform is for adults aged 18 and over." },
