@@ -6,6 +6,7 @@ export function VisualSplit({
   reverse = false,
   id,
   plain = false,
+  position,
   children,
 }: {
   src: string;
@@ -13,10 +14,11 @@ export function VisualSplit({
   reverse?: boolean;
   id?: string;
   plain?: boolean;
+  position?: string;
   children: ReactNode;
 }) {
   const className = `${plain ? "hub-split" : "section hub-split"}${reverse ? " reverse" : ""}`;
-  const image = <img src={src} alt={alt} width={1600} height={760} loading="lazy" />;
+  const image = <img src={src} alt={alt} width={1600} height={760} loading="lazy" style={position ? { objectPosition: position } : undefined} />;
   const copy = <div className="prose">{children}</div>;
   if (plain) {
     return (

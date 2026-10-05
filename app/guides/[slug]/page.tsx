@@ -8,7 +8,7 @@ import { VisualSplit } from "@/components/content/VisualSplit";
 import { guideBySlug, guides } from "@/lib/content";
 import { guideDepth } from "@/lib/guideDepth";
 import { hubForSlug } from "@/lib/guideHub";
-import { guideScenes } from "@/lib/scenes";
+import { guideStepVisuals, guideVisuals } from "@/lib/guideVisuals";
 import { absoluteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -33,7 +33,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const guide = guideBySlug(slug);
   if (!guide) notFound();
   const depth = guideDepth[guide.slug];
-  const scene = guideScenes[guide.category];
+  const scene = guideVisuals[guide.slug];
+  const stepsScene = guideStepVisuals[guide.slug] ?? scene;
   const hub = hubForSlug(guide.slug);
   return (
     <div className="container page-hero">
@@ -49,7 +50,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <h1>{guide.title}</h1>
           <p>{guide.excerpt}</p>
         </div>
-        {scene ? <img src={scene.src} alt={scene.alt} width={1600} height={760} /> : null}
+        {scene ? <img src={scene.src} alt={scene.alt} width={1600} height={900} style={{ objectPosition: scene.position }} /> : null}
       </section>
       {depth ? (
         <section className="topic">
@@ -57,11 +58,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <ul>{depth.covers.map((item) => <li key={item}>{item}</li>)}</ul>
         </section>
       ) : null}
-      <VisualSplit
-        src={guide.category === "Download" ? "/images/brand/scene-slots.webp" : guide.category === "Payments" ? "/images/brand/scene-account.webp" : "/images/brand/scene-devices.webp"}
-        alt={guide.category === "Download" ? "Gates of Olympus on a display in a dark private room" : guide.category === "Payments" ? "A quiet desk beside a night window" : "A phone and a laptop on a dark marble desk"}
-        reverse
-      >
+      <VisualSplit src={stepsScene.src} alt={stepsScene.alt} position={stepsScene.position} reverse>
         <h2>Steps</h2>
         <ol className="steps">{guide.steps.map((step) => <li key={step}>{step}</li>)}</ol>
       </VisualSplit>

@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { VisualSplit } from "@/components/content/VisualSplit";
 import { guides, faqGroups } from "@/lib/content";
 import { guideHubs } from "@/lib/guideHub";
-import { guideScenes } from "@/lib/scenes";
+import { guideVisuals } from "@/lib/guideVisuals";
 import { pageMeta } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
@@ -62,8 +62,8 @@ export default function GuidesPage() {
         </div>
         <div className="guide-grid">
           {featuredGuides.map((guide) => (
-            <Link className="guide-card" key={guide.slug} href={`/guides/${guide.slug}`}>
-              <img src={guideScenes[guide.category].src} alt={guideScenes[guide.category].alt} width={1280} height={720} loading="lazy" />
+            <Link className="guide-card guide-shot" key={guide.slug} href={`/guides/${guide.slug}`}>
+              <img src={guideVisuals[guide.slug].src} alt={guideVisuals[guide.slug].alt} width={1600} height={900} loading="lazy" style={{ objectPosition: guideVisuals[guide.slug].position }} />
               <span className="guide-body">
                 <p className="tag">{guide.category}</p>
                 <h3>{guide.title}</h3>
@@ -79,8 +79,8 @@ export default function GuidesPage() {
           <h2 id={group.id}>{group.title}</h2>
           <div className="guide-grid">
             {group.items.map((guide) => (
-              <Link className="guide-card" key={guide.slug} href={`/guides/${guide.slug}`}>
-                <img src={guideScenes[guide.category].src} alt={guideScenes[guide.category].alt} width={1280} height={720} loading="lazy" />
+              <Link className="guide-card guide-shot" key={guide.slug} href={`/guides/${guide.slug}`}>
+                <img src={guideVisuals[guide.slug].src} alt={guideVisuals[guide.slug].alt} width={1600} height={900} loading="lazy" style={{ objectPosition: guideVisuals[guide.slug].position }} />
                 <span className="guide-body">
                   <p className="tag">{guide.category}</p>
                   <h3>{guide.title}</h3>

@@ -276,6 +276,7 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
 .guide-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
 .panel-scene, .promo { overflow: hidden; }
 .guide-card > img { width: 100%; max-width: none; height: 148px; object-fit: cover; display: block; }
+.guide-shot > img { height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; }
 .guide-body { display: block; padding: 18px 22px 22px; }
 .panel-scene > img, .promo-art {
   width: calc(100% + 44px);
