@@ -440,7 +440,8 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
 .hub-cta { padding: 28px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
 .hub-cta h2 { margin: 0; }
 .hub-cta p { margin: 10px 0 0; }
-.offer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.offer-grid, .access-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.access-grid .btn { margin-top: 16px; }
 .offer-listed { margin-top: 14px; }
 .offer-grid .promo h3 { font-size: 1.35rem; letter-spacing: -0.03em; }
 
@@ -510,6 +511,6 @@ h1 { font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: 0.9; letter-spacing: -0
   .promo-copy { padding: 48px 16px 16px; }
   .promo-copy strong { font-size: 1.35rem; }
   .game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .topic-grid, .guide-grid, .info-grid { grid-template-columns: 1fr; }
+  .topic-grid, .guide-grid, .info-grid, .access-grid { grid-template-columns: 1fr; }
   .section { padding: 64px 0; }
 }
