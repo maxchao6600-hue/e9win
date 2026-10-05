@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { FaqBlock } from "@/components/content/CopySections";
+import { VisualSplit } from "@/components/content/VisualSplit";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { guideBySlug } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
@@ -107,7 +108,7 @@ export default function AgentPage() {
         <p>This is not a job offer. Support confirms whether the path can be enabled on your account and what the current terms are. Read those terms before you treat the path as open.</p>
       </section>
 
-      <section className="section prose" id="journey">
+      <VisualSplit src="/images/brand/scene-account.webp" alt="A quiet desk beside a night window" id="journey">
         <h2>How the E9WIN Agent journey works</h2>
         <p>The steps below are the ones this site describes. Approval is not automatic. Nothing here starts the path by itself.</p>
         <ol className="steps">
@@ -120,7 +121,7 @@ export default function AgentPage() {
           <li>Top-up and withdrawal for the network use the same cashier as a player account.</li>
           <li>Send account-specific problems to official support. Do not collect passwords.</li>
         </ol>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>E9WIN Agent responsibilities</h2>
@@ -175,18 +176,18 @@ export default function AgentPage() {
         </ul>
       </section>
 
-      <section className="section prose">
+      <VisualSplit src="/images/promotions/promo-referral.webp" alt="Referral campaign artwork" reverse>
         <h2>How agent promotion and referral works</h2>
         <p>The published chain is short. Support enables the path. You copy the link under Share in the profile. A friend registers through that link. That registration is how this site describes a downline player. Commission follows their play, on the rate in the setup.</p>
         <p>Someone who registers without that link is not described here as your downline. This page does not promise that every visit is attributed.</p>
         <p>The promotions list also names a player invite campaign. After login, the same profile share area can provide a referral link for that campaign, and the reward on the invite card stays on the card. Agent commission is the setup support confirms. Do not treat the invite card as the agent rate, or the agent rate as a public bonus.</p>
-      </section>
+      </VisualSplit>
 
-      <section className="section prose">
+      <VisualSplit src="/images/brand/scene-payments.webp" alt="A card and a phone on a dark cashier counter">
         <h2>Agent tracking and account management</h2>
         <p>Tracking on the public site is the Share link in the lobby profile, and only after support has enabled the path. The link is not printed on this page. If you cannot see Share, sign in to the lobby first.</p>
         <p>This website does not include an agent dashboard. It does not show a commission balance, a player count, a conversion figure, or a payout history. If the setup includes reporting, support is the place to ask what that reporting shows. Network top-up and withdrawal use the same cashier flow as a player account.</p>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>E9WIN Agent support</h2>
@@ -194,13 +195,13 @@ export default function AgentPage() {
         <p>Those channels are the right place for an application, a question about the rate, a missing Share link, and a player who cannot sign in or cannot see a deposit. Send the username. Leave the password out. The <Link href="/faq">FAQ</Link> covers the shorter public answers.</p>
       </section>
 
-      <section className="section prose">
+      <VisualSplit src="/images/brand/scene-slots.webp" alt="Gates of Olympus on a display in a dark private room">
         <h2>Promoting E9WIN games</h2>
         <p>Agents use the same public catalog as everyone else. Setup does not publish a private game list, a different stake rule, or a commission attached to one title. Covers, categories, and the lobby are the sources. Point people at the games hub and let the game show its own rules.</p>
         <p>
-          <Link href="/games">Games hub</Link>, <Link href="/games/slots">slots</Link>, <Link href="/games/live-casino">live casino</Link>, <Link href="/games/sports">sports</Link>, <Link href="/games/4d">4D</Link>, <Link href="/games/fishing">fishing</Link>, and <Link href="/games/esports">esports</Link>.
+          <Link href="/games">Games hub</Link>, <Link href="/games/slots">slots</Link>, <Link href="/games/live-casino">live casino</Link>, <Link href="/games/sports">sports</Link>, <Link href="/games/4d">4D</Link>, <Link href="/games/fishing">fishing</Link>, and           <Link href="/games/esports">esports</Link>.
         </p>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>Agents and E9WIN promotions</h2>
@@ -208,10 +209,10 @@ export default function AgentPage() {
         <p>The player invite campaign is one of those cards. Its reward stays on the card. It is not an agent commission table, and this page does not add an agent-only promotion.</p>
       </section>
 
-      <section className="section prose">
+      <VisualSplit src="/images/brand/scene-vip.webp" alt="A private lounge with velvet seating and gold light" reverse>
         <h2>Agents and E9WIN VIP</h2>
         <p>Agent setup and VIP membership are different labels. VIP is explained on the <Link href="/vip">VIP</Link> page: a notice in the rewards area, with no public level ladder and no cash figure. Asking for agent setup does not publish VIP status. A friend who registers through your link is not described as a VIP member because of that registration.</p>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>Responsible E9WIN promotion</h2>
@@ -308,14 +309,14 @@ export default function AgentPage() {
         </div>
       </section>
 
-      <section className="section hub-cta">
+      <VisualSplit src="/images/brand/scene-agent.webp" alt="A gallery desk overlooking a gaming floor">
         <h2>Interested in becoming an E9WIN Agent?</h2>
         <p>Ask support for setup, then read the rate in that reply before you share a link.</p>
         <div className="cta-row">
           <Link className="btn btn-primary" href="/contact">Contact E9WIN</Link>
           <Link className="btn btn-line" href="#program">Explore agent information</Link>
         </div>
-      </section>
+      </VisualSplit>
 
       <JsonLd data={{
         "@context": "https://schema.org",

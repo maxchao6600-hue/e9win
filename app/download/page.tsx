@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { FaqBlock } from "@/components/content/CopySections";
+import { VisualSplit } from "@/components/content/VisualSplit";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { guideBySlug } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
@@ -171,7 +172,7 @@ export default function DownloadPage() {
         </div>
       </section>
 
-      <section className="section prose" id="android">
+      <VisualSplit src="/images/brand/scene-devices.webp" alt="A phone and a laptop on a dark marble desk" id="android">
         <h2>E9WIN on Android</h2>
         <p>Android access on this site is the player-portal link. The button opens that portal. What you do next is whatever that destination shows: an access screen, a file, or both. This page does not publish a package name, a version number, a file size, or a minimum Android version.</p>
         <p>Treat the portal as the source. If you install a file, it should be the file that portal gave you on this visit. An APK from a search result or a private message is not that link. A Google Play listing is not part of this path.</p>
@@ -180,7 +181,7 @@ export default function DownloadPage() {
           {androidSteps.map((step) => <li key={step}>{step}</li>)}
         </ol>
         <p><a href={siteConfig.playerPortal}>Open the player portal</a>. If it fails, use <Link href="/contact">contact</Link> or <a href={siteConfig.support.whatsapp}>WhatsApp</a>.</p>
-      </section>
+      </VisualSplit>
 
       <section className="section prose" id="iphone">
         <h2>E9WIN on iPhone</h2>
@@ -198,11 +199,11 @@ export default function DownloadPage() {
         <p>From there you can open <Link href="/games">games</Link>, read <Link href="/promotions">promotions</Link>, and use <Link href="/login">login</Link> or <Link href="/register">register</Link> if you still need an account. The cashier and the game rules sit inside the lobby, not on this marketing page.</p>
       </section>
 
-      <section className="section prose" id="desktop">
+      <VisualSplit src="/images/brand/scene-account.webp" alt="A quiet desk beside a night window" reverse id="desktop">
         <h2>Access E9WIN on desktop</h2>
         <p>Windows, Mac, and Linux can open the lobby in a current browser. Browser access does not require a separate desktop program. There is no Windows application and no Mac application in the documented path.</p>
         <p>Use the same username you use on the phone. A desktop session and a phone session are the same account when the username matches.</p>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>Which E9WIN access method fits your device?</h2>
@@ -277,14 +278,14 @@ export default function DownloadPage() {
         <p>New accounts start at <Link href="/register">register</Link>. If the password is rejected, use recovery inside the lobby. This page cannot see the password and will not ask you to type it here.</p>
       </section>
 
-      <section className="section prose">
+      <VisualSplit src="/images/brand/scene-slots.webp" alt="Gates of Olympus on a display in a dark private room">
         <h2>Play E9WIN games on mobile</h2>
         <p>Once the lobby is open, the game categories are the ones published on the games hub. Covers for slots and live tables can be reviewed on the phone. Sports, 4D, fishing, and esports open in the lobby as well. Stake rules stay inside the game.</p>
         <p>Nothing here says a specific title is certified for a specific handset. If a game does not load, try a reload and the other named browser, then ask support with the username and the game name.</p>
         <p>
-          <Link href="/games">Games hub</Link>, <Link href="/games/slots">slots</Link>, <Link href="/games/live-casino">live casino</Link>, <Link href="/games/sports">sports</Link>, <Link href="/games/4d">4D</Link>, <Link href="/games/fishing">fishing</Link>, and <Link href="/games/esports">esports</Link>.
+          <Link href="/games">Games hub</Link>, <Link href="/games/slots">slots</Link>, <Link href="/games/live-casino">live casino</Link>, <Link href="/games/sports">sports</Link>, <Link href="/games/4d">4D</Link>, <Link href="/games/fishing">fishing</Link>, and           <Link href="/games/esports">esports</Link>.
         </p>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>Access E9WIN promotions on mobile</h2>
@@ -292,11 +293,11 @@ export default function DownloadPage() {
         <p>This download page does not add a mobile-only campaign, a mobile bonus, or a code.</p>
       </section>
 
-      <section className="section prose">
+      <VisualSplit src="/images/brand/scene-payments.webp" alt="A card and a phone on a dark cashier counter" reverse>
         <h2>Payments and account access on mobile</h2>
         <p>Deposit and withdrawal start in the lobby cashier, on the phone or on a desktop browser. The public pages describe method types that include bank transfer, e-wallet, telco PIN, and USDT. The screen you are paying on is the one that shows the account name, the reference, and any limit for that attempt.</p>
         <p>Read <Link href="/payment-methods">payment methods</Link>, <Link href="/deposit">deposit</Link>, and <Link href="/withdrawal">withdrawal</Link> before you move money. Those pages do not change because you opened them on a phone.</p>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>Use E9WIN without installing an app</h2>
@@ -383,14 +384,14 @@ export default function DownloadPage() {
         </div>
       </section>
 
-      <section className="section hub-cta">
+      <VisualSplit src="/images/promotions/promo-welcome.webp" alt="A dark entrance lit with gold">
         <h2>Access E9WIN your way</h2>
         <p>Choose the method for the device you have, and use the links on this page to reach the lobby.</p>
         <div className="cta-row">
           <Link className="btn btn-primary" href="#access">Access E9WIN</Link>
           <Link className="btn btn-line" href="/games">Explore games</Link>
         </div>
-      </section>
+      </VisualSplit>
 
       <JsonLd data={{
         "@context": "https://schema.org",

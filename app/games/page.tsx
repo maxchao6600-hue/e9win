@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { FaqBlock } from "@/components/content/CopySections";
+import { VisualSplit } from "@/components/content/VisualSplit";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { GameBrowser } from "@/components/games/GameBrowser";
 import { guideBySlug } from "@/lib/content";
@@ -105,7 +106,7 @@ export default function GamesPage() {
         </div>
         <div className="cat-showcase">
           <Link className="cat-tile cat-slots" href="/games/slots">
-            <img src={categoryScenes.slots.src} alt="" width={1680} height={945} />
+            <img src={categoryScenes.slots.src} alt={categoryScenes.slots.alt} width={1680} height={945} />
             <span className="cat-shade" />
             <span className="cat-copy">
               <h3>Slots</h3>
@@ -114,7 +115,7 @@ export default function GamesPage() {
             </span>
           </Link>
           <Link className="cat-tile cat-live" href="/games/live-casino">
-            <img src={categoryScenes["live-casino"].src} alt="" width={1600} height={760} />
+            <img src={categoryScenes["live-casino"].src} alt={categoryScenes["live-casino"].alt} width={1600} height={760} />
             <span className="cat-shade" />
             <span className="cat-copy">
               <h3>Live Casino</h3>
@@ -123,7 +124,7 @@ export default function GamesPage() {
             </span>
           </Link>
           <Link className="cat-tile cat-sports" href="/games/sports">
-            <img src={categoryScenes.sports.src} alt="" width={1600} height={760} />
+            <img src={categoryScenes.sports.src} alt={categoryScenes.sports.alt} width={1600} height={760} />
             <span className="cat-shade" />
             <span className="cat-copy">
               <h3>Sports</h3>
@@ -133,7 +134,7 @@ export default function GamesPage() {
           </Link>
           <div className="cat-row">
             <Link className="cat-tile cat-lottery" href="/games/4d">
-              <img src={categoryScenes.lottery.src} alt="" width={1400} height={760} />
+              <img src={categoryScenes.lottery.src} alt={categoryScenes.lottery.alt} width={1400} height={760} />
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>4D Lottery</h3>
@@ -142,7 +143,7 @@ export default function GamesPage() {
               </span>
             </Link>
             <Link className="cat-tile cat-fishing" href="/games/fishing">
-              <img src={categoryScenes.fishing.src} alt="" width={1400} height={760} />
+              <img src={categoryScenes.fishing.src} alt={categoryScenes.fishing.alt} width={1400} height={760} />
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>Fishing</h3>
@@ -151,7 +152,7 @@ export default function GamesPage() {
               </span>
             </Link>
             <Link className="cat-tile cat-esports" href="/games/esports">
-              <img src={categoryScenes.esports.src} alt="" width={1400} height={760} />
+              <img src={categoryScenes.esports.src} alt={categoryScenes.esports.alt} width={1400} height={760} />
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>Esports</h3>
@@ -246,7 +247,7 @@ export default function GamesPage() {
       </section>
 
       <section className="section hub-split" id="slots">
-        <img src={categoryScenes.slots.src} alt="" width={1680} height={945} style={{ objectPosition: "36% 22%" }} />
+        <img src={categoryScenes.slots.src} alt={categoryScenes.slots.alt} width={1680} height={945} style={{ objectPosition: "36% 22%" }} />
         <div className="prose">
           <h2>Online slots</h2>
           <p>An online slot is a video game with its own rules screen. On E9WIN, the public slot list is the set of covers on this site. Names under the art are the catalog titles, and the studio is printed with the cover.</p>
@@ -257,18 +258,18 @@ export default function GamesPage() {
       </section>
 
       <section className="section hub-split reverse" id="live-casino">
-        <img src={categoryScenes["live-casino"].src} alt="" width={1600} height={760} style={{ objectPosition: "center 22%" }} />
+        <img src={categoryScenes["live-casino"].src} alt={categoryScenes["live-casino"].alt} width={1600} height={760} style={{ objectPosition: "center 22%" }} />
         <div className="prose">
           <h2>Live casino</h2>
           <p>Live casino here means a table a studio is dealing, shown as a cover you can recognize before you join. The published covers are Evolution and Playtech. Titles in that set include baccarat, roulette, sic bo, dragon tiger, and game-show formats such as Mega Ball and Crazy Coin Flip.</p>
-          <p>The cover is the discovery step. The live round, the shoe, and the table limits are only on the table. VIP Baccarat is a Playtech table name. It is not the membership VIP page.</p>
+          <p>The cover is the discovery step. The live round, the shoe, and the table limits are only on the table. VIP Baccarat is a Playtech table name. Membership is explained on the <Link href="/vip">VIP page</Link>.</p>
           <p>You can review covers on a phone, then sign in to sit at the table. Nothing on this page is a result or a limit.</p>
           <p><Link href="/games/live-casino">Open live casino</Link> · <Link href="/guides/live-casino-guide">Live casino guide</Link></p>
         </div>
       </section>
 
       <section className="section hub-split" id="sports">
-        <img src={categoryScenes.sports.src} alt="" width={1600} height={760} style={{ objectPosition: "left 46%" }} />
+        <img src={categoryScenes.sports.src} alt={categoryScenes.sports.alt} width={1600} height={760} style={{ objectPosition: "left 46%" }} />
         <div className="prose">
           <h2>Sports</h2>
           <p>The sports category is the sportsbook, not a second slot lobby. The only sports cover stored with this site is live horse racing. Football is part of the category description: the World Cup and the Premier League are named. That naming is not a fixture list.</p>
@@ -279,7 +280,7 @@ export default function GamesPage() {
       </section>
 
       <section className="section hub-split reverse" id="lottery">
-        <img src={categoryScenes.lottery.src} alt="" width={1400} height={760} style={{ objectPosition: "72% center" }} />
+        <img src={categoryScenes.lottery.src} alt={categoryScenes.lottery.alt} width={1400} height={760} style={{ objectPosition: "72% center" }} />
         <div className="prose">
           <h2>4D lottery</h2>
           <p>4D on E9WIN is a numbers category. The operators named on the site are Magnum, Da Ma Cai, Toto, and Singapore. You pick the game in the lobby and enter digits there. This website does not keep a betting slip.</p>
@@ -290,7 +291,7 @@ export default function GamesPage() {
       </section>
 
       <section className="section hub-split" id="fishing">
-        <img src={categoryScenes.fishing.src} alt="" width={1400} height={760} style={{ objectPosition: "center 40%" }} />
+        <img src={categoryScenes.fishing.src} alt={categoryScenes.fishing.alt} width={1400} height={760} style={{ objectPosition: "center 40%" }} />
         <div className="prose">
           <h2>Fishing games</h2>
           <p>Fishing games are arcade titles. Credit is spent on shots inside the game, and the stake for that shot is shown in the game, not on this page. E9WIN lists fishing as its own category. The public catalog does not include fishing covers or fishing titles.</p>
@@ -301,7 +302,7 @@ export default function GamesPage() {
       </section>
 
       <section className="section hub-split reverse" id="esports">
-        <img src={categoryScenes.esports.src} alt="" width={1400} height={760} style={{ objectPosition: "center 42%" }} />
+        <img src={categoryScenes.esports.src} alt={categoryScenes.esports.alt} width={1400} height={760} style={{ objectPosition: "center 42%" }} />
         <div className="prose">
           <h2>Esports</h2>
           <p>Esports is a market category offered with the sportsbook. It is not a slot, and it is not the horse racing cover. This site does not store teams, tournaments, schedules, scores, or odds.</p>
@@ -310,7 +311,7 @@ export default function GamesPage() {
         </div>
       </section>
 
-      <section className="section prose">
+      <VisualSplit src="/images/games/gates-of-olympus.webp" alt="Gates of Olympus cover from the public catalog" reverse>
         <h2>How to find a game</h2>
         <p>Use the catalog when a cover exists. Use the category page when you need the product explained. Use the lobby when you are ready to open the client.</p>
         <ol className="steps">
@@ -320,7 +321,7 @@ export default function GamesPage() {
           <li>Read the name and studio under the cover. If there is no cover, follow the category page instead of guessing from a similar image.</li>
           <li>Sign in and continue into the lobby. The game client, the paytable, or the market is the next screen.</li>
         </ol>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>How to choose a game</h2>
@@ -345,7 +346,7 @@ export default function GamesPage() {
         </div>
       </section>
 
-      <section className="section prose">
+      <VisualSplit src="/images/brand/scene-payments.webp" alt="A card and a phone on a dark cashier counter">
         <h2>How to start playing</h2>
         <p>This site can show you the catalog and the category notes. It does not take a stake. The path from reading to play is the account and the lobby.</p>
         <ol className="steps">
@@ -356,7 +357,7 @@ export default function GamesPage() {
           <li>Launch the title in the lobby and read the stake screen before the first bet.</li>
         </ol>
         <p>Payments are a separate step. The <Link href="/payment-methods">payment methods</Link> page lists what the cashier shows. Amounts and timing stay on that cashier attempt.</p>
-      </section>
+      </VisualSplit>
 
       <section className="section hub-split">
         <img src="/images/brand/scene-devices.webp" alt="A phone and a laptop on a dark marble desk" width={1400} height={760} />
@@ -452,7 +453,7 @@ export default function GamesPage() {
             const scene = guideScenes[guide.category];
             return (
               <Link className="guide-card" href={`/guides/${guide.slug}`} key={guide.slug}>
-                {scene ? <img src={scene.src} alt="" width={640} height={360} /> : null}
+                {scene ? <img src={scene.src} alt={scene.alt} width={640} height={360} loading="lazy" /> : null}
                 <span className="guide-body">
                   <span className="tag">{guide.category}</span>
                   <h3>{guide.title}</h3>
@@ -486,7 +487,7 @@ export default function GamesPage() {
         </div>
       </section>
 
-      <section className="section hub-cta">
+      <VisualSplit src="/images/brand/hero-hall.webp" alt="A quiet luxury gaming hall in gold light" reverse>
         <h2>Explore the E9WIN game collection</h2>
         <p>Use the catalog for covers, the category pages for an explanation, and the lobby when you are ready to play.</p>
         <div className="cta-row">
@@ -494,7 +495,7 @@ export default function GamesPage() {
           <Link className="btn btn-line" href="/register">Register</Link>
           <Link className="btn btn-ghost" href="/contact">Contact</Link>
         </div>
-      </section>
+      </VisualSplit>
 
       <JsonLd data={{
         "@context": "https://schema.org",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { FaqBlock } from "@/components/content/CopySections";
+import { VisualSplit } from "@/components/content/VisualSplit";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { guideBySlug, promotions } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
@@ -85,13 +86,13 @@ export default function PromotionsPage() {
         <img src="/images/promotions/promo-welcome.webp" alt="Welcome campaign still used on the E9WIN promotions page" width={1280} height={720} />
       </section>
 
-      <section className="section prose">
+      <VisualSplit src="/images/promotions/promo-daily.webp" alt="Daily and extra slot campaign artwork" reverse>
         <h2>E9WIN promotions and offers</h2>
         <p>The promotions page is a directory of campaign names and short descriptions. It is not the cashier and it is not the opt-in button. A name here means the rewards desk has published that kind of campaign.</p>
         <p>Four of the names also sit in the homepage slider because they have stills: welcome, daily and extra slots, rebate, and invite friends. Birthday and missions stay in the list without that artwork.</p>
         <p>Availability can differ by account. The card in the account is where you see whether you can opt in, which products count, and any turnover that card prints. If this page and the card disagree, follow the card.</p>
         <p>Older campaign windows that were dated on the public site have closed. They are not relabelled as current offers, and this page does not reprint those percentages.</p>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>Explore E9WIN promotions</h2>
@@ -149,7 +150,7 @@ export default function PromotionsPage() {
         </ol>
       </section>
 
-      <section className="section prose" id="how">
+      <VisualSplit src="/images/brand/scene-account.webp" alt="A quiet desk beside a night window" id="how">
         <h2>How E9WIN promotions work</h2>
         <p>The path is the same shape for every named campaign, and the details are not. Discover the name here, review the description, check the card, participate only if the card matches, then complete whatever qualifying action that card states.</p>
         <ol className="steps">
@@ -161,9 +162,9 @@ export default function PromotionsPage() {
           <li>Use the result where the card says it applies. A withdrawal can wait while turnover on an open card is unfinished.</li>
         </ol>
         <p className="callout">Individual campaigns can differ. Nothing in this list is a percentage, a minimum deposit, or an expiry.</p>
-      </section>
+      </VisualSplit>
 
-      <section className="section prose">
+      <VisualSplit src="/images/brand/scene-payments.webp" alt="A card and a phone on a dark cashier counter">
         <h2>Promotion eligibility</h2>
         <p>Depending on the specific promotion, the card may mention account status, a product list, a payment or profile check, a turnover line, or a limit per person. Not every campaign uses every one of those.</p>
         <ul>
@@ -175,7 +176,7 @@ export default function PromotionsPage() {
           <li>A per-person limit, if the card states one.</li>
         </ul>
         <p>Birthday eligibility is confirmed after a date of birth is saved on the profile. Referral uses the share link in the profile after login.</p>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>Understanding promotion terms</h2>
@@ -191,7 +192,7 @@ export default function PromotionsPage() {
         <p>More context sits on the <Link href="/faq">FAQ</Link>, the <Link href="/responsible-gaming">responsible gaming</Link> page, and <Link href="/contact">contact</Link>. There is no separate terms URL per campaign. The card is the offer.</p>
       </section>
 
-      <section className="section prose" id="join">
+      <VisualSplit src="/images/promotions/promo-rebate.webp" alt="Rebate campaign artwork" reverse id="join">
         <h2>How to join an E9WIN promotion</h2>
         <p>Campaigns do not all use one button. Welcome, slot, rebate, and referral cards are reviewed in the account. Missions and redeem codes are entered in the lobby when a campaign is open. Birthday depends on the saved date of birth.</p>
         <ol className="steps">
@@ -203,9 +204,9 @@ export default function PromotionsPage() {
           <li>Complete any qualifying action the card names. A deposit, if one is required, follows the cashier instruction for that attempt.</li>
           <li>Check the account again for the result. This website does not show a live balance.</li>
         </ol>
-      </section>
+      </VisualSplit>
 
-      <section className="section prose">
+      <VisualSplit src="/images/brand/scene-slots.webp" alt="Gates of Olympus on a display in a dark private room">
         <h2>Promotions and E9WIN games</h2>
         <p>Some campaigns name a product. Welcome campaigns name slots, live casino, and sports. Daily and extra slot campaigns point at the slots desk. Rebate says the products that count are on the offer. Birthday, referral, and missions do not get a game list invented here.</p>
         <p>A slot campaign may not include live tables, sports, or 4D. Check the card before you assume a category counts. The <Link href="/games">games hub</Link> is where those categories are explained. It does not opt you into a campaign.</p>
@@ -222,7 +223,7 @@ export default function PromotionsPage() {
           {" · "}
           <Link href="/games/esports">Esports</Link>
         </p>
-      </section>
+      </VisualSplit>
 
       <section className="section prose">
         <h2>Promotions and your E9WIN account</h2>
@@ -293,7 +294,7 @@ export default function PromotionsPage() {
             const scene = guideScenes[guide.category];
             return (
               <Link className="guide-card" href={`/guides/${guide.slug}`} key={guide.slug}>
-                {scene ? <img src={scene.src} alt="" width={640} height={360} /> : null}
+                {scene ? <img src={scene.src} alt={scene.alt} width={640} height={360} loading="lazy" /> : null}
                 <span className="guide-body">
                   <span className="tag">{guide.category}</span>
                   <h3>{guide.title}</h3>
@@ -329,14 +330,14 @@ export default function PromotionsPage() {
         </div>
       </section>
 
-      <section className="section hub-cta">
+      <VisualSplit src="/images/promotions/promo-referral.webp" alt="Referral campaign artwork" reverse>
         <h2>Explore E9WIN promotions</h2>
         <p>Use this list to see which campaigns are named. Use the account card to see whether you can join.</p>
         <div className="cta-row">
           <Link className="btn btn-primary" href="#offers">View promotions</Link>
           <Link className="btn btn-line" href="/games">Explore games</Link>
         </div>
-      </section>
+      </VisualSplit>
 
       <JsonLd data={{
         "@context": "https://schema.org",
