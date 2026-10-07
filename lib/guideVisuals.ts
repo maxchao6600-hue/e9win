@@ -13,14 +13,14 @@ export const guideVisuals: Record<string, GuideVisual> = {
     position: "center 68%",
   },
   "how-to-login": {
-    src: "/images/brand/scene-esports.webp",
-    alt: "Hands on a keyboard",
-    position: "center 58%",
+    src: "/images/brand/scene-devices.webp",
+    alt: "A phone and a laptop on a dark marble desk",
+    position: "center 24%",
   },
   "how-to-start": {
     src: "/images/brand/hero-hall.webp",
     alt: "A gold-lit hall of gaming screens",
-    position: "center 42%",
+    position: "left 18%",
   },
   "games-guide": {
     src: "/images/brand/hero-hall.webp",
@@ -70,7 +70,7 @@ export const guideVisuals: Record<string, GuideVisual> = {
   "android-guide": {
     src: "/images/brand/scene-devices.webp",
     alt: "A phone and a laptop on a dark marble desk",
-    position: "center 62%",
+    position: "left 40%",
   },
   "iphone-guide": {
     src: "/images/brand/scene-devices.webp",
@@ -83,8 +83,8 @@ export const guideVisuals: Record<string, GuideVisual> = {
     position: "62% center",
   },
   "deposit-guide": {
-    src: "/images/promotions/promo-rebate.webp",
-    alt: "A stack of gold coins on a dark table",
+    src: "/images/brand/scene-payments.webp",
+    alt: "A card and a phone on a dark cashier counter",
     position: "center",
   },
   "withdrawal-guide": {
@@ -100,7 +100,7 @@ export const guideVisuals: Record<string, GuideVisual> = {
   "account-guide": {
     src: "/images/brand/scene-account.webp",
     alt: "A notebook on a quiet desk",
-    position: "center 68%",
+    position: "center 36%",
   },
   "security-guide": {
     src: "/images/brand/scene-agent.webp",

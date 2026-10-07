@@ -72,7 +72,7 @@ const zhFaq: Record<string, { title: string; items: { q: string; a: string }[] }
     items: [
       {
         q: "E9WIN 的支付方式如何运作？",
-        a: "收银台使用已公布的标识：Maybank、CIMB、Public Bank、RHB、Hong Leong、AmBank、BSN、Touch 'n Go、Boost、GrabPay、ShopeePay 和 USDT，以及即时转账、电信 PIN 和银行转账。你所选择方式的限额留在该页面上。",
+        a: "收银台使用已公布的标识：Maybank、CIMB、Public Bank、RHB、Hong Leong、AmBank、BSN、Touch 'n Go、Boost、GrabPay、ShopeePay 和 USDT，以及即时转账、电信 PIN 和银行转账。你所选择方式的限额会显示在该页面上。",
       },
       {
         q: "存款没有到账怎么办？",
@@ -186,7 +186,7 @@ const zhFaq: Record<string, { title: string; items: { q: string; a: string }[] }
     items: [
       {
         q: "列出了哪些 4D 游戏？",
-        a: "列出的游戏是 Magnum、Da Ma Cai、Toto 和 Singapore。开彩结果和号码输入留在大厅画面。",
+        a: "列出的游戏是 Magnum、Da Ma Cai、Toto 和 Singapore。选号及最新开奖结果会显示在游戏大厅内。",
       },
     ],
   },
@@ -204,7 +204,7 @@ const zhFaq: Record<string, { title: string; items: { q: string; a: string }[] }
     items: [
       {
         q: "E9WIN VIP 如何运作？",
-        a: "E9WIN VIP 是在大厅奖励区查看的会员标识。等级、积分和现金数字留在该账户通知上。",
+        a: "E9WIN VIP 是在游戏大厅奖励区查看的会员标识。等级、积分和现金数字会显示在该账户通知上。",
       },
     ],
   },

@@ -16,11 +16,11 @@ const homeDescription = "E9WIN is a Malaysia online gaming lobby for slots, live
 
 export function homeMetadata(locale: Locale): Metadata {
   return pageMeta({
-    title: tx(locale, "E9WIN Malaysia | Online Gaming, Games and Promotions", "E9WIN 马来西亚 | 在线游戏、游戏与优惠"),
+    title: tx(locale, "E9WIN Malaysia | Online Gaming, Games and Promotions", "E9WIN 马来西亚 | 线上游戏平台与优惠"),
     description: tx(
       locale,
       homeDescription,
-      "E9WIN 是面向马来西亚的在线游戏大厅，提供老虎机、真人娱乐场、体育、4D、捕鱼、电竞、优惠和手机游玩。",
+      "E9WIN 是面向马来西亚的线上游戏平台，提供老虎机、真人娱乐场、体育、4D、捕鱼、电竞、优惠和手机游玩。",
     ),
     path: localizePath("/", locale),
     locale,
@@ -114,7 +114,7 @@ export function HomeView({ locale }: { locale: Locale }) {
       q: t("How do E9WIN payments work?", "E9WIN 支付方式如何运作？"),
       a: t(
         "The cashier uses the published marks: Maybank, CIMB, Public Bank, RHB, Hong Leong, AmBank, BSN, Touch 'n Go, Boost, GrabPay, ShopeePay, and USDT, plus instant transfer, telco PIN, and bank transfer. Limits for the method you choose stay on that screen.",
-        "收银台使用已公布的标志：Maybank、CIMB、Public Bank、RHB、Hong Leong、AmBank、BSN、Touch 'n Go、Boost、GrabPay、ShopeePay 和 USDT，另有即时转账、电信 PIN 和银行转账。你所选方式的限额留在那个画面上。",
+        "收银台使用已公布的标志：Maybank、CIMB、Public Bank、RHB、Hong Leong、AmBank、BSN、Touch 'n Go、Boost、GrabPay、ShopeePay 和 USDT，另有即时转账、电信 PIN 和银行转账。你所选择方式的限额会显示在该页面上。",
       ),
     },
     {
@@ -237,7 +237,7 @@ export function HomeView({ locale }: { locale: Locale }) {
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>{t("E9WIN Sports", "E9WIN 体育")}</h3>
-                <p>{t("Preview live horse racing, then read football markets inside the sportsbook.", "先预览赛马，再在体育博彩里阅读足球盘口。")}</p>
+                <p>{t("Preview live horse racing, then read football markets inside the sportsbook.", "先预览赛马，再在体育博彩中查看足球盘口。")}</p>
                 <span className="cat-go">{t("Open", "打开")} <span aria-hidden="true">→</span></span>
               </span>
             </Link>
@@ -247,7 +247,7 @@ export function HomeView({ locale }: { locale: Locale }) {
                 <span className="cat-shade" />
                 <span className="cat-copy">
                   <h3>{t("E9WIN 4D", "E9WIN 4D")}</h3>
-                  <p>{t("Choose Magnum, Da Ma Cai, Toto, or Singapore. Draws open in the lobby.", "选择 Magnum（万能）、Da Ma Cai（大马彩）、Toto（多多）或 Singapore（新加坡）。开奖在游戏大厅打开。")}</p>
+                  <p>{t("Choose Magnum, Da Ma Cai, Toto, or Singapore. Draws open in the lobby.", "选择 Magnum（万能）、Da Ma Cai（大马彩）、Toto（多多）或 Singapore（新加坡）。最新开奖结果会显示在游戏大厅内。")}</p>
                   <span className="cat-go">{t("Open", "打开")} <span aria-hidden="true">→</span></span>
                 </span>
               </Link>
@@ -256,7 +256,7 @@ export function HomeView({ locale }: { locale: Locale }) {
                 <span className="cat-shade" />
                 <span className="cat-copy">
                   <h3>{t("E9WIN Fishing", "E9WIN 捕鱼")}</h3>
-                  <p>{t("Arcade fishing titles open after sign-in. Sea-themed slot covers stay in slots.", "街机捕鱼在登录后打开。海洋主题的老虎机封面仍留在老虎机。")}</p>
+                  <p>{t("Arcade fishing titles open after sign-in. Sea-themed slot covers stay in slots.", "登录后即可进入街机捕鱼。海洋主题的老虎机封面仍属于老虎机。")}</p>
                   <span className="cat-go">{t("Open", "打开")} <span aria-hidden="true">→</span></span>
                 </span>
               </Link>
@@ -265,7 +265,7 @@ export function HomeView({ locale }: { locale: Locale }) {
                 <span className="cat-shade" />
                 <span className="cat-copy">
                   <h3>{t("E9WIN Esports", "E9WIN 电竞")}</h3>
-                  <p>{t("Esports markets sit with the sportsbook and open after you sign in.", "电竞盘口和体育博彩放在一起，登录后打开。")}</p>
+                  <p>{t("Esports markets sit with the sportsbook and open after you sign in.", "电竞盘口与体育博彩放在一起，登录后即可查看。")}</p>
                   <span className="cat-go">{t("Open", "打开")} <span aria-hidden="true">→</span></span>
                 </span>
               </Link>
@@ -282,7 +282,7 @@ export function HomeView({ locale }: { locale: Locale }) {
               <h2 id="featured">{t("Featured games", "精选游戏")}</h2>
               <Link className="cat-all" href={href("/games")}>{t("View all games", "查看全部游戏")} <span aria-hidden="true">→</span></Link>
             </div>
-            <p>{t("A short list from the catalog. The full grid is on the games page.", "目录里的一小份名单。完整网格在游戏页。")}</p>
+            <p>{t("A short list from the catalog. The full grid is on the games page.", "这是目录中的一小部分。完整列表在游戏页。")}</p>
           </div>
           <div className="game-grid">
             {featured.map((game) => (
@@ -323,10 +323,10 @@ export function HomeView({ locale }: { locale: Locale }) {
             <div className="topic-grid">
               <article className="panel"><h3><Link href={href("/games/slots")}>{t("E9WIN Slots", "E9WIN 老虎机")}</Link></h3><p>{t("Video slot covers from Pragmatic Play and Lucky365. Rules and stake range are on the paytable inside the game.", "Pragmatic Play 和 Lucky365 的老虎机封面。规则和投注范围在游戏内的赔付表上。")}</p></article>
               <article className="panel"><h3><Link href={href("/games/live-casino")}>{t("E9WIN Live Casino", "E9WIN 真人娱乐场")}</Link></h3><p>{t("Evolution and Playtech covers for baccarat, roulette, sic bo, and other tables. VIP Baccarat is a table name. Membership is the separate VIP page.", "Evolution 和 Playtech 的百家乐、轮盘、骰宝和其他桌台封面。VIP Baccarat 是桌名。VIP会员是另一页。")}</p></article>
-              <article className="panel"><h3><Link href={href("/games/sports")}>{t("E9WIN Sports", "E9WIN 体育")}</Link></h3><p>{t("Live horse racing has a cover. Football, including the World Cup and the Premier League, is named. Current prices stay in the sportsbook.", "赛马有封面。足球有名称，包括世界杯和英超。当前价格留在体育博彩里。")}</p></article>
-              <article className="panel"><h3><Link href={href("/games/4d")}>{t("E9WIN 4D", "E9WIN 4D")}</Link></h3><p>{t("Magnum, Da Ma Cai, Toto, and Singapore. Number selection and results open in the lobby.", "Magnum（万能）、Da Ma Cai（大马彩）、Toto（多多）和 Singapore（新加坡）。选号和成绩在游戏大厅打开。")}</p></article>
-              <article className="panel"><h3><Link href={href("/games/fishing")}>{t("E9WIN Fishing", "E9WIN 捕鱼")}</Link></h3><p>{t("Arcade titles after sign-in. Great Blue and Dolphin Reef stay in the slots catalog.", "登录后的街机游戏。Great Blue 和 Dolphin Reef 留在老虎机目录。")}</p></article>
-              <article className="panel"><h3><Link href={href("/games/esports")}>{t("E9WIN Esports", "E9WIN 电竞")}</Link></h3><p>{t("Markets with the sportsbook. Fixtures and prices open after you sign in.", "盘口和体育博彩放在一起。赛程和价格在登录后打开。")}</p></article>
+              <article className="panel"><h3><Link href={href("/games/sports")}>{t("E9WIN Sports", "E9WIN 体育")}</Link></h3><p>{t("Live horse racing has a cover. Football, including the World Cup and the Premier League, is named. Current prices stay in the sportsbook.", "赛马有封面。足球有名称，包括世界杯和英超。当前价格会显示在体育博彩中。")}</p></article>
+              <article className="panel"><h3><Link href={href("/games/4d")}>{t("E9WIN 4D", "E9WIN 4D")}</Link></h3><p>{t("Magnum, Da Ma Cai, Toto, and Singapore. Number selection and results open in the lobby.", "Magnum（万能）、Da Ma Cai（大马彩）、Toto（多多）和 Singapore（新加坡）。选号和开奖结果会显示在游戏大厅内。")}</p></article>
+              <article className="panel"><h3><Link href={href("/games/fishing")}>{t("E9WIN Fishing", "E9WIN 捕鱼")}</Link></h3><p>{t("Arcade titles after sign-in. Great Blue and Dolphin Reef stay in the slots catalog.", "登录后即可进入街机捕鱼。Great Blue 和 Dolphin Reef 仍属于老虎机。")}</p></article>
+              <article className="panel"><h3><Link href={href("/games/esports")}>{t("E9WIN Esports", "E9WIN 电竞")}</Link></h3><p>{t("Markets with the sportsbook. Fixtures and prices open after you sign in.", "电竞盘口与体育博彩放在一起。登录后可查看赛程和价格。")}</p></article>
             </div>
             <p>
               {t("Payments, access, and the rewards desk are separate:", "支付、进入方式和奖励区是分开的：")}

@@ -39,7 +39,7 @@ const zhFaq = [
   },
   {
     q: "E9WIN 支付如何运作？",
-    a: "收银台使用已公布的标志：Maybank、CIMB、Public Bank、RHB、Hong Leong、AmBank、BSN、Touch 'n Go、Boost、GrabPay、ShopeePay 和 USDT，以及即时转账、电信 PIN 和银行转账。你所选方式的限额留在该画面上。",
+    a: "收银台使用已公布的标志：Maybank、CIMB、Public Bank、RHB、Hong Leong、AmBank、BSN、Touch 'n Go、Boost、GrabPay、ShopeePay 和 USDT，以及即时转账、电信 PIN 和银行转账。你所选择方式的限额会显示在该页面上。",
   },
 ];
 

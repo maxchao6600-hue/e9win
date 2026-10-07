@@ -145,7 +145,7 @@ export const zhGuides: Record<string, ZhGuide> = {
   },
   "lottery-guide": {
     title: "E9WIN 4D 指南",
-    excerpt: "已列名的 4D 是万能、大马彩、多多和新加坡。开奖留在大厅画面。",
+    excerpt: "已列名的 4D 是万能、大马彩、多多和新加坡。开奖结果会显示在游戏大厅内。",
     category: "4D",
     steps: [
       "打开 4D，选择四个已列名的游戏之一。",
@@ -170,7 +170,7 @@ export const zhGuides: Record<string, ZhGuide> = {
   },
   "esports-guide": {
     title: "E9WIN 电竞指南",
-    excerpt: "电竞盘口和体育博彩放在一起，登录后打开。",
+    excerpt: "电竞盘口与体育博彩放在一起，登录后即可查看。",
     category: "电竞",
     steps: [
       "打开电竞分类，确认它和赛马不是同一页。",

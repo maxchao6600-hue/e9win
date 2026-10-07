@@ -28,7 +28,7 @@ export function ResponsibleView({ locale }: { locale: Locale }) {
         <div>
           <p className="tag">18+</p>
           <h1>{t("Responsible gaming", "理性娱乐")}</h1>
-          <p>{t("E9WIN is for adults aged 18 and over. Gambling can be addictive. Only use money you can afford to lose, and treat play as entertainment.", "E9WIN 面向 18 岁及以上的成年人。博彩花费可能超出原来的计划。请只用可以承受损失的金额，并把游戏当作娱乐。")}</p>
+          <p>{t("E9WIN is for adults aged 18 and over. Gambling can be addictive. Only use money you can afford to lose, and treat play as entertainment.", "E9WIN 面向 18 岁及以上的成年人。游戏支出可能超出原来的计划。请只用可以承受损失的金额，并把游戏当作娱乐。")}</p>
         </div>
         <img src="/images/brand/scene-account.webp" alt={t("A quiet desk beside a night window", "夜窗旁安静的书桌")} width={1600} height={760} />
       </section>

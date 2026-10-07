@@ -151,12 +151,12 @@ export const zhCategoryCopy: Record<GameCategory, CategoryPageCopy> = {
     ],
   },
   sports: {
-    lead: "E9WIN 体育是公开目录里的体育博彩，加上现场赛马。足球，包括世界杯和英超，是为体育博彩列名的。当前盘口和价格在登录后打开。",
+    lead: "E9WIN 体育包含体育博彩和现场赛马。足球（包括世界杯和英超）已列入体育博彩。登录后即可查看当前盘口和价格。",
     sections: [
       {
         title: "已发布的内容",
         paragraphs: [
-          "现场赛马是目录里有画面的体育项目。其他盘口，包括足球，被说明为可用，并在登录后打开。",
+          "现场赛马是目录里有画面的体育项目。其他盘口（包括足球）在说明中列为可玩，登录后即可查看。",
           "这个网站不保存赔率、比分或开赛时间。如果某个数字不在体育博彩画面上，这一页就不能把它当成可以重复的事实。",
         ],
       },
@@ -265,12 +265,12 @@ export const zhCategoryCopy: Record<GameCategory, CategoryPageCopy> = {
       {
         title: "如果找不到 4D",
         paragraphs: [
-          "登录后打开彩票区域。这个主题的公开网址是 /games/4d。较早的 /games/lottery 地址显示同一页，并使用 4D 的规范网址。",
+          "登录后进入彩票区域。这个主题的公开网址是 /games/4d。较早的 /games/lottery 地址显示同一页，并使用 4D 的规范网址。",
         ],
       },
     ],
     faq: [
-      { q: "我可以在这里看到今天的开奖吗？", a: "开奖详情在你所选游戏的大厅里打开。" },
+      { q: "我可以在这里看到今天的开奖吗？", a: "开奖详情会显示在你所选游戏的游戏大厅里。" },
       { q: "哪些游戏有列名？", a: "Magnum、Da Ma Cai、Toto 和 Singapore，也就是万能、大马彩、多多和新加坡。" },
       { q: "有列出派彩表吗？", a: "投注额和投注类型在你打开的那款游戏的大厅画面上。" },
       { q: "/games/lottery 是另一个产品吗？", a: "不是。它是这个 4D 页面的较早地址。规范网址是 /games/4d。" },
@@ -282,13 +282,13 @@ export const zhCategoryCopy: Record<GameCategory, CategoryPageCopy> = {
     ],
   },
   fishing: {
-    lead: "E9WIN 捕鱼是大厅里的街机分类，和老虎机、真人桌并列。当前列表在登录后打开。",
+    lead: "E9WIN 捕鱼是游戏大厅里的街机分类，与老虎机、真人桌并列。登录后即可查看当前列表。",
     sections: [
       {
         title: "为什么没有游戏格子",
         paragraphs: [
           "Great Blue 或 Dolphin Reef 这类老虎机封面是老虎机，不是捕鱼游戏。它们不用作捕鱼画面。",
-          "捕鱼列表在登录后显示。规则和投注在每一款游戏上。",
+          "捕鱼列表登录后即可查看。规则和投注在每一款游戏上。",
         ],
       },
       {
@@ -347,7 +347,7 @@ export const zhCategoryCopy: Record<GameCategory, CategoryPageCopy> = {
     ],
   },
   esports: {
-    lead: "E9WIN 电竞和体育博彩放在一起。当前盘口在登录后打开。",
+    lead: "E9WIN 电竞与体育博彩放在一起。登录后即可查看当前盘口。",
     sections: [
       {
         title: "已发布的内容",
@@ -413,10 +413,10 @@ export function presentCategory(slug: GameCategory, locale: Locale): CategoryPag
 export const zhCategoryDescriptions: Record<GameCategory, string> = {
   slots: "E9WIN 老虎机汇集 Pragmatic Play、Playtech 和 Lucky365 的公开老虎机目录。打开封面后，在大厅里阅读赔付表。",
   "live-casino": "E9WIN 真人娱乐场列出 Evolution 和 Playtech 的百家乐、轮盘、骰宝、龙虎和游戏节目。",
-  sports: "E9WIN 体育涵盖体育博彩和现场赛马。足球有列名，包括世界杯和英超。当前盘口在登录后打开。",
-  lottery: "E9WIN 4D 列名 Magnum、Da Ma Cai、Toto 和 Singapore，也就是万能、大马彩、多多和新加坡。选号和开奖详情在大厅里打开。",
-  fishing: "E9WIN 捕鱼是大厅里的街机捕鱼分类。当前游戏列表在登录后打开。",
-  esports: "E9WIN 电竞放在体育博彩旁边。当前盘口在登录后的大厅里打开。",
+  sports: "E9WIN 体育涵盖体育博彩和现场赛马。足球已列名，包括世界杯和英超。登录后即可查看当前盘口。",
+  lottery: "E9WIN 4D 列名 Magnum、Da Ma Cai、Toto 和 Singapore，也就是万能、大马彩、多多和新加坡。选号和开奖详情会显示在游戏大厅内。",
+  fishing: "E9WIN 捕鱼是游戏大厅里的街机捕鱼分类。登录后即可查看当前游戏列表。",
+  esports: "E9WIN 电竞与体育博彩放在一起。登录后即可在游戏大厅查看当前盘口。",
 };
 
 export const zhCategoryH1: Record<GameCategory, string> = {

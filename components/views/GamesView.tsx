@@ -127,7 +127,7 @@ export function GamesView({ locale }: { locale: Locale }) {
     },
     {
       q: t("How does the live casino section work?", "真人娱乐场这一区如何运作？"),
-      a: t("A cover identifies the table. The dealer, the current round, and the table limits stay on the live screen.", "封面用来认出桌台。荷官、当前局和桌限留在真人画面上。"),
+      a: t("A cover identifies the table. The dealer, the current round, and the table limits stay on the live screen.", "封面用来辨认桌台。荷官、当前局数和桌台限额会显示在真人画面上。"),
     },
     {
       q: t("Where can I access sports?", "在哪里进入体育？"),
@@ -143,7 +143,7 @@ export function GamesView({ locale }: { locale: Locale }) {
     },
     {
       q: t("Which 4D operators are listed?", "列出了哪些 4D 经营者？"),
-      a: t("The named games are Magnum, Da Ma Cai, Toto, and Singapore. Draw results and payout tables stay on the lobby screen.", "已列名的游戏是 Magnum（万能）、Da Ma Cai（大马彩）、Toto（多多）和 Singapore（新加坡）。开奖结果和派彩表留在游戏大厅画面上。"),
+      a: t("The named games are Magnum, Da Ma Cai, Toto, and Singapore. Draw results and payout tables stay on the lobby screen.", "已列名的游戏是 Magnum（万能）、Da Ma Cai（大马彩）、Toto（多多）和 Singapore（新加坡）。开奖结果和派彩表会显示在游戏大厅内。"),
     },
     {
       q: t("Can I access games on mobile?", "可以在手机上进入游戏吗？"),
@@ -163,7 +163,7 @@ export function GamesView({ locale }: { locale: Locale }) {
         <div>
           <p className="tag">{t("Games hub", "游戏页")}</p>
           <h1>{t("E9WIN Games", "E9WIN 游戏")}</h1>
-          <p>{t("E9WIN games cover slots, live casino, sports, 4D, fishing, and esports. Covers on this page are for discovery. A title opens in the lobby after you sign in.", "E9WIN 游戏包括老虎机、真人娱乐场、体育、4D、捕鱼和电竞。本页封面用来查找。登录后，游戏在游戏大厅打开。")}</p>
+          <p>{t("E9WIN games cover slots, live casino, sports, 4D, fishing, and esports. Covers on this page are for discovery. A title opens in the lobby after you sign in.", "E9WIN 游戏包括老虎机、真人娱乐场、体育、4D、捕鱼和电竞。本页可先浏览游戏封面与分类，登录后即可进入游戏大厅开启对应游戏。")}</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="#catalog">{t("Browse the catalog", "浏览目录")}</Link>
             <Link className="btn btn-line" href={href("/register")}>{t("Register", "注册")}</Link>
@@ -202,7 +202,7 @@ export function GamesView({ locale }: { locale: Locale }) {
             <span className="cat-shade" />
             <span className="cat-copy">
               <h3>{t("E9WIN Slots", "E9WIN 老虎机")}</h3>
-              <p>{t("Video slot covers from Pragmatic Play and Lucky365. The paytable stays inside the game.", "Pragmatic Play 和 Lucky365 的老虎机封面。赔付表留在游戏里。")}</p>
+              <p>{t("Video slot covers from Pragmatic Play and Lucky365. The paytable stays inside the game.", "Pragmatic Play 和 Lucky365 的老虎机封面。赔付表会显示在游戏内。")}</p>
               <span className="cat-go">{t("Open", "打开")}</span>
             </span>
           </Link>
@@ -211,7 +211,7 @@ export function GamesView({ locale }: { locale: Locale }) {
             <span className="cat-shade" />
             <span className="cat-copy">
               <h3>{t("E9WIN Live Casino", "E9WIN 真人娱乐场")}</h3>
-              <p>{t("Evolution and Playtech tables, including baccarat, roulette, and sic bo. Limits stay on the table.", "Evolution 和 Playtech 桌台，包括百家乐、轮盘和骰宝。限额留在桌面上。")}</p>
+              <p>{t("Evolution and Playtech tables, including baccarat, roulette, and sic bo. Limits stay on the table.", "Evolution 和 Playtech 的百家乐、轮盘、骰宝等桌台。限额会显示在桌台上。")}</p>
               <span className="cat-go">{t("Open", "打开")}</span>
             </span>
           </Link>
@@ -220,7 +220,7 @@ export function GamesView({ locale }: { locale: Locale }) {
             <span className="cat-shade" />
             <span className="cat-copy">
               <h3>{t("E9WIN Sports", "E9WIN 体育")}</h3>
-              <p>{t("Live horse racing has a cover. Football markets, including the World Cup and the Premier League, are read in the sportsbook.", "赛马有封面。足球盘口，包括世界杯和英超，在体育博彩里阅读。")}</p>
+              <p>{t("Live horse racing has a cover. Football markets, including the World Cup and the Premier League, are read in the sportsbook.", "赛马有封面。足球盘口（包括世界杯和英超）可在体育博彩中查看。")}</p>
               <span className="cat-go">{t("Open", "打开")}</span>
             </span>
           </Link>
@@ -230,7 +230,7 @@ export function GamesView({ locale }: { locale: Locale }) {
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>{t("E9WIN 4D Lottery", "E9WIN 4D")}</h3>
-                <p>{t("Magnum, Da Ma Cai, Toto, and Singapore. Number entry and draw results stay in the lobby.", "Magnum（万能）、Da Ma Cai（大马彩）、Toto（多多）和 Singapore（新加坡）。输入号码和开奖结果留在游戏大厅。")}</p>
+                <p>{t("Magnum, Da Ma Cai, Toto, and Singapore. Number entry and draw results stay in the lobby.", "Magnum（万能）、Da Ma Cai（大马彩）、Toto（多多）和 Singapore（新加坡）。选号及最新开奖结果会显示在游戏大厅内。")}</p>
                 <span className="cat-go">{t("Open", "打开")}</span>
               </span>
             </Link>
@@ -239,7 +239,7 @@ export function GamesView({ locale }: { locale: Locale }) {
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>{t("E9WIN Fishing", "E9WIN 捕鱼")}</h3>
-                <p>{t("Arcade fishing opens after sign-in. Great Blue and Dolphin Reef stay in the slots catalog.", "街机捕鱼在登录后打开。Great Blue 和 Dolphin Reef 留在老虎机目录。")}</p>
+                <p>{t("Arcade fishing opens after sign-in. Great Blue and Dolphin Reef stay in the slots catalog.", "登录后即可进入街机捕鱼。Great Blue 和 Dolphin Reef 仍属于老虎机。")}</p>
                 <span className="cat-go">{t("Open", "打开")}</span>
               </span>
             </Link>
@@ -248,7 +248,7 @@ export function GamesView({ locale }: { locale: Locale }) {
               <span className="cat-shade" />
               <span className="cat-copy">
                 <h3>{t("E9WIN Esports", "E9WIN 电竞")}</h3>
-                <p>{t("Markets beside the sportsbook. Teams, tournaments, and prices open after you sign in.", "盘口在体育博彩旁边。队伍、赛事和价格在登录后打开。")}</p>
+                <p>{t("Markets beside the sportsbook. Teams, tournaments, and prices open after you sign in.", "电竞盘口与体育博彩放在一起。登录后可查看队伍、赛事和价格。")}</p>
                 <span className="cat-go">{t("Open", "打开")}</span>
               </span>
             </Link>
@@ -261,7 +261,7 @@ export function GamesView({ locale }: { locale: Locale }) {
           <div>
             <p className="tag">{t("Catalog", "目录")}</p>
             <h2 id="selected-heading">{t("Selected from the catalog", "从目录中选出")}</h2>
-            <p>{t("These titles are marked in the public data. The mark is not a ranking, a jackpot, or a player count.", "这些名称在公开数据里被标出。这个标记不是排名、累积奖池或玩家人数。")}</p>
+            <p>{t("These titles are marked in the public data. The mark is not a ranking, a jackpot, or a player count.", "这些游戏在公开目录中标为精选。这里的精选标记仅用于目录展示，并不代表排名、奖池金额或玩家人数。")}</p>
           </div>
           <Link className="cat-all" href="#catalog">{t("View all games", "查看全部游戏")}</Link>
         </div>
@@ -448,7 +448,7 @@ export function GamesView({ locale }: { locale: Locale }) {
           <li>{t("Open the category page if you still need to know what that product is.", "如果还需要知道该产品是什么，就打开分类页。")}</li>
           <li>{t("Launch the title in the lobby and read the stake screen before the first bet.", "在游戏大厅启动游戏，第一次下注前阅读投注画面。")}</li>
         </ol>
-        <p>{t("Payments are a separate step. The", "支付是另一步。")} <Link href={href("/payment-methods")}>{t("payment methods", "支付方式")}</Link>{t(" page lists what the cashier shows. Amounts and timing stay on that cashier attempt.", "页列出收银台显示的内容。金额和时间留在该次收银台。")}</p>
+        <p>{t("Payments are a separate step. The", "支付是另一步。")} <Link href={href("/payment-methods")}>{t("payment methods", "支付方式")}</Link>{t(" page lists what the cashier shows. Amounts and timing stay on that cashier attempt.", "页列出收银台显示的内容。金额和时间会显示在该次收银台画面上。")}</p>
       </VisualSplit>
 
       <section className="section hub-split">
@@ -494,7 +494,7 @@ export function GamesView({ locale }: { locale: Locale }) {
           </article>
           <article className="panel">
             <h3>{t("Search the printed name", "搜索印出的名称")}</h3>
-            <p>{t("The search box matches the title and the studio on the cover. Odds, draws, and fishing lists stay in the lobby.", "搜索框匹配封面上的标题和工作室。赔率、开奖和捕鱼名单留在游戏大厅。")}</p>
+            <p>{t("The search box matches the title and the studio on the cover. Odds, draws, and fishing lists stay in the lobby.", "搜索框匹配封面上的标题和工作室。赔率、开奖和捕鱼名单会显示在游戏大厅内。")}</p>
           </article>
           <article className="panel">
             <h3>{t("Read the line under the art", "阅读画面下的那一行")}</h3>

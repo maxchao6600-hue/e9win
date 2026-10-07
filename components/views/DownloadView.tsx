@@ -12,7 +12,7 @@ import { guideScenes, pageScenes } from "@/lib/scenes";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const enDescription = "Open E9WIN on Android through the player portal, on iPhone with a Safari home-screen shortcut, or in a phone or desktop browser. A store listing is not part of this path.";
-const zhDescription = "在 Android 上通过玩家门户打开 E9WIN，在 iPhone 上使用 Safari 主屏幕快捷方式，或在手机与桌面浏览器中打开。应用商店上架不属于这条路径。";
+const zhDescription = "可通过 Android 玩家门户、iPhone Safari 主屏幕快捷方式，或手机与桌面浏览器打开 E9WIN。这条路径不包括应用商店上架。";
 
 const zhAlt: Record<string, string> = {
   "A phone and a laptop on a dark marble desk": "深色大理石桌上的手机和笔记本电脑",
@@ -107,7 +107,7 @@ export function DownloadView({ locale }: { locale: Locale }) {
     { q: t("What should I do if the website does not load?", "网站加载不了时怎么办？"), a: t("Reload on a current browser and a stable connection. If other websites also fail, the connection is the first place to look. If only this site fails, try the other named browser and then contact support.", "在较新的浏览器和稳定网络上重新加载。如果其他网站也打不开，先检查网络。如果只有本站失败，换用另一个已点名的浏览器，然后联系客服。") },
     { q: t("Can I access games from mobile?", "可以在手机上访问游戏吗？"), a: t("The public categories are the same ones linked from this site: slots, live casino, sports, 4D, fishing, and esports. A title still has to open in the lobby. This page does not claim every title runs on every phone.", "公开分类与本站链接的相同：老虎机、真人娱乐场、体育、4D、捕鱼和电竞。具体游戏仍要在大厅里打开。本页不声称每一款都能在每一部手机上运行。") },
     { q: t("Can I access promotions from mobile?", "可以在手机上查看优惠吗？"), a: t("Yes. The promotions page and the account card are the same information in the phone browser. This page does not add a mobile-only campaign.", "可以。优惠页和账户卡片在手机浏览器里是同一份信息。本页不另加仅限手机的活动。") },
-    { q: t("Can I access payments from mobile?", "可以在手机上进行支付吗？"), a: t("The cashier is inside the lobby on the phone and on desktop. Public method types include bank transfer, e-wallet, telco PIN, and USDT. Limits and timing stay on the cashier screen.", "收银台在手机和桌面的大厅里。公开的方式类型包括银行转账、电子钱包、电信 PIN 和 USDT。限额和时间留在收银台画面上。") },
+    { q: t("Can I access payments from mobile?", "可以在手机上进行支付吗？"), a: t("The cashier is inside the lobby on the phone and on desktop. Public method types include bank transfer, e-wallet, telco PIN, and USDT. Limits and timing stay on the cashier screen.", "收银台在手机和桌面的大厅里。公开的方式类型包括银行转账、电子钱包、电信 PIN 和 USDT。限额和时间会显示在收银台画面上。") },
   ];
 
   const methods = [
