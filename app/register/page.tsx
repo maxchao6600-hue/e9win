@@ -14,7 +14,7 @@ export default function RegisterPage() {
   return (
     <div className="container page-hero">
       <p className="kicker">E9WIN register</p>
-      <h1>Register</h1>
+      <h1>E9WIN Register</h1>
       <p>Adults only. Use a name and mobile number you can match to a withdrawal account. The form stays in your browser until you continue to the player portal.</p>
       <AuthForm mode="register" />
       <p>By continuing you agree to the <Link href="/terms">terms</Link> and <Link href="/privacy">privacy notes</Link>. Already registered? <Link href="/login">Login</Link>.</p>

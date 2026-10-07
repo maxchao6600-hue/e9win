@@ -90,7 +90,7 @@ const coreGuides: Guide[] = [
   },
   {
     slug: "how-to-download",
-    title: "How to download E9WIN",
+    title: "E9WIN Download Guide",
     excerpt: "Use the Android download, add the site to an iPhone home screen, or stay on mobile web.",
     category: "Download",
     updatedAt: "2026-09-25",
@@ -98,16 +98,16 @@ const coreGuides: Guide[] = [
       "Android: use the download action published on the E9WIN download page. It opens the player portal.",
       "iPhone and iPad: open the mobile site in Safari, then use Share and Add to Home Screen.",
       "Any phone: the web lobby works in the browser without an install.",
-      "Keep the device updated and only install from the link on the official download page.",
+      "Keep the device updated and only install from the link on the download page.",
     ],
     related: [
       { href: "/download", label: "Download page" },
-      { href: "/guides/mobile-guide", label: "Mobile guide" },
+      { href: "/guides/mobile-guide", label: "E9WIN Mobile Guide" },
     ],
   },
   {
     slug: "deposit-guide",
-    title: "Deposit guide",
+    title: "E9WIN Deposit Guide",
     excerpt: "How deposits are started with bank transfer, e-wallet, telco PIN, or USDT.",
     category: "Payments",
     updatedAt: "2026-09-25",
@@ -125,7 +125,7 @@ const coreGuides: Guide[] = [
   },
   {
     slug: "withdrawal-guide",
-    title: "Withdrawal guide",
+    title: "E9WIN Withdrawal Guide",
     excerpt: "Request a withdrawal to a bank or e-wallet that matches your account.",
     category: "Payments",
     updatedAt: "2026-09-25",
@@ -143,7 +143,7 @@ const coreGuides: Guide[] = [
   },
   {
     slug: "games-guide",
-    title: "Games guide",
+    title: "E9WIN Games Guide",
     excerpt: "Find slots, live tables, sports, lottery, fishing, and esports.",
     category: "Games",
     updatedAt: "2026-09-25",
@@ -160,7 +160,7 @@ const coreGuides: Guide[] = [
   },
   {
     slug: "mobile-guide",
-    title: "Mobile guide",
+    title: "E9WIN Mobile Guide",
     excerpt: "Play in the browser, from the home screen, or with the Android download.",
     category: "Download",
     updatedAt: "2026-09-25",
@@ -178,7 +178,7 @@ const coreGuides: Guide[] = [
   },
   {
     slug: "account-guide",
-    title: "Account guide",
+    title: "E9WIN Account Guide",
     excerpt: "Keep login details, bank details, and verification in one place.",
     category: "Account",
     updatedAt: "2026-09-25",
@@ -290,8 +290,8 @@ export const faqGroups: FaqGroup[] = [
     title: "General",
     items: [
       {
-        q: "What is this website for?",
-        a: "It explains the E9WIN lobby: games, payments, promotions, and how to reach support. Stakes are placed in the player lobby, not on these pages.",
+        q: "What is E9WIN?",
+        a: "E9WIN is a Malaysia-facing online gaming lobby for slots, live casino, sports, 4D, fishing, and esports. This website explains the categories, payments, promotions, and support. Stakes are placed in the player lobby.",
       },
       {
         q: "Which games are on E9WIN?",
@@ -304,7 +304,7 @@ export const faqGroups: FaqGroup[] = [
     title: "Registration",
     items: [
       {
-        q: "How do I open an E9WIN account?",
+        q: "How do I register with E9WIN?",
         a: "Use the register form, then continue in the player portal. Provide a real name, mobile number, and login you can verify later.",
       },
       {
@@ -318,7 +318,7 @@ export const faqGroups: FaqGroup[] = [
     title: "Login",
     items: [
       {
-        q: "How do I sign in?",
+        q: "How do I log in to E9WIN?",
         a: "Enter the username and password from registration. Play continues in the E9WIN lobby.",
       },
       {
@@ -336,7 +336,7 @@ export const faqGroups: FaqGroup[] = [
         a: "Browse covers on the games pages, then launch the title in the lobby after you sign in. Fishing, 4D, and esports have no public thumbnail grid.",
       },
       {
-        q: "Can I play on a phone?",
+        q: "How do I access E9WIN on mobile?",
         a: "Yes. Use mobile web, add the site to the iPhone home screen, or use the Android portal link on the download page. Store listings are not part of that path.",
       },
     ],
@@ -346,7 +346,7 @@ export const faqGroups: FaqGroup[] = [
     title: "Download",
     items: [
       {
-        q: "Is there an official App Store or Google Play listing?",
+        q: "Is there an App Store or Google Play listing?",
         a: "Android uses the download path on the Download page. iPhone uses Safari, then Add to Home Screen. Store listings are not part of that path.",
       },
       {
@@ -360,8 +360,8 @@ export const faqGroups: FaqGroup[] = [
     title: "Payments",
     items: [
       {
-        q: "Which payment methods are shown?",
-        a: "Published marks include Maybank, CIMB, Public Bank, RHB, Hong Leong, AmBank, BSN, Touch 'n Go, Boost, GrabPay, ShopeePay, and USDT. The cashier also lists instant transfer, telco PIN, and bank transfer.",
+        q: "How do E9WIN payments work?",
+        a: "The cashier uses the published marks: Maybank, CIMB, Public Bank, RHB, Hong Leong, AmBank, BSN, Touch 'n Go, Boost, GrabPay, ShopeePay, and USDT, plus instant transfer, telco PIN, and bank transfer. Limits for the method you choose stay on that screen.",
       },
       {
         q: "What if a deposit does not appear?",
@@ -375,7 +375,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "How long does a withdrawal take?",
-        a: "The platform does not publish a guaranteed time. It depends on the method and any account checks. Confirm the status in the withdrawal history.",
+        a: "Timing depends on the method and any account checks. Confirm the status in the withdrawal history.",
       },
       {
         q: "Which name can receive a withdrawal?",
@@ -408,8 +408,8 @@ export const faqGroups: FaqGroup[] = [
     title: "Promotions",
     items: [
       {
-        q: "Where are the current bonus figures?",
-        a: "Open the campaign card in your account for the active amount, turnover, and eligibility. Older campaign windows are not shown here as current offers.",
+        q: "Where can I find E9WIN promotions?",
+        a: "The promotions page names the campaigns. Current amounts, turnover, and eligibility are on the account card.",
       },
       {
         q: "How do I claim a promotion?",
@@ -441,7 +441,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Where is the paytable?",
-        a: "Inside the game in the lobby. This website does not reprint RTP or stake ranges.",
+        a: "Game-specific rules and any RTP figure belong on the paytable inside the lobby.",
       },
     ],
   },
@@ -465,7 +465,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Why are there no odds on the sports page?",
-        a: "Odds are not stored here. Live horse racing has a cover. Football, including the World Cup and the Premier League, is named and opens in the sportsbook.",
+        a: "Current sports markets and prices are shown inside the sportsbook after sign-in. Live horse racing has a cover on this site. Football, including the World Cup and the Premier League, is named.",
       },
     ],
   },
@@ -475,7 +475,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Where are esports fixtures?",
-        a: "They are not listed on this site. Esports markets are offered with the sportsbook after you sign in.",
+        a: "Current esports markets open with the sportsbook after you sign in.",
       },
     ],
   },
@@ -485,7 +485,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Which 4D games are named?",
-        a: "Magnum, Da Ma Cai, Toto, and Singapore. Draw results are not reprinted here.",
+        a: "The named games are Magnum, Da Ma Cai, Toto, and Singapore. Draw results and number entry stay on the lobby screen.",
       },
     ],
   },
@@ -495,7 +495,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Why is there no fishing thumbnail grid?",
-        a: "Fishing covers are not in the public catalog. Great Blue and Dolphin Reef are slots, not fishing games.",
+        a: "The fishing list opens in the lobby after you sign in. Great Blue and Dolphin Reef are slots.",
       },
     ],
   },
@@ -504,8 +504,8 @@ export const faqGroups: FaqGroup[] = [
     title: "VIP",
     items: [
       {
-        q: "Are VIP levels or cash rewards listed?",
-        a: "No. Those figures are omitted until E9WIN publishes them.",
+        q: "How does E9WIN VIP work?",
+        a: "E9WIN VIP is a membership label read in the lobby rewards area. Levels, points, and cash figures stay on that account notice.",
       },
     ],
   },
@@ -528,7 +528,7 @@ export const faqGroups: FaqGroup[] = [
     title: "Support",
     items: [
       {
-        q: "How do I reach support?",
+        q: "How do I contact E9WIN support?",
         a: "WhatsApp and the Facebook page are the published public channels. The lobby also refers players to live chat when they are signed in.",
       },
       {

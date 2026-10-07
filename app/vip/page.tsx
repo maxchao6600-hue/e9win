@@ -71,7 +71,7 @@ export default function VipPage() {
         <div>
           <p className="tag">VIP hub</p>
           <h1>E9WIN VIP</h1>
-          <p>This is the membership page. It explains the VIP label, where a notice can appear after you sign in, and how to ask when the account is unclear. Levels, points, and cash figures are not printed here.</p>
+          <p>E9WIN VIP explains the membership label, where a notice can appear after you sign in, and how to ask when the account is unclear. The rewards area in the lobby holds the current detail for that login.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="#membership">Explore VIP information</Link>
             <Link className="btn btn-line" href="/contact">Contact support</Link>

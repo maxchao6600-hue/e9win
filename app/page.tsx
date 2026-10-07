@@ -11,8 +11,8 @@ import { categoryScenes, guideScenes, pageScenes } from "@/lib/scenes";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "E9WIN | Malaysia Online Gaming",
-  description: siteConfig.description,
+  title: "E9WIN Malaysia | Online Gaming, Games and Promotions",
+  description: "E9WIN is a Malaysia online gaming lobby for slots, live casino, sports, 4D, fishing, esports, promotions, and mobile play.",
   path: "/",
 });
 
@@ -23,13 +23,13 @@ const homeGuides = homeGuideSlugs.flatMap((slug) => {
   return guide ? [guide] : [];
 });
 const homeFaqTitles = [
-  "How do I open an E9WIN account?",
-  "How do I sign in?",
+  "How do I register with E9WIN?",
+  "How do I log in to E9WIN?",
   "Where do I open a game?",
-  "Which payment methods are shown?",
+  "How do E9WIN payments work?",
   "Do I have to install an app?",
   "How do I claim a promotion?",
-  "How do I reach support?",
+  "How do I contact E9WIN support?",
 ];
 const homeFaq = homeFaqTitles.flatMap((question) => {
   const item = faqGroups.flatMap((group) => group.items).find((entry) => entry.q === question);
@@ -52,8 +52,8 @@ export default function HomePage() {
         <div className="hero-layout">
           <div className="hero-copy">
             <p className="kicker">Malaysia online gaming</p>
-            <h1>E9WIN</h1>
-            <p className="lede">Slots, live casino, sports, and 4D lottery in one lobby.</p>
+            <h1>E9WIN Malaysia</h1>
+            <p className="lede">Slots, live casino, sports, 4D, fishing, and esports in one player lobby.</p>
             <div className="cta-row">
               <Link className="btn btn-primary" href="/register">Register now</Link>
               <Link className="btn btn-ghost" href="/games">Explore games</Link>
@@ -66,9 +66,9 @@ export default function HomePage() {
         <div className="container">
           <VisualSplit plain src="/images/brand/scene-slots.webp" alt="Gates of Olympus on a display in a dark private room">
             <h2>What E9WIN is</h2>
-            <p>E9WIN is a Malaysia-facing gaming lobby. This website is the public guide to that lobby: the categories you can open, the payment marks that are published, and the support channels that are actually listed.</p>
-            <p>Stakes, paytables, and cashier limits stay in the player lobby after you sign in. The pages here explain the path. They do not reprint odds, bonus amounts, or a licence that the site has not published.</p>
-            <p><Link href="/about">About E9WIN</Link> · <Link href="/games">Games</Link> · <Link href="/faq">FAQ</Link></p>
+            <p>E9WIN is a Malaysia-facing online gaming platform. Slots, live casino, sports, 4D, fishing, and esports open through one player lobby.</p>
+            <p>These pages explain the categories, E9WIN payment methods, E9WIN promotions, and the support channels that are listed. Stake screens, paytables, and cashier limits stay in the lobby after you sign in.</p>
+            <p><Link href="/games">E9WIN games</Link> · <Link href="/promotions">E9WIN promotions</Link> · <Link href="/vip">E9WIN VIP</Link> · <Link href="/download">E9WIN download</Link> · <Link href="/guides">E9WIN guides</Link> · <Link href="/payment-methods">E9WIN payment methods</Link></p>
           </VisualSplit>
         </div>
       </section>
@@ -97,34 +97,34 @@ export default function HomePage() {
               <h2 id="categories">Game categories</h2>
               <Link className="cat-all" href="/games">View all games <span aria-hidden="true">→</span></Link>
             </div>
-            <p>Slots, live casino, sports, 4D lottery, fishing, and esports. Open a category, then play in the lobby.</p>
+            <p>E9WIN games are grouped into slots, live casino, sports, 4D lottery, fishing, and esports. Open a category, then play in the lobby.</p>
           </div>
           <div className="cat-showcase">
             <Link className="cat-tile cat-slots" href="/games/slots">
               <img src={categoryScenes.slots.src} alt={categoryScenes.slots.alt} width={1280} height={720} loading="lazy" />
               <span className="cat-shade" />
               <span className="cat-copy">
-                <h3>Slots</h3>
+                <h3>E9WIN Slots</h3>
                 <p>Browse video slot covers from the public catalog, then open a title in the lobby.</p>
-                <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+                <span className="cat-go">Open <span aria-hidden="true">→</span></span>
               </span>
             </Link>
             <Link className="cat-tile cat-live" href="/games/live-casino">
               <img src={categoryScenes["live-casino"].src} alt={categoryScenes["live-casino"].alt} width={1280} height={720} loading="lazy" />
               <span className="cat-shade" />
               <span className="cat-copy">
-                <h3>Live Casino</h3>
+                <h3>E9WIN Live Casino</h3>
                 <p>Open live baccarat, roulette, sic bo, and other table covers from the catalog.</p>
-                <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+                <span className="cat-go">Open <span aria-hidden="true">→</span></span>
               </span>
             </Link>
             <Link className="cat-tile cat-sports" href="/games/sports">
               <img src={categoryScenes.sports.src} alt={categoryScenes.sports.alt} width={1280} height={720} loading="lazy" />
               <span className="cat-shade" />
               <span className="cat-copy">
-                <h3>Sports</h3>
+                <h3>E9WIN Sports</h3>
                 <p>Preview live horse racing, then read football markets inside the sportsbook.</p>
-                <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+                <span className="cat-go">Open <span aria-hidden="true">→</span></span>
               </span>
             </Link>
             <div className="cat-row">
@@ -132,27 +132,27 @@ export default function HomePage() {
                 <img src={categoryScenes.lottery.src} alt={categoryScenes.lottery.alt} width={1280} height={720} loading="lazy" />
                 <span className="cat-shade" />
                 <span className="cat-copy">
-                  <h3>4D Lottery</h3>
+                  <h3>E9WIN 4D</h3>
                   <p>Choose Magnum, Da Ma Cai, Toto, or Singapore. Draws open in the lobby.</p>
-                  <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+                  <span className="cat-go">Open <span aria-hidden="true">→</span></span>
                 </span>
               </Link>
               <Link className="cat-tile cat-fishing" href="/games/fishing">
                 <img src={categoryScenes.fishing.src} alt={categoryScenes.fishing.alt} width={1280} height={720} loading="lazy" />
                 <span className="cat-shade" />
                 <span className="cat-copy">
-                  <h3>Fishing</h3>
-                  <p>Arcade fishing titles open after sign-in. Slot covers are not used here.</p>
-                  <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+                  <h3>E9WIN Fishing</h3>
+                  <p>Arcade fishing titles open after sign-in. Sea-themed slot covers stay in slots.</p>
+                  <span className="cat-go">Open <span aria-hidden="true">→</span></span>
                 </span>
               </Link>
               <Link className="cat-tile cat-esports" href="/games/esports">
                 <img src={categoryScenes.esports.src} alt={categoryScenes.esports.alt} width={1280} height={720} loading="lazy" />
                 <span className="cat-shade" />
                 <span className="cat-copy">
-                  <h3>Esports</h3>
+                  <h3>E9WIN Esports</h3>
                   <p>Esports markets sit with the sportsbook and open after you sign in.</p>
-                  <span className="cat-go">Explore <span aria-hidden="true">→</span></span>
+                  <span className="cat-go">Open <span aria-hidden="true">→</span></span>
                 </span>
               </Link>
             </div>
@@ -207,14 +207,14 @@ export default function HomePage() {
           <h2 id="lobby-map">How the lobby is organised</h2>
           <p>Each category answers a different question. Use the page that matches what you want to open, then sign in when you are ready to play.</p>
           <div className="topic-grid">
-            <article className="panel"><h3><Link href="/games/slots">Slots</Link></h3><p>Video slot covers from Pragmatic Play and Lucky365. Rules and stake range are on the paytable inside the game.</p></article>
-            <article className="panel"><h3><Link href="/games/live-casino">Live casino</Link></h3><p>Evolution and Playtech covers for baccarat, roulette, sic bo, and other tables. VIP Baccarat is a table name, not membership.</p></article>
-            <article className="panel"><h3><Link href="/games/sports">Sports</Link></h3><p>Live horse racing has a cover. Football, including the World Cup and the Premier League, is named. Odds stay in the sportsbook.</p></article>
-            <article className="panel"><h3><Link href="/games/4d">4D lottery</Link></h3><p>Magnum, Da Ma Cai, Toto, and Singapore. Number selection opens in the lobby. Results are not reprinted here.</p></article>
-            <article className="panel"><h3><Link href="/games/fishing">Fishing</Link></h3><p>Arcade titles after sign-in. Great Blue and Dolphin Reef remain slots, so they are not used as fishing art.</p></article>
-            <article className="panel"><h3><Link href="/games/esports">Esports</Link></h3><p>Markets with the sportsbook. No fixture list, scores, or odds are stored on this site.</p></article>
+            <article className="panel"><h3><Link href="/games/slots">E9WIN Slots</Link></h3><p>Video slot covers from Pragmatic Play and Lucky365. Rules and stake range are on the paytable inside the game.</p></article>
+            <article className="panel"><h3><Link href="/games/live-casino">E9WIN Live Casino</Link></h3><p>Evolution and Playtech covers for baccarat, roulette, sic bo, and other tables. VIP Baccarat is a table name. Membership is the separate VIP page.</p></article>
+            <article className="panel"><h3><Link href="/games/sports">E9WIN Sports</Link></h3><p>Live horse racing has a cover. Football, including the World Cup and the Premier League, is named. Current prices stay in the sportsbook.</p></article>
+            <article className="panel"><h3><Link href="/games/4d">E9WIN 4D</Link></h3><p>Magnum, Da Ma Cai, Toto, and Singapore. Number selection and results open in the lobby.</p></article>
+            <article className="panel"><h3><Link href="/games/fishing">E9WIN Fishing</Link></h3><p>Arcade titles after sign-in. Great Blue and Dolphin Reef stay in the slots catalog.</p></article>
+            <article className="panel"><h3><Link href="/games/esports">E9WIN Esports</Link></h3><p>Markets with the sportsbook. Fixtures and prices open after you sign in.</p></article>
           </div>
-          <p>Payments, access, and the rewards desk are separate: <Link href="/payment-methods">payment methods</Link>, <Link href="/deposit">deposit</Link>, <Link href="/withdrawal">withdrawal</Link>, <Link href="/download">download</Link>, <Link href="/promotions">promotions</Link>, <Link href="/vip">VIP</Link>, <Link href="/guides">guides</Link>.</p>
+          <p>Payments, access, and the rewards desk are separate: <Link href="/payment-methods">E9WIN payment methods</Link>, <Link href="/deposit">E9WIN deposit</Link>, <Link href="/withdrawal">E9WIN withdrawal</Link>, <Link href="/download">E9WIN download</Link>, <Link href="/promotions">E9WIN promotions</Link>, <Link href="/vip">E9WIN VIP</Link>, <Link href="/guides">E9WIN guides</Link>.</p>
           </VisualSplit>
         </div>
       </section>
@@ -223,8 +223,8 @@ export default function HomePage() {
         <div className="container">
           <VisualSplit plain src={pageScenes.download.src} alt={pageScenes.download.alt}>
           <h2 id="mobile-play">Play in the browser you already have</h2>
-          <p>The lobby does not require a store app. On a phone, the same categories are available in the mobile site. An iPhone can add that site to the home screen from Safari. Android can use the portal download on the download page. A desktop browser is enough on Windows, Mac, and Linux.</p>
-          <p>Reload the page to pick up the web lobby. E9WIN does not publish a device list or a manual patch. If the portal link fails, use <Link href="/contact">WhatsApp</Link> rather than a file from another site. The steps are in the <Link href="/guides/mobile-guide">mobile guide</Link> and the <Link href="/guides/how-to-download">download guide</Link>.</p>
+          <p>The same categories are available in the phone browser. An iPhone can add the site to the home screen from Safari. Android can use the player portal on the download page. A desktop browser is enough on Windows, Mac, and Linux.</p>
+          <p>Reload the page to pick up the web lobby. If the portal link fails, use <Link href="/contact">WhatsApp</Link> and stay with the file the portal provides. The steps are in the <Link href="/guides/mobile-guide">E9WIN mobile guide</Link> and the <Link href="/guides/how-to-download">E9WIN download guide</Link>.</p>
           </VisualSplit>
         </div>
       </section>
@@ -234,16 +234,16 @@ export default function HomePage() {
           <article className="panel panel-scene">
             <img src={pageScenes.download.src} alt={pageScenes.download.alt} width={1280} height={720} loading="lazy" />
             <p className="tag">Download</p>
-            <h2>Play on the phone you already use</h2>
-            <p>Android uses the download on the Download page. iPhone uses Safari’s Add to Home Screen. You can also stay in the browser.</p>
-            <Link className="btn btn-primary" href="/download">Get the app path</Link>
+            <h2>E9WIN download</h2>
+            <p>Android uses the player portal on the download page. iPhone uses Safari’s Add to Home Screen. You can also stay in the mobile browser.</p>
+            <Link className="btn btn-primary" href="/download">E9WIN mobile</Link>
           </article>
           <article className="panel panel-scene">
             <img src={pageScenes.vip.src} alt={pageScenes.vip.alt} width={1280} height={720} loading="lazy" />
             <p className="tag">VIP</p>
-            <h2>A membership path, not a made-up ladder</h2>
-            <p>VIP is a membership label read in the lobby rewards area. Levels and cash figures are not published on this site.</p>
-            <Link className="btn btn-ghost" href="/vip">Read VIP</Link>
+            <h2>E9WIN VIP</h2>
+            <p>VIP is the membership label in the lobby rewards area. The account notice is where any current detail appears.</p>
+            <Link className="btn btn-ghost" href="/vip">E9WIN VIP information</Link>
           </article>
         </div>
       </section>
@@ -253,16 +253,16 @@ export default function HomePage() {
           <article className="panel panel-scene">
             <img src={pageScenes.agent.src} alt={pageScenes.agent.alt} width={1280} height={720} loading="lazy" />
             <p className="tag">Agent</p>
-            <h2>Introduce players. Commission is not quoted here.</h2>
-            <p>Agents work with downline players and the in-account cashier. Commission details come from support when you apply.</p>
-            <Link className="btn btn-ghost" href="/agent">Agent details</Link>
+            <h2>E9WIN agent</h2>
+            <p>The agent program covers referrals and downline players. Commission details come from support when you apply.</p>
+            <Link className="btn btn-ghost" href="/agent">E9WIN agent program</Link>
           </article>
           <article className="panel">
             <p className="tag">How it works</p>
             <h2>Register, fund, play, withdraw</h2>
             <ol className="steps">
               <li>Create an account with a name you can match to a payout.</li>
-              <li>Sign in. This site does not keep the session.</li>
+              <li>Sign in. Play continues in the player lobby.</li>
               <li>Browse a category, then open the title in the lobby.</li>
               <li>Read a promotion card before you opt in.</li>
               <li>Deposit with the cashier instruction for that attempt.</li>
@@ -278,7 +278,7 @@ export default function HomePage() {
         <div className="feat-wrap">
           <div className="cat-head">
             <div className="cat-head-row">
-              <h2 id="payments">Payments</h2>
+              <h2 id="payments">E9WIN payment methods</h2>
               <Link className="cat-all" href="/payment-methods">Payment methods <span aria-hidden="true">→</span></Link>
             </div>
             <p>Malaysia shown on the E9WIN payment strip.</p>
@@ -291,10 +291,10 @@ export default function HomePage() {
         <div className="container">
           <div className="section-head">
             <div>
-              <h2>Guides</h2>
+              <h2>E9WIN guides</h2>
               <p>Short instructions for the tasks players actually do.</p>
             </div>
-            <Link className="btn btn-line" href="/guides">Guide hub</Link>
+            <Link className="btn btn-line" href="/guides">E9WIN Guides</Link>
           </div>
           <div className="guide-grid">
             {homeGuides.map((guide) => (

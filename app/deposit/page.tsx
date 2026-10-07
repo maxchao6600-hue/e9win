@@ -8,14 +8,14 @@ import { depositMethods, payments } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "E9WIN Deposit",
+  title: "E9WIN Deposit | Bank, E-Wallet and USDT",
   description: "Deposit to E9WIN by instant transfer, e-wallet, bank transfer, telco PIN, or USDT.",
   path: "/deposit",
 });
 
 const faq = [
-  { q: "Is a minimum deposit listed?", a: "No. The cashier shows the limits for the method you pick." },
-  { q: "How long does a deposit take?", a: "A time is not guaranteed. It depends on the method." },
+  { q: "Is a minimum deposit listed?", a: "The cashier shows the limits for the method you pick." },
+  { q: "How long does a deposit take?", a: "Timing depends on the method. The cashier status shows when the wallet updates." },
 ];
 
 export default function DepositPage() {
@@ -25,11 +25,11 @@ export default function DepositPage() {
       <section className="hub-hero">
         <div>
           <p className="tag">Cashier</p>
-          <h1>Deposit</h1>
-          <p>The cashier covers instant transfer, e-wallet, telco PIN, bank transfer, USDT, and sending credit to a friend. Limits and timing stay on the screen for that attempt.</p>
+          <h1>E9WIN Deposit</h1>
+          <p>E9WIN deposit covers instant transfer, e-wallet, telco PIN, bank transfer, USDT, and sending credit to a friend. The cashier shows the limit and the instruction for that attempt.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="/login">Sign in</Link>
-            <Link className="btn btn-line" href="/payment-methods">Payment methods</Link>
+            <Link className="btn btn-line" href="/payment-methods">E9WIN payment methods</Link>
           </div>
         </div>
         <img src="/images/brand/scene-payments.webp" alt="A card and a phone on a dark cashier counter" width={1600} height={760} />
@@ -52,7 +52,7 @@ export default function DepositPage() {
           <li>Pay that exact instruction. Do not reuse an old account number from a screenshot.</li>
           <li>Keep the receipt until the wallet updates.</li>
         </ol>
-        <p>Processing time is not published as a guarantee. See the <Link href="/guides/deposit-guide">deposit guide</Link> or <Link href="/contact">contact support</Link>.</p>
+        <p>The cashier shows the timing for the method you chose. See the <Link href="/guides/deposit-guide">E9WIN deposit guide</Link> or <Link href="/contact">contact support</Link>.</p>
       </div>
       <div className="prose">
         <AnchoredSections sections={[
@@ -68,7 +68,7 @@ export default function DepositPage() {
             paragraphs: [
               "Use a bank or e-wallet you already control, in the same name as the profile. Telco PIN and USDT are also cashier paths. Friend credit moves balance to another player account and is not a deposit from a bank.",
             ],
-            note: "Fees, minimums, and processing times are not published on this page. The cashier shows the limits for the method you select.",
+            note: "The cashier shows the fee, minimum, and timing for the method you select.",
           },
           {
             title: "If the credit is missing",
@@ -90,11 +90,11 @@ export default function DepositPage() {
         <section className="topic">
           <h2>Related</h2>
           <RelatedLinks links={[
-            { href: "/payment-methods", label: "Payment methods" },
-            { href: "/withdrawal", label: "Withdrawal" },
-            { href: "/guides/payment-guide", label: "How to choose a payment method" },
-            { href: "/guides/deposit-guide", label: "Deposit guide" },
-            { href: "/guides/withdrawal-guide", label: "Withdrawal guide" },
+            { href: "/payment-methods", label: "E9WIN payment methods" },
+            { href: "/withdrawal", label: "E9WIN withdrawal" },
+            { href: "/guides/payment-guide", label: "E9WIN payment guide" },
+            { href: "/guides/deposit-guide", label: "E9WIN deposit guide" },
+            { href: "/guides/withdrawal-guide", label: "E9WIN withdrawal guide" },
             { href: "/responsible-gaming", label: "Responsible gaming" },
           ]} />
         </section>

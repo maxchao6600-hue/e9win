@@ -27,11 +27,11 @@ const faqs = [
   { q: "Where can I find slots?", a: "Use the Slots chip on this page or open the slots category. Published covers name Pragmatic Play and Lucky365. The paytable is inside the game, not on this website." },
   { q: "How do I open a slot?", a: "Find the cover, sign in, and launch it from the lobby. Read the stake range on that screen before you play." },
   { q: "Where can I find live casino games?", a: "Open the live casino category. Published covers are Evolution and Playtech tables, including baccarat, roulette, and sic bo." },
-  { q: "How does the live casino section work?", a: "A cover identifies the table. The dealer, the current round, and the table limits stay on the live screen. This site does not copy those limits." },
+  { q: "How does the live casino section work?", a: "A cover identifies the table. The dealer, the current round, and the table limits stay on the live screen." },
   { q: "Where can I access sports?", a: "Open the sports category. The public catalog shows live horse racing. Football, including the World Cup and the Premier League, is named in the sportsbook after you sign in." },
-  { q: "How do I browse sports?", a: "Start with the horse racing cover if you want the artwork stored here. For other markets, sign in and read the sportsbook. Odds, fixtures, and results are not printed on this page." },
-  { q: "Where can I find 4D?", a: "Open the 4D lottery category. Number selection happens in the lobby. This page does not show a thumbnail grid for it." },
-  { q: "Which 4D operators are listed?", a: "The named games are Magnum, Da Ma Cai, Toto, and Singapore. Draw results, winning numbers, and payout tables are not reprinted here." },
+  { q: "How do I browse sports?", a: "Start with the horse racing cover if you want the artwork stored here. Current markets and prices are shown in the sportsbook after you sign in." },
+  { q: "Where can I find 4D?", a: "Open the 4D lottery category. Number selection happens in the lobby." },
+  { q: "Which 4D operators are listed?", a: "The named games are Magnum, Da Ma Cai, Toto, and Singapore. Draw results and payout tables stay on the lobby screen." },
   { q: "Can I access games on mobile?", a: "Yes. The same categories are in the phone browser. iPhone can use Safari Add to Home Screen. Android can use the portal download on the download page. There is no App Store or Google Play listing." },
   { q: "How do I browse games on a phone?", a: "Open Games, use search or a category chip, and launch from the lobby. If a cover is hard to read, rotate the phone or open the category page for the written explanation." },
 ];
@@ -71,7 +71,7 @@ export default function GamesPage() {
         <div>
           <p className="tag">Games hub</p>
           <h1>E9WIN Games</h1>
-          <p>Look through slots, live casino, sports, 4D lottery, fishing, and esports in one place. Covers on this page are for discovery. The lobby is where a title opens after you sign in.</p>
+          <p>E9WIN games cover slots, live casino, sports, 4D, fishing, and esports. Covers on this page are for discovery. A title opens in the lobby after you sign in.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="#catalog">Browse the catalog</Link>
             <Link className="btn btn-line" href="/register">Register</Link>
@@ -84,7 +84,7 @@ export default function GamesPage() {
         <img src={categoryScenes["live-casino"].src} alt={categoryScenes["live-casino"].alt} width={1600} height={760} />
         <div className="prose">
           <h2>Explore E9WIN games</h2>
-          <p>The hub has two jobs. It shows the covers this website actually stores, and it explains the categories that only exist inside the lobby. You do not need an account to read either part.</p>
+          <p>E9WIN game categories split the lobby into six products. This hub shows the covers the site stores, and it explains the categories that open after you sign in. You can read either part before you create an account.</p>
           <p>Slots, live tables, and live horse racing have artwork here: {slotCount} slot covers and {liveCount} live covers, plus the horse racing cover. Fishing, 4D, and esports are real categories, but searching them will not invent a thumbnail.</p>
           <p>Start with a category if you know the kind of game. Use search if you already know the title. Open the category page when you want the longer explanation, then sign in when you are ready to play.</p>
           <ul>
@@ -99,7 +99,7 @@ export default function GamesPage() {
         <div className="section-head">
           <div>
             <p className="tag">Categories</p>
-            <h2 id="categories-heading">Explore game categories</h2>
+            <h2 id="categories-heading">E9WIN game categories</h2>
             <p>Six doors into the lobby. Each description is specific to what this site can show.</p>
           </div>
           <Link className="cat-all" href="#catalog">View all games</Link>
@@ -109,27 +109,27 @@ export default function GamesPage() {
             <img src={categoryScenes.slots.src} alt={categoryScenes.slots.alt} width={1680} height={945} />
             <span className="cat-shade" />
             <span className="cat-copy">
-              <h3>Slots</h3>
+              <h3>E9WIN Slots</h3>
               <p>Video slot covers from Pragmatic Play and Lucky365. The paytable stays inside the game.</p>
-              <span className="cat-go">Explore</span>
+              <span className="cat-go">Open</span>
             </span>
           </Link>
           <Link className="cat-tile cat-live" href="/games/live-casino">
             <img src={categoryScenes["live-casino"].src} alt={categoryScenes["live-casino"].alt} width={1600} height={760} />
             <span className="cat-shade" />
             <span className="cat-copy">
-              <h3>Live Casino</h3>
+              <h3>E9WIN Live Casino</h3>
               <p>Evolution and Playtech tables, including baccarat, roulette, and sic bo. Limits stay on the table.</p>
-              <span className="cat-go">Explore</span>
+              <span className="cat-go">Open</span>
             </span>
           </Link>
           <Link className="cat-tile cat-sports" href="/games/sports">
             <img src={categoryScenes.sports.src} alt={categoryScenes.sports.alt} width={1600} height={760} />
             <span className="cat-shade" />
             <span className="cat-copy">
-              <h3>Sports</h3>
+              <h3>E9WIN Sports</h3>
               <p>Live horse racing has a cover. Football markets, including the World Cup and the Premier League, are read in the sportsbook.</p>
-              <span className="cat-go">Explore</span>
+              <span className="cat-go">Open</span>
             </span>
           </Link>
           <div className="cat-row">
@@ -137,27 +137,27 @@ export default function GamesPage() {
               <img src={categoryScenes.lottery.src} alt={categoryScenes.lottery.alt} width={1400} height={760} />
               <span className="cat-shade" />
               <span className="cat-copy">
-                <h3>4D Lottery</h3>
-                <p>Magnum, Da Ma Cai, Toto, and Singapore. Number entry is in the lobby. Results are not reprinted here.</p>
-                <span className="cat-go">Explore</span>
+                <h3>E9WIN 4D Lottery</h3>
+                <p>Magnum, Da Ma Cai, Toto, and Singapore. Number entry and draw results stay in the lobby.</p>
+                <span className="cat-go">Open</span>
               </span>
             </Link>
             <Link className="cat-tile cat-fishing" href="/games/fishing">
               <img src={categoryScenes.fishing.src} alt={categoryScenes.fishing.alt} width={1400} height={760} />
               <span className="cat-shade" />
               <span className="cat-copy">
-                <h3>Fishing</h3>
-                <p>Arcade fishing opens after sign-in. Great Blue and Dolphin Reef remain slots, so they are not fishing covers.</p>
-                <span className="cat-go">Explore</span>
+                <h3>E9WIN Fishing</h3>
+                <p>Arcade fishing opens after sign-in. Great Blue and Dolphin Reef stay in the slots catalog.</p>
+                <span className="cat-go">Open</span>
               </span>
             </Link>
             <Link className="cat-tile cat-esports" href="/games/esports">
               <img src={categoryScenes.esports.src} alt={categoryScenes.esports.alt} width={1400} height={760} />
               <span className="cat-shade" />
               <span className="cat-copy">
-                <h3>Esports</h3>
-                <p>Markets beside the sportsbook. This page does not list teams, tournaments, or prices.</p>
-                <span className="cat-go">Explore</span>
+                <h3>E9WIN Esports</h3>
+                <p>Markets beside the sportsbook. Teams, tournaments, and prices open after you sign in.</p>
+                <span className="cat-go">Open</span>
               </span>
             </Link>
           </div>
@@ -251,9 +251,9 @@ export default function GamesPage() {
         <div className="prose">
           <h2>Online slots</h2>
           <p>An online slot is a video game with its own rules screen. On E9WIN, the public slot list is the set of covers on this site. Names under the art are the catalog titles, and the studio is printed with the cover.</p>
-          <p>Browse by scrolling the slots chip, or search a name such as the title on the cover. Opening it still means signing in. Stake range, paylines, and any feature rules are on the paytable inside the game. This hub does not reprint RTP, volatility, or jackpot amounts, because those figures are not stored with the covers.</p>
+          <p>Browse by scrolling the slots chip, or search a name such as the title on the cover. Opening it still means signing in. Stake range, paylines, and any RTP figure belong on the paytable inside the game.</p>
           <p>The same covers are available in the phone browser. If you are choosing a promotion later, the campaign card says which slots are eligible. This grid does not.</p>
-          <p><Link href="/games/slots">Open slots</Link> · <Link href="/guides/slots-guide">Slots guide</Link></p>
+          <p><Link href="/games/slots">E9WIN Slots</Link> · <Link href="/guides/slots-guide">E9WIN Slots Guide</Link></p>
         </div>
       </section>
 
@@ -264,7 +264,7 @@ export default function GamesPage() {
           <p>Live casino here means a table a studio is dealing, shown as a cover you can recognize before you join. The published covers are Evolution and Playtech. Titles in that set include baccarat, roulette, sic bo, dragon tiger, and game-show formats such as Mega Ball and Crazy Coin Flip.</p>
           <p>The cover is the discovery step. The live round, the shoe, and the table limits are only on the table. VIP Baccarat is a Playtech table name. Membership is explained on the <Link href="/vip">VIP page</Link>.</p>
           <p>You can review covers on a phone, then sign in to sit at the table. Nothing on this page is a result or a limit.</p>
-          <p><Link href="/games/live-casino">Open live casino</Link> · <Link href="/guides/live-casino-guide">Live casino guide</Link></p>
+          <p><Link href="/games/live-casino">E9WIN Live Casino</Link> · <Link href="/guides/live-casino-guide">E9WIN Live Casino Guide</Link></p>
         </div>
       </section>
 
@@ -274,8 +274,8 @@ export default function GamesPage() {
           <h2>Sports</h2>
           <p>The sports category is the sportsbook, not a second slot lobby. The only sports cover stored with this site is live horse racing. Football is part of the category description: the World Cup and the Premier League are named. That naming is not a fixture list.</p>
           <p>Event browsing, prices, and whether a market is open are all inside the sportsbook after you sign in. A number from a chat or a screenshot is not the current price. Esports is a separate category beside sports, so a football question and an esports question do not use the same page.</p>
-          <p>Mobile uses the same sportsbook. This page does not add a different set of markets for phones.</p>
-          <p><Link href="/games/sports">Open sports</Link> · <Link href="/guides/sports-guide">Sports guide</Link></p>
+          <p>Mobile uses the same sportsbook and the same markets.</p>
+          <p><Link href="/games/sports">E9WIN Sports</Link> · <Link href="/guides/sports-guide">E9WIN Sports Guide</Link></p>
         </div>
       </section>
 
@@ -283,10 +283,10 @@ export default function GamesPage() {
         <img src={categoryScenes.lottery.src} alt={categoryScenes.lottery.alt} width={1400} height={760} style={{ objectPosition: "72% center" }} />
         <div className="prose">
           <h2>4D lottery</h2>
-          <p>4D on E9WIN is a numbers category. The operators named on the site are Magnum, Da Ma Cai, Toto, and Singapore. You pick the game in the lobby and enter digits there. This website does not keep a betting slip.</p>
-          <p>There is no public cover grid, no winning-number archive, and no payout table on this hub. Draw time is shown on the lobby screen for that attempt. The older address /games/lottery points at the same category as /games/4d.</p>
+          <p>4D on E9WIN is a numbers category. The operators named on the site are Magnum, Da Ma Cai, Toto, and Singapore. You pick the game in the lobby and enter digits there.</p>
+          <p>Draw time and the payout table are shown on the lobby screen for that attempt. The older address /games/lottery points at the same category as /games/4d.</p>
           <p>Use a phone browser the same way: open the category, sign in, and read the selection screen. Do not use a slot with a sea theme, or a live game show, as a stand-in for 4D.</p>
-          <p><Link href="/games/4d">Open 4D lottery</Link> · <Link href="/guides/lottery-guide">4D guide</Link></p>
+          <p><Link href="/games/4d">E9WIN 4D Lottery</Link> · <Link href="/guides/lottery-guide">E9WIN 4D Guide</Link></p>
         </div>
       </section>
 
@@ -294,10 +294,10 @@ export default function GamesPage() {
         <img src={categoryScenes.fishing.src} alt={categoryScenes.fishing.alt} width={1400} height={760} style={{ objectPosition: "center 40%" }} />
         <div className="prose">
           <h2>Fishing games</h2>
-          <p>Fishing games are arcade titles. Credit is spent on shots inside the game, and the stake for that shot is shown in the game, not on this page. E9WIN lists fishing as its own category. The public catalog does not include fishing covers or fishing titles.</p>
+          <p>Fishing games are arcade titles. Credit is spent on shots inside the game, and the stake for that shot is shown in the game. E9WIN Fishing is its own category, and the current list opens in the lobby after you sign in.</p>
           <p>What is known is the boundary. Great Blue and Dolphin Reef are Lucky365 slots, so they stay in the slots grid. If a search for a fish name only returns those slots, that is the catalog working, not a fishing result.</p>
           <p>Sign in and open fishing in the lobby to see the list that account can launch. Mobile uses the same lobby path.</p>
-          <p><Link href="/games/fishing">Open fishing</Link> · <Link href="/guides/fishing-guide">Fishing guide</Link></p>
+          <p><Link href="/games/fishing">E9WIN Fishing</Link> · <Link href="/guides/fishing-guide">E9WIN Fishing Guide</Link></p>
         </div>
       </section>
 
@@ -305,9 +305,9 @@ export default function GamesPage() {
         <img src={categoryScenes.esports.src} alt={categoryScenes.esports.alt} width={1400} height={760} style={{ objectPosition: "center 42%" }} />
         <div className="prose">
           <h2>Esports</h2>
-          <p>Esports is a market category offered with the sportsbook. It is not a slot, and it is not the horse racing cover. This site does not store teams, tournaments, schedules, scores, or odds.</p>
+          <p>Esports is a market category offered with the sportsbook, separate from slots and from the horse racing cover. Current teams, tournaments, and prices are shown in the lobby after you sign in.</p>
           <p>Access is straightforward: open the esports category, sign in, and read the market the sportsbook is showing. If the market you wanted was football or racing, use the sports category instead. The phone uses that same sportsbook view.</p>
-          <p><Link href="/games/esports">Open esports</Link> · <Link href="/guides/esports-guide">Esports guide</Link></p>
+          <p><Link href="/games/esports">E9WIN Esports</Link> · <Link href="/guides/esports-guide">E9WIN Esports Guide</Link></p>
         </div>
       </section>
 
@@ -333,7 +333,7 @@ export default function GamesPage() {
           </article>
           <article className="panel">
             <h3>What the screen is</h3>
-            <p>A slot has a paytable. A live table has limits and a round in progress. A sportsbook has markets. Read that screen. This website does not replace it.</p>
+            <p>A slot has a paytable. A live table has limits and a round in progress. A sportsbook has markets. Read that screen before you place a stake.</p>
           </article>
           <article className="panel">
             <h3>Device</h3>
@@ -348,10 +348,10 @@ export default function GamesPage() {
 
       <VisualSplit src="/images/brand/scene-payments.webp" alt="A card and a phone on a dark cashier counter">
         <h2>How to start playing</h2>
-        <p>This site can show you the catalog and the category notes. It does not take a stake. The path from reading to play is the account and the lobby.</p>
+        <p>The catalog and the category notes live on this site. The stake is placed in the player lobby after you sign in.</p>
         <ol className="steps">
           <li><Link href="/register">Register</Link> with details you can match to a payout later.</li>
-          <li><Link href="/login">Sign in</Link>. This website does not keep the play session.</li>
+          <li><Link href="/login">Sign in</Link>. Play continues in the player lobby.</li>
           <li>Return to <Link href="/games">Games</Link> and choose a category, or use search.</li>
           <li>Open the category page if you still need to know what that product is.</li>
           <li>Launch the title in the lobby and read the stake screen before the first bet.</li>
@@ -364,9 +364,9 @@ export default function GamesPage() {
         <div className="prose">
           <h2>Mobile gaming</h2>
           <p>The games hub is the same site on a phone. Search, category chips, and the six category pages are in the mobile layout. You do not need a store app to read them.</p>
-          <p>iPhone uses Safari’s Add to Home Screen when you want an icon. Android can use the portal download described on the <Link href="/download">download</Link> page. Neither path is an App Store or Google Play listing, and this site does not publish a device list.</p>
+          <p>iPhone uses Safari’s Add to Home Screen when you want an icon. Android can use the portal download described on the <Link href="/download">E9WIN download</Link> page. Both paths stay on the player portal and the mobile site.</p>
           <p>If a cover is cropped tightly, open the category page. The explanation there does not depend on the thumbnail. Account sign-in uses the same login as desktop.</p>
-          <p><Link href="/guides/mobile-guide">Mobile guide</Link> · <Link href="/download">Download</Link></p>
+          <p><Link href="/guides/mobile-guide">E9WIN Mobile Guide</Link> · <Link href="/download">E9WIN Download</Link></p>
         </div>
       </section>
 
@@ -402,7 +402,7 @@ export default function GamesPage() {
           </article>
           <article className="panel">
             <h3>Search the printed name</h3>
-            <p>The search box matches the title and the studio on the cover. It does not search odds, draws, or fishing lists that are not stored here.</p>
+        <p>The search box matches the title and the studio on the cover. Odds, draws, and fishing lists stay in the lobby.</p>
           </article>
           <article className="panel">
             <h3>Read the line under the art</h3>

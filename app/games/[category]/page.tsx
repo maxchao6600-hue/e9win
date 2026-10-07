@@ -19,11 +19,20 @@ export function generateStaticParams() {
   ];
 }
 
+const categoryTitles: Record<GameCategory, string> = {
+  slots: "E9WIN Slots | Online Slots and Game Catalog",
+  "live-casino": "E9WIN Live Casino | Baccarat, Roulette and Live Tables",
+  sports: "E9WIN Sports | Sportsbook and Sports Betting",
+  lottery: "E9WIN 4D Lottery | Magnum, Da Ma Cai, Toto and Singapore",
+  fishing: "E9WIN Fishing | Fishing Games in the E9WIN Lobby",
+  esports: "E9WIN Esports | Esports Markets in the E9WIN Lobby",
+};
+
 export function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
   return params.then(({ category }) => {
     const item = categoryFromParam(category);
     if (!item) return { title: "Games" };
-    const title = item.slug === "lottery" ? "E9WIN 4D Lottery | Magnum, Da Ma Cai, Toto, Singapore" : `E9WIN ${item.title} | ${item.title} in the lobby`;
+    const title = categoryTitles[item.slug];
     const scene = categoryScenes[item.slug];
     const meta = pageMeta({ title, description: item.description, path: categoryPath(item.slug) });
     if (!scene) return meta;
@@ -60,11 +69,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       <section className="hub-hero">
         <div>
           <p className="tag">Games</p>
-          <h1>{label}</h1>
+          <h1>E9WIN {label}</h1>
           <p>{copy.lead}</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="/register">Register to play</Link>
-            <Link className="btn btn-line" href="/games">All games</Link>
+            <Link className="btn btn-line" href="/games">E9WIN Games</Link>
           </div>
         </div>
         {scene ? <img src={scene.src} alt={scene.alt} width={1600} height={760} /> : null}
@@ -79,7 +88,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         </div>
         {list.length > 0 ? <GameBrowser initialCategory={item.slug} /> : (
           <div className="empty">
-            <p>Open the category in the player lobby. This page explains the product. It does not reprint odds, draws, or a title list that is not stored here.</p>
+            <p>Open this category in the player lobby. The page explains the product. Current markets, draws, and any title list that lives in the lobby stay on that screen.</p>
             <Link className="btn btn-primary" href="/download">Continue in the lobby</Link>
           </div>
         )}
@@ -103,7 +112,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           </article>
           <article className="panel">
             <h3>Guides and account</h3>
-            <RelatedLinks links={[...copy.links, { href: "/download", label: "Download" }, { href: "/faq", label: "FAQ" }, { href: "/contact", label: "Contact" }]} />
+            <RelatedLinks links={[
+              ...copy.links,
+              ...(copy.links.some((link) => link.href === "/download") ? [] : [{ href: "/download", label: "E9WIN Download" }]),
+              { href: "/faq", label: "E9WIN FAQ" },
+              { href: "/contact", label: "Contact" },
+            ]} />
           </article>
         </div>
       </section>
@@ -113,15 +127,15 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         <p>Use this page to understand the category. Sign in when you are ready to play. Rules and stake limits stay on the game screen.</p>
         <div className="cta-row">
           <Link className="btn btn-primary" href="/register">Register</Link>
-          <Link className="btn btn-line" href="/promotions">Promotions</Link>
-          <Link className="btn btn-ghost" href="/guides">Guides</Link>
+          <Link className="btn btn-line" href="/promotions">E9WIN Promotions</Link>
+          <Link className="btn btn-ghost" href="/guides">E9WIN Guides</Link>
         </div>
       </section>
 
       <JsonLd data={{
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: label,
+        name: `E9WIN ${label}`,
         description: item.description,
         url: absoluteUrl(path),
       }} />

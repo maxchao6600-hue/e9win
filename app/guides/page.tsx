@@ -38,7 +38,7 @@ export default function GuidesPage() {
         <div>
           <p className="tag">Knowledge hub</p>
           <h1>E9WIN Guides</h1>
-          <p>Practical steps for registration, login, payments, and each product the public site actually describes. Amounts that are not on an account card are not repeated here.</p>
+          <p>E9WIN Guides is the information hub for registration, login, games, payments, and mobile access. Amounts stay on the account card.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="#getting-started">Start here</Link>
             <Link className="btn btn-line" href="/faq">FAQ</Link>
@@ -49,8 +49,8 @@ export default function GuidesPage() {
 
       <VisualSplit src="/images/brand/scene-slots.webp" alt="Gates of Olympus on a display in a dark private room" reverse>
         <h2>Start with the task</h2>
-        <p>New players usually need <Link href="/guides/how-to-register">registration</Link>, then <Link href="/guides/deposit-guide">a deposit</Link>, then a category: <Link href="/guides/slots-guide">slots</Link>, <Link href="/guides/live-casino-guide">live tables</Link>, <Link href="/guides/sports-guide">sports</Link>, or <Link href="/guides/lottery-guide">4D</Link>.</p>
-        <p>If you are choosing a campaign, read <Link href="/guides/promotions-guide">how to read a promotion</Link> before you opt in. If you want to stop, use the <Link href="/guides/responsible-gaming-guide">limits guide</Link>.</p>
+        <p>New players usually need <Link href="/guides/how-to-register">registration</Link>, then <Link href="/guides/deposit-guide">the E9WIN deposit guide</Link>, then a category: <Link href="/guides/slots-guide">E9WIN Slots Guide</Link>, <Link href="/guides/live-casino-guide">E9WIN Live Casino Guide</Link>, <Link href="/guides/sports-guide">E9WIN Sports Guide</Link>, or <Link href="/guides/lottery-guide">E9WIN 4D Guide</Link>.</p>
+        <p>If you are choosing a campaign, read <Link href="/guides/promotions-guide">the promotion guide</Link> before you opt in. If you want to stop, use the <Link href="/guides/responsible-gaming-guide">limits guide</Link>.</p>
       </VisualSplit>
 
       <section className="section">

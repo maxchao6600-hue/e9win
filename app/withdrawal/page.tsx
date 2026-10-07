@@ -7,8 +7,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "E9WIN Withdrawal",
-  description: "Withdraw from E9WIN to a matching bank or e-wallet. Processing time is not guaranteed.",
+  title: "E9WIN Withdrawal | Matching Bank and E-Wallet",
+  description: "Withdraw from E9WIN to a bank or e-wallet in the same name as the profile. The cashier shows the status of the request.",
   path: "/withdrawal",
 });
 
@@ -24,8 +24,8 @@ export default function WithdrawalPage() {
       <section className="hub-hero">
         <div>
           <p className="tag">Cashier</p>
-          <h1>Withdrawal</h1>
-          <p>Withdrawals use the bank and e-wallet methods shown for E9WIN. The payout name should match the account. A processing time is not published.</p>
+          <h1>E9WIN Withdrawal</h1>
+          <p>E9WIN withdrawal uses the bank and e-wallet methods shown on the payment page. The payout name should match the account. The cashier shows the status of the request.</p>
         </div>
         <img src="/images/brand/scene-account.webp" alt="A quiet desk beside a night window" width={1600} height={760} />
       </section>
@@ -41,8 +41,8 @@ export default function WithdrawalPage() {
       </section>
       <div className="panel section">
         <h2>Notes</h2>
-        <p>Turnover on an active promotion can block a withdrawal until that requirement is met. The campaign card states the rule. This site does not promise a processing time.</p>
-        <p><Link href="/guides/withdrawal-guide">Withdrawal guide</Link> · <Link href="/contact">Support</Link></p>
+        <p>Turnover on an active promotion can hold a withdrawal until that requirement is met. The campaign card states the rule. The cashier shows the status of the request.</p>
+        <p><Link href="/guides/withdrawal-guide">E9WIN withdrawal guide</Link> · <Link href="/contact">Support</Link></p>
       </div>
       <div className="prose">
         <AnchoredSections sections={[
@@ -55,7 +55,7 @@ export default function WithdrawalPage() {
           {
             title: "Before you submit",
             paragraphs: [
-              "Open the cashier and read the limit on that screen. This website does not print a minimum, a maximum, or a processing time.",
+              "Open the cashier and read the limit on that screen. The limit, the maximum, and the timing belong to that attempt.",
               "If a promotion is active, read its card first. Turnover stated there can hold a request. The card is the rule.",
             ],
           },
@@ -78,9 +78,9 @@ export default function WithdrawalPage() {
         <section className="topic">
           <h2>Related</h2>
           <RelatedLinks links={[
-            { href: "/payment-methods", label: "Payment methods" },
-            { href: "/deposit", label: "Deposit" },
-            { href: "/guides/withdrawal-guide", label: "Withdrawal guide" },
+            { href: "/payment-methods", label: "E9WIN payment methods" },
+            { href: "/deposit", label: "E9WIN deposit" },
+            { href: "/guides/withdrawal-guide", label: "E9WIN withdrawal guide" },
             { href: "/promotions", label: "Promotions" },
             { href: "/contact", label: "Contact" },
           ]} />

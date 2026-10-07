@@ -20,7 +20,7 @@ export type CategoryPageCopy = {
 
 export const categoryCopy: Record<GameCategory, CategoryPageCopy> = {
   slots: {
-    lead: "The public slots list is a set of video slots you can recognise before you open the lobby. Each thumbnail is a real title from that catalog, not a symbol for the whole category.",
+    lead: "E9WIN Slots brings the public slot catalog together so you can recognise a title before you open the lobby. Each thumbnail is a real cover from that catalog.",
     sections: [
       {
         title: "What you can browse here",
@@ -87,18 +87,18 @@ export const categoryCopy: Record<GameCategory, CategoryPageCopy> = {
       { q: "Which studios have covers on this page?", a: "Pragmatic Play and Lucky365. Other studios may exist in the lobby without a cover published here." },
       { q: "Can I read the paytable on this site?", a: "No. The paytable and stake range open with the game in the lobby." },
       { q: "Are these the only slots?", a: "They are the slots with artwork in the public catalog. The lobby can show more after you sign in." },
-      { q: "Does E9WIN publish RTP?", a: "No. Read the figure on the game’s own paytable if the studio shows one." },
+      { q: "Does E9WIN publish RTP?", a: "Game-specific rules and any RTP figure belong on the paytable inside the lobby." },
       { q: "Is Great Blue a fishing game?", a: "No. It is a Lucky365 slot in this catalog." },
     ],
     links: [
-      { href: "/games", label: "All games" },
-      { href: "/guides/slots-guide", label: "Slots guide" },
+      { href: "/games", label: "E9WIN Games" },
+      { href: "/guides/slots-guide", label: "E9WIN Slots Guide" },
       { href: "/promotions", label: "Promotions" },
       { href: "/deposit", label: "Deposit" },
     ],
   },
   "live-casino": {
-    lead: "Live casino on this site means tables and game shows with published covers: baccarat, roulette, sic bo, dragon tiger, and related titles from Evolution and Playtech.",
+    lead: "E9WIN Live Casino shows the live tables that have published covers: baccarat, roulette, sic bo, dragon tiger, and related titles from Evolution and Playtech.",
     sections: [
       {
         title: "What the covers are",
@@ -155,18 +155,18 @@ export const categoryCopy: Record<GameCategory, CategoryPageCopy> = {
     faq: [
       { q: "Which live studios are in the grid?", a: "Evolution and Playtech titles that have covers in the catalog." },
       { q: "Is VIP Baccarat the membership programme?", a: "No. VIP Baccarat is a table name. Membership is described on the VIP page, without unpublished cash figures." },
-      { q: "Are table limits printed here?", a: "No. Read them on the table after you sign in." },
+      { q: "Are table limits printed here?", a: "Table limits are shown on the live table after you sign in." },
       { q: "Is blackjack in the cover grid?", a: "It is named in the category description. A cover is published only when the catalog has artwork for that title." },
     ],
     links: [
-      { href: "/games", label: "All games" },
-      { href: "/guides/live-casino-guide", label: "Live casino guide" },
-      { href: "/vip", label: "VIP" },
+      { href: "/games", label: "E9WIN Games" },
+      { href: "/guides/live-casino-guide", label: "E9WIN Live Casino Guide" },
+      { href: "/vip", label: "E9WIN VIP" },
       { href: "/guides/how-to-login", label: "How to login" },
     ],
   },
   sports: {
-    lead: "Sports on E9WIN is the sportsbook plus one catalogued product: live horse racing. Football is named in the public description, including the World Cup and the Premier League. This page does not list fixtures or odds.",
+    lead: "E9WIN Sports is the sportsbook plus live horse racing in the public catalog. Football, including the World Cup and the Premier League, is named for the sportsbook. Current markets and prices open after you sign in.",
     sections: [
       {
         title: "What is published",
@@ -219,21 +219,21 @@ export const categoryCopy: Record<GameCategory, CategoryPageCopy> = {
       },
     ],
     faq: [
-      { q: "Why are there no odds on this page?", a: "Odds change and are not published as a static list. Read them in the lobby." },
+      { q: "Why are there no odds on this page?", a: "Current markets and prices are shown in the sportsbook after you sign in." },
       { q: "Is horse racing the only sports product with a cover?", a: "Yes. It is the sports artwork in the public catalog." },
       { q: "Which football competitions are named?", a: "The public description names the World Cup and the Premier League. It does not list fixtures." },
-      { q: "Where do I read a price?", a: "On the sportsbook after you sign in. A number that is not on that screen is not a fact this page can repeat." },
+      { q: "Where do I read a price?", a: "On the sportsbook after you sign in. The price on that screen is the one the lobby is offering." },
     ],
     links: [
-      { href: "/games", label: "Games hub" },
-      { href: "/games/esports", label: "Esports" },
-      { href: "/guides/sports-guide", label: "Sports guide" },
+      { href: "/games", label: "E9WIN Games" },
+      { href: "/games/esports", label: "E9WIN Esports" },
+      { href: "/guides/sports-guide", label: "E9WIN Sports Guide" },
       { href: "/responsible-gaming", label: "Responsible gaming" },
       { href: "/download", label: "Mobile access" },
     ],
   },
   lottery: {
-    lead: "4D on E9WIN names four games: Magnum, Da Ma Cai, Toto, and Singapore. Number selection and draw information open in the lobby. This page does not publish results or prize tiers.",
+    lead: "E9WIN 4D Lottery names four games: Magnum, Da Ma Cai, Toto, and Singapore. Number selection and draw information open in the lobby.",
     sections: [
       {
         title: "What 4D means here",
@@ -285,19 +285,19 @@ export const categoryCopy: Record<GameCategory, CategoryPageCopy> = {
       },
     ],
     faq: [
-      { q: "Can I see today’s draw here?", a: "No. Draw details open in the lobby." },
+      { q: "Can I see today’s draw here?", a: "Draw details open in the lobby for the game you select." },
       { q: "Which games are named?", a: "Magnum, Da Ma Cai, Toto, and Singapore." },
-      { q: "Are payout tables listed?", a: "No. Stake and bet type are on the lobby screen for the game you open." },
+      { q: "Are payout tables listed?", a: "Stake and bet type are on the lobby screen for the game you open." },
       { q: "Is /games/lottery a different product?", a: "No. It is the older address for this 4D page. The canonical URL is /games/4d." },
     ],
     links: [
-      { href: "/guides/lottery-guide", label: "4D guide" },
-      { href: "/games", label: "All games" },
+      { href: "/guides/lottery-guide", label: "E9WIN 4D Guide" },
+      { href: "/games", label: "E9WIN Games" },
       { href: "/guides/how-to-register", label: "How to register" },
     ],
   },
   fishing: {
-    lead: "Fishing is an arcade category in the lobby, next to slots and live tables. This site does not publish fishing covers, so there is no thumbnail grid to browse.",
+    lead: "E9WIN Fishing is an arcade category in the lobby, beside slots and live tables. The current list opens after you sign in.",
     sections: [
       {
         title: "Why there is no game grid",
@@ -349,20 +349,20 @@ export const categoryCopy: Record<GameCategory, CategoryPageCopy> = {
       },
     ],
     faq: [
-      { q: "Where are the fishing thumbnails?", a: "They are not in the public catalog. The list opens after sign-in." },
+      { q: "Where are the fishing thumbnails?", a: "The fishing list opens in the lobby after you sign in." },
       { q: "Is Great Blue a fishing game?", a: "No. Great Blue is a Lucky365 slot." },
       { q: "Is Dolphin Reef fishing?", a: "No. Dolphin Reef is also a Lucky365 slot." },
-      { q: "Can I see room prices here?", a: "No. The cost of a shot is shown inside the fishing title." },
+      { q: "Can I see room prices here?", a: "The cost of a shot is shown inside the fishing title." },
     ],
     links: [
-      { href: "/games", label: "Games hub" },
-      { href: "/games/slots", label: "Slots" },
-      { href: "/guides/fishing-guide", label: "Fishing guide" },
+      { href: "/games", label: "E9WIN Games" },
+      { href: "/games/slots", label: "E9WIN Slots" },
+      { href: "/guides/fishing-guide", label: "E9WIN Fishing Guide" },
       { href: "/download", label: "Open the lobby" },
     ],
   },
   esports: {
-    lead: "Esports markets are offered with the sportsbook. There is no public fixture list, no scores, and no esports cover art on this site.",
+    lead: "E9WIN Esports sits with the sportsbook. Current markets open after you sign in.",
     sections: [
       {
         title: "What is published",
@@ -407,15 +407,15 @@ export const categoryCopy: Record<GameCategory, CategoryPageCopy> = {
       },
     ],
     faq: [
-      { q: "Which esports titles are listed?", a: "None are published as a static list. The lobby shows the markets that are open." },
-      { q: "Are odds shown on this page?", a: "No." },
+      { q: "Which esports titles are listed?", a: "The lobby shows the markets that are open. This page keeps the written explanation." },
+      { q: "Are odds shown on this page?", a: "Prices are on the sportsbook screen after you sign in." },
       { q: "Is esports the same page as sports?", a: "No. Sports has the horse-racing cover and the named football competitions. Esports is the separate market path." },
       { q: "Can I trust a score from a chat?", a: "Only the sportsbook screen you are signed into can show the market E9WIN is offering." },
     ],
     links: [
-      { href: "/games", label: "Games hub" },
-      { href: "/games/sports", label: "Sports" },
-      { href: "/guides/esports-guide", label: "Esports guide" },
+      { href: "/games", label: "E9WIN Games" },
+      { href: "/games/sports", label: "E9WIN Sports" },
+      { href: "/guides/esports-guide", label: "E9WIN Esports Guide" },
       { href: "/responsible-gaming", label: "Responsible gaming" },
     ],
   },

@@ -135,7 +135,7 @@ export default function DownloadPage() {
           <p>Use the access method that matches the device in front of you. Android goes through the player portal on this page. iPhone uses Safari. The phone and desktop browsers open the lobby with no install.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="#access">Access E9WIN</Link>
-            <Link className="btn btn-line" href="/guides/mobile-guide">Mobile guide</Link>
+            <Link className="btn btn-line" href="/guides/mobile-guide">E9WIN mobile guide</Link>
           </div>
         </div>
         <img src={pageScenes.download.src} alt={pageScenes.download.alt} width={1400} height={760} />

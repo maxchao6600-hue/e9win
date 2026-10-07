@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "E9WIN",
   url: "https://e9winonline.com",
   description:
-    "E9WIN is a Malaysia online gaming platform for slots, live casino, sports, lottery, and mobile play.",
+    "E9WIN is a Malaysia-facing online gaming lobby for slots, live casino, sports, 4D, fishing, esports, promotions, and mobile access.",
   locale: "en_MY",
   logo: "/images/brand/logo.png",
   favicon: "/images/brand/favicon.png",

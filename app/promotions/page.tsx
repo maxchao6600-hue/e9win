@@ -77,7 +77,7 @@ export default function PromotionsPage() {
         <div>
           <p className="tag">Promotions hub</p>
           <h1>E9WIN Promotions</h1>
-          <p>This is the list of campaigns the site actually names. Use it to see what kind of offer exists, then open the account card before you opt in. Amounts, turnover, and dates are not copied here.</p>
+          <p>E9WIN promotions name the campaigns this site actually describes. Open the account card before you opt in. That card carries the current amount, turnover, and dates.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="#offers">Explore promotions</Link>
             <Link className="btn btn-line" href="#how">How promotions work</Link>

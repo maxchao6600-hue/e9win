@@ -14,8 +14,8 @@ export const metadata: Metadata = pageMeta({
 });
 
 const faq = [
-  { q: "Are limits printed here?", a: "No. The cashier shows the limits for the method you choose." },
-  { q: "Is a processing time guaranteed?", a: "No. Timing depends on the method and any account checks." },
+  { q: "Are limits printed here?", a: "The cashier shows the limits for the method you choose." },
+  { q: "Is a processing time guaranteed?", a: "Timing depends on the method and any account checks. The cashier status is the current one." },
   { q: "Can I pay an account number from a chat?", a: "Use the instruction on the cashier for that attempt. Do not reuse an old screenshot or a number that arrived in chat." },
 ];
 
@@ -26,11 +26,11 @@ export default function PaymentMethodsPage() {
       <section className="hub-hero">
         <div>
           <p className="tag">Payments</p>
-          <h1>Payment methods</h1>
+          <h1>E9WIN Payment Methods</h1>
           <p>These are the payment marks published with E9WIN. The cashier is where you pick one, copy the instruction, and later request a withdrawal to a matching name.</p>
           <div className="cta-row">
-            <Link className="btn btn-primary" href="/deposit">Deposit</Link>
-            <Link className="btn btn-line" href="/withdrawal">Withdrawal</Link>
+            <Link className="btn btn-primary" href="/deposit">E9WIN deposit</Link>
+            <Link className="btn btn-line" href="/withdrawal">E9WIN withdrawal</Link>
           </div>
         </div>
         <img src="/images/brand/scene-payments.webp" alt="A card and a phone on a dark cashier counter" width={1600} height={760} />
@@ -80,7 +80,7 @@ export default function PaymentMethodsPage() {
           {
             title: "Pending withdrawal",
             paragraphs: [
-              "A withdrawal can wait on a name check, a missing profile step, or turnover printed on an active promotion card. No processing time is published. Read the withdrawal history before you submit another request.",
+              "A withdrawal can wait on a name check, a missing profile step, or turnover printed on an active promotion card. Read the withdrawal history for the current status before you submit another request.",
             ],
           },
           {
@@ -98,10 +98,10 @@ export default function PaymentMethodsPage() {
         <section className="topic">
           <h2>Related</h2>
           <RelatedLinks links={[
-            { href: "/deposit", label: "Deposit steps" },
-            { href: "/withdrawal", label: "Withdrawal steps" },
-            { href: "/guides/deposit-guide", label: "Deposit guide" },
-            { href: "/guides/withdrawal-guide", label: "Withdrawal guide" },
+            { href: "/deposit", label: "E9WIN deposit" },
+            { href: "/withdrawal", label: "E9WIN withdrawal" },
+            { href: "/guides/deposit-guide", label: "E9WIN deposit guide" },
+            { href: "/guides/withdrawal-guide", label: "E9WIN withdrawal guide" },
             { href: "/guides/security-guide", label: "Account safety" },
           ]} />
         </section>

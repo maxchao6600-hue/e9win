@@ -7,7 +7,7 @@ import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
   title: "About E9WIN | Malaysia Online Gaming Lobby",
-  description: "What the E9WIN public site explains: games, mobile access, payments, promotions, and support. History and licences are not published here.",
+  description: "What E9WIN is, how the lobby is organised, and how players reach games, payments, and support.",
   path: "/about",
 });
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div>
           <p className="tag">E9WIN</p>
           <h1>About E9WIN</h1>
-          <p>E9WIN is a Malaysia-facing online gaming lobby. This website explains how to find games, payments, promotions, and support. Stakes are placed in the player lobby.</p>
+          <p>E9WIN is a Malaysia-facing online gaming lobby. Players reach slots, live casino, sports, 4D, fishing, and esports through one account, then use the published payment marks and support channels.</p>
         </div>
         <img src="/images/brand/scene-slots.webp" alt="Gates of Olympus on a display in a dark private room" width={1600} height={760} />
       </section>
@@ -39,14 +39,14 @@ export default function AboutPage() {
         {
           title: "How people open the lobby",
           paragraphs: [
-            "A desktop or phone browser is enough. iPhone can add the site to the home screen from Safari. Android can use the portal link on the download page. App Store and Google Play listings are not part of that path.",
+            "A desktop or phone browser is enough. iPhone can add the site to the home screen from Safari. Android can use the player portal on the download page.",
           ],
         },
         {
           title: "Payments and promotions",
           paragraphs: [
-            "Published payment marks include Malaysian banks, Touch 'n Go, Boost, GrabPay, ShopeePay, and USDT. The cashier also lists instant transfer, telco PIN, and bank transfer. Limits are not printed on this site.",
-            "Promotion names are published. Amounts and turnover stay on the account card. Closed campaign windows are not shown as current offers.",
+            "Published payment marks include Malaysian banks, Touch 'n Go, Boost, GrabPay, ShopeePay, and USDT. The cashier also lists instant transfer, telco PIN, and bank transfer. The limit for each method is on that screen.",
+            "Promotion names are published on the promotions page. Amounts and turnover stay on the account card.",
           ],
         },
         {
@@ -64,8 +64,8 @@ export default function AboutPage() {
       <section className="topic">
         <h2>Related</h2>
         <RelatedLinks links={[
-          { href: "/games", label: "Games" },
-          { href: "/payment-methods", label: "Payment methods" },
+          { href: "/games", label: "E9WIN Games" },
+          { href: "/payment-methods", label: "E9WIN payment methods" },
           { href: "/contact", label: "Contact" },
           { href: "/responsible-gaming", label: "Responsible gaming" },
         ]} />

@@ -72,7 +72,7 @@ export default function AgentPage() {
         <div>
           <p className="tag">Partnership hub</p>
           <h1>E9WIN Agent Program</h1>
-          <p>This page explains the agent path: introducing players, working with a downline, and asking support for setup. The commission rate is confirmed in that setup. It is not printed here, and income is not guaranteed.</p>
+          <p>The E9WIN agent program covers introducing players, working with a downline, and asking support for the application. Commission is confirmed in that setup.</p>
           <div className="cta-row">
             <Link className="btn btn-primary" href="#apply">Become an E9WIN Agent</Link>
             <Link className="btn btn-line" href="/contact">Contact support</Link>

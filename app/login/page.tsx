@@ -14,8 +14,8 @@ export default function LoginPage() {
   return (
     <div className="container page-hero">
       <p className="kicker">E9WIN login</p>
-      <h1>Login</h1>
-      <p>Use the username and password from registration. This page checks the form only. It does not create a session.</p>
+      <h1>E9WIN Login</h1>
+      <p>Use the username and password from registration. This page checks the form. The session continues in the player lobby.</p>
       <AuthForm mode="login" />
       <p><Link href="/register">Need an account?</Link> · <Link href="/guides/how-to-login">Login guide</Link></p>
     </div>

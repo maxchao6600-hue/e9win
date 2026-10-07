@@ -3,7 +3,7 @@ import type { Guide } from "@/lib/content";
 export const extraGuides: Guide[] = [
   {
     slug: "slots-guide",
-    title: "How to browse slots",
+    title: "E9WIN Slots Guide",
     excerpt: "Use the public slot covers, then read the paytable inside the lobby before you spin.",
     category: "Slots",
     updatedAt: "2026-09-26",
@@ -15,14 +15,14 @@ export const extraGuides: Guide[] = [
       "If a promotion names eligible slots, follow that card. This guide does not restate bonus values.",
     ],
     related: [
-      { href: "/games/slots", label: "Slots" },
-      { href: "/games", label: "All games" },
+      { href: "/games/slots", label: "E9WIN Slots" },
+      { href: "/games", label: "E9WIN Games" },
       { href: "/promotions", label: "Promotions" },
     ],
   },
   {
     slug: "live-casino-guide",
-    title: "How live tables work",
+    title: "E9WIN Live Casino Guide",
     excerpt: "Live covers are Evolution and Playtech titles. Limits and the current round are on the table.",
     category: "Live Casino",
     updatedAt: "2026-09-26",
@@ -42,7 +42,7 @@ export const extraGuides: Guide[] = [
   },
   {
     slug: "sports-guide",
-    title: "How to read the sportsbook",
+    title: "E9WIN Sports Guide",
     excerpt: "Horse racing has a cover. Football is named. Odds stay in the lobby.",
     category: "Sports",
     updatedAt: "2026-09-26",
@@ -62,8 +62,8 @@ export const extraGuides: Guide[] = [
   },
   {
     slug: "lottery-guide",
-    title: "How 4D selection works",
-    excerpt: "Magnum, Da Ma Cai, Toto, and Singapore are the named 4D games. Results are not reprinted here.",
+    title: "E9WIN 4D Guide",
+    excerpt: "Magnum, Da Ma Cai, Toto, and Singapore are the named 4D games. Results stay on the lobby screen.",
     category: "Lottery",
     updatedAt: "2026-09-26",
     steps: [
@@ -81,8 +81,8 @@ export const extraGuides: Guide[] = [
   },
   {
     slug: "fishing-guide",
-    title: "How to open fishing games",
-    excerpt: "Fishing has no public covers. The list opens after you sign in.",
+    title: "E9WIN Fishing Guide",
+    excerpt: "The fishing list opens in the lobby after you sign in.",
     category: "Fishing",
     updatedAt: "2026-09-26",
     steps: [
@@ -100,8 +100,8 @@ export const extraGuides: Guide[] = [
   },
   {
     slug: "esports-guide",
-    title: "How to find esports markets",
-    excerpt: "Esports is offered with the sportsbook. This site does not print matches or odds.",
+    title: "E9WIN Esports Guide",
+    excerpt: "Esports markets sit with the sportsbook and open after you sign in.",
     category: "Esports",
     updatedAt: "2026-09-26",
     steps: [
@@ -114,7 +114,7 @@ export const extraGuides: Guide[] = [
       { href: "/games", label: "Games hub" },
       { href: "/games/esports", label: "Esports" },
       { href: "/games/sports", label: "Sports" },
-      { href: "/guides/sports-guide", label: "Sports guide" },
+      { href: "/guides/sports-guide", label: "E9WIN Sports Guide" },
     ],
   },
   {
@@ -138,8 +138,8 @@ export const extraGuides: Guide[] = [
   },
   {
     slug: "security-guide",
-    title: "How to keep the account yours",
-    excerpt: "Use one login, ignore unofficial downloads, and never send a password to support.",
+    title: "E9WIN Security Guide",
+    excerpt: "Use one login, install only from the download page, and never send a password to support.",
     category: "Security",
     updatedAt: "2026-09-26",
     steps: [
@@ -231,7 +231,7 @@ export const extraGuides: Guide[] = [
   },
   {
     slug: "payment-guide",
-    title: "How to choose a payment method",
+    title: "E9WIN Payment Guide",
     excerpt: "Match the cashier method to the account you control, then follow the instruction on that attempt.",
     category: "Payments",
     updatedAt: "2026-09-27",
