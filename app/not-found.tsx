@@ -1,11 +1,11 @@
-import Link from "next/link";
+import type { Metadata } from "next";
+import { NotFoundView } from "@/components/layout/NotFoundView";
+
+export const metadata: Metadata = {
+  title: { absolute: "Page not found | E9WIN" },
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
-  return (
-    <div className="container page-hero">
-      <h1>Page not found</h1>
-      <p>That address is not on this site.</p>
-      <Link className="btn btn-primary" href="/">Back home</Link>
-    </div>
-  );
+  return <NotFoundView />;
 }

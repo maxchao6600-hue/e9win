@@ -28,8 +28,13 @@ const paths = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return paths.map((path) => ({
-    url: `${siteConfig.url}${path === "/" ? "" : path}`,
-    lastModified: new Date("2026-09-27"),
-  }));
+  const dated = new Date("2026-10-07");
+  return paths.flatMap((path) => {
+    const english = `${siteConfig.url}${path === "/" ? "" : path}`;
+    const chinese = path === "/" ? `${siteConfig.url}/zh` : `${siteConfig.url}/zh${path}`;
+    return [
+      { url: english, lastModified: dated },
+      { url: chinese, lastModified: dated },
+    ];
+  });
 }

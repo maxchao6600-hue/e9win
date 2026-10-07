@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { Promotion } from "@/lib/content";
+import { localizePath, tx, type Locale } from "@/lib/i18n";
 
 type Slide = Promotion & { image: string };
 
 const INTERVAL = 5000;
 
-export function PromoSlider({ items }: { items: Slide[] }) {
+export function PromoSlider({ items, locale = "en" }: { items: Slide[]; locale?: Locale }) {
   const [index, setIndex] = useState(0);
   const paused = useRef(false);
   const reduced = useRef(false);
@@ -64,7 +65,7 @@ export function PromoSlider({ items }: { items: Slide[] }) {
         {items.map((item, slide) => (
           <Link
             key={item.id}
-            href={item.href ?? "/promotions"}
+            href={localizePath(item.href ?? "/promotions", locale)}
             className={slide === index ? "is-active" : undefined}
             aria-hidden={slide === index ? undefined : true}
             tabIndex={slide === index ? undefined : -1}
@@ -85,13 +86,13 @@ export function PromoSlider({ items }: { items: Slide[] }) {
         ))}
         {count > 1 ? (
           <>
-            <button type="button" className="promo-arrow prev" aria-label="Previous promotion" onClick={() => step(-1)}>‹</button>
-            <button type="button" className="promo-arrow next" aria-label="Next promotion" onClick={() => step(1)}>›</button>
+            <button type="button" className="promo-arrow prev" aria-label={tx(locale, "Previous promotion", "上一则优惠")} onClick={() => step(-1)}>‹</button>
+            <button type="button" className="promo-arrow next" aria-label={tx(locale, "Next promotion", "下一则优惠")} onClick={() => step(1)}>›</button>
           </>
         ) : null}
       </div>
       {count > 1 ? (
-        <div className="promo-dots" role="tablist" aria-label="Promotion slides">
+        <div className="promo-dots" role="tablist" aria-label={tx(locale, "Promotion slides", "优惠轮播")}>
           {items.map((item, slide) => (
             <button
               key={item.id}
@@ -104,7 +105,7 @@ export function PromoSlider({ items }: { items: Slide[] }) {
           ))}
         </div>
       ) : null}
-      <Link className="cat-all promo-view" href={items[index]?.href ?? "/promotions"}>View promotion <span aria-hidden="true">→</span></Link>
+      <Link className="cat-all promo-view" href={localizePath(items[index]?.href ?? "/promotions", locale)}>{tx(locale, "View promotion", "查看优惠")} <span aria-hidden="true">→</span></Link>
     </div>
   );
 }
